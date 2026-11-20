@@ -1,0 +1,7262 @@
+{
+ "/api/dashboard/sessions?from=2026-07-02&to=2026-07-07": {
+  "sessions": [
+   {
+    "byModel": {
+     "claude-fable-5": 3.965637,
+     "claude-fable-5-1": 1.262877,
+     "claude-haiku-4-5-20251001": 0.341277,
+     "claude-opus-4-8": 0.819857,
+     "claude-opus-5-5": 1.252226,
+     "claude-sonnet-5": 0.49103
+    },
+    "daily": {
+     "2026-07-04": 0.986234,
+     "2026-07-05": 2.238576,
+     "2026-07-06": 1.496959,
+     "2026-07-07": 3.411136
+    },
+    "host": "laptop",
+    "last": "2026-07-09 13:32",
+    "messages": 18,
+    "models": [
+     {
+      "cache_read": 1127059,
+      "cache_write": 63192,
+      "cost": 3.965637,
+      "input": 86001,
+      "model": "claude-fable-5",
+      "output": 16452
+     },
+     {
+      "cache_read": 774949,
+      "cache_write": 0,
+      "cost": 1.262877,
+      "input": 40724,
+      "model": "claude-fable-5-1",
+      "output": 13238
+     },
+     {
+      "cache_read": 1536563,
+      "cache_write": 48339,
+      "cost": 0.341277,
+      "input": 44125,
+      "model": "claude-haiku-4-5-20251001",
+      "output": 13039
+     },
+     {
+      "cache_read": 798769,
+      "cache_write": 37980,
+      "cost": 0.819857,
+      "input": 3482,
+      "model": "claude-opus-4-8",
+      "output": 4949
+     },
+     {
+      "cache_read": 2036569,
+      "cache_write": 13270,
+      "cost": 1.252226,
+      "input": 67958,
+      "model": "claude-opus-5-5",
+      "output": 23346
+     },
+     {
+      "cache_read": 979302,
+      "cache_write": 18403,
+      "cost": 0.49103,
+      "input": 30014,
+      "model": "claude-sonnet-5",
+      "output": 17494
+     }
+    ],
+    "project": "C--work-demo-project-1",
+    "promptCount": 4,
+    "prompts": [
+     {
+      "date": "2026-07-05",
+      "index": 0,
+      "main": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "messages": 4,
+      "models": [],
+      "sub": {
+       "cache_read": 2056623,
+       "cache_write": 36583,
+       "cost": 2.612224,
+       "input": 111845,
+       "output": 16502
+      },
+      "subModels": [
+       {
+        "cache_read": 777001,
+        "cache_write": 27353,
+        "cost": 1.897299,
+        "input": 38078,
+        "model": "claude-fable-5",
+        "output": 5010
+       },
+       {
+        "cache_read": 355566,
+        "cache_write": 0,
+        "cost": 0.390732,
+        "input": 3464,
+        "model": "claude-fable-5-1",
+        "output": 5344
+       },
+       {
+        "cache_read": 857371,
+        "cache_write": 9230,
+        "cost": 0.167341,
+        "input": 38644,
+        "model": "claude-haiku-4-5-20251001",
+        "output": 5304
+       },
+       {
+        "cache_read": 66685,
+        "cache_write": 0,
+        "cost": 0.156853,
+        "input": 31659,
+        "model": "claude-opus-5-5",
+        "output": 844
+       }
+      ],
+      "text": "(pre-prompt)",
+      "ts": "09:30"
+     },
+     {
+      "date": "2026-07-04",
+      "index": 1,
+      "main": {
+       "cache_read": 1284022,
+       "cache_write": 68056,
+       "cost": 0.986234,
+       "input": 8723,
+       "output": 20146
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 798769,
+        "cache_write": 37980,
+        "cost": 0.819857,
+        "input": 3482,
+        "model": "claude-opus-4-8",
+        "output": 4949
+       },
+       {
+        "cache_read": 458073,
+        "cache_write": 0,
+        "cost": 0.166377,
+        "input": 4746,
+        "model": "claude-sonnet-5",
+        "output": 6527
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #1",
+      "ts": "08:00"
+     },
+     {
+      "date": "2026-07-05",
+      "index": 2,
+      "main": {
+       "cache_read": 1326513,
+       "cache_write": 110907,
+       "cost": 0.173936,
+       "input": 41140,
+       "output": 23440
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 679192,
+        "cache_write": 39109,
+        "cost": 0.173936,
+        "input": 5481,
+        "model": "claude-haiku-4-5-20251001",
+        "output": 7735
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #2",
+      "ts": "09:00"
+     },
+     {
+      "date": "2026-07-06",
+      "index": 3,
+      "main": {
+       "cache_read": 2057412,
+       "cache_write": 40732,
+       "cost": 1.496959,
+       "input": 90433,
+       "output": 32295
+      },
+      "messages": 4,
+      "models": [
+       {
+        "cache_read": 419383,
+        "cache_write": 0,
+        "cost": 0.872146,
+        "input": 37260,
+        "model": "claude-fable-5-1",
+        "output": 7894
+       },
+       {
+        "cache_read": 837575,
+        "cache_write": 0,
+        "cost": 0.300159,
+        "input": 11766,
+        "model": "claude-opus-5-5",
+        "output": 4279
+       },
+       {
+        "cache_read": 521229,
+        "cache_write": 18403,
+        "cost": 0.324654,
+        "input": 25268,
+        "model": "claude-sonnet-5",
+        "output": 10967
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #3",
+      "ts": "10:00"
+     },
+     {
+      "date": "2026-07-07",
+      "index": 4,
+      "main": {
+       "cache_read": 1482367,
+       "cache_write": 49109,
+       "cost": 2.863552,
+       "input": 72456,
+       "output": 29665
+      },
+      "messages": 4,
+      "models": [
+       {
+        "cache_read": 350058,
+        "cache_write": 35839,
+        "cost": 2.068338,
+        "input": 47923,
+        "model": "claude-fable-5",
+        "output": 11442
+       },
+       {
+        "cache_read": 1132309,
+        "cache_write": 13270,
+        "cost": 0.795214,
+        "input": 24533,
+        "model": "claude-opus-5-5",
+        "output": 18223
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #4",
+      "ts": "11:00"
+     }
+    ],
+    "session_id": "00000000-0000-4000-8000-000000000001",
+    "started": "2026-07-04 08:00",
+    "subagent_messages": 4,
+    "total": 8.132904
+   },
+   {
+    "byModel": {
+     "claude-fable-5": 4.148231,
+     "claude-haiku-4-5-20251001": 0.189308,
+     "claude-opus-4-8": 1.50265,
+     "claude-opus-5-5": 0.689645,
+     "claude-sonnet-5": 0.323505
+    },
+    "daily": {
+     "2026-07-02": 2.182518,
+     "2026-07-03": 2.768568,
+     "2026-07-07": 1.902253
+    },
+    "host": "desktop",
+    "last": "2026-07-09 10:00",
+    "messages": 9,
+    "models": [
+     {
+      "cache_read": 1562206,
+      "cache_write": 77390,
+      "cost": 4.148231,
+      "input": 82008,
+      "model": "claude-fable-5",
+      "output": 8103
+     },
+     {
+      "cache_read": 751222,
+      "cache_write": 34214,
+      "cost": 0.189308,
+      "input": 13785,
+      "model": "claude-haiku-4-5-20251001",
+      "output": 9961
+     },
+     {
+      "cache_read": 719612,
+      "cache_write": 77012,
+      "cost": 1.50265,
+      "input": 17149,
+      "model": "claude-opus-4-8",
+      "output": 15166
+     },
+     {
+      "cache_read": 807586,
+      "cache_write": 35987,
+      "cost": 0.689645,
+      "input": 38668,
+      "model": "claude-opus-5-5",
+      "output": 4278
+     },
+     {
+      "cache_read": 492405,
+      "cache_write": 43954,
+      "cost": 0.323505,
+      "input": 8764,
+      "model": "claude-sonnet-5",
+      "output": 3168
+     }
+    ],
+    "project": "C--work-demo-project-2",
+    "promptCount": 3,
+    "prompts": [
+     {
+      "date": "2026-07-03",
+      "index": 0,
+      "main": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "messages": 1,
+      "models": [],
+      "sub": {
+       "cache_read": 562466,
+       "cache_write": 47643,
+       "cost": 0.946063,
+       "input": 8125,
+       "output": 5911
+      },
+      "subModels": [
+       {
+        "cache_read": 562466,
+        "cache_write": 47643,
+        "cost": 0.946063,
+        "input": 8125,
+        "model": "claude-opus-4-8",
+        "output": 5911
+       }
+      ],
+      "text": "(pre-prompt)",
+      "ts": "13:30"
+     },
+     {
+      "date": "2026-07-07",
+      "index": 1,
+      "main": {
+       "cache_read": 1211564,
+       "cache_write": 138414,
+       "cost": 1.902253,
+       "input": 54124,
+       "output": 14797
+      },
+      "messages": 4,
+      "models": [
+       {
+        "cache_read": 71031,
+        "cache_write": 25779,
+        "cost": 1.022161,
+        "input": 34445,
+        "model": "claude-fable-5",
+        "output": 1822
+       },
+       {
+        "cache_read": 157146,
+        "cache_write": 29369,
+        "cost": 0.556587,
+        "input": 9024,
+        "model": "claude-opus-4-8",
+        "output": 9255
+       },
+       {
+        "cache_read": 492405,
+        "cache_write": 43954,
+        "cost": 0.323505,
+        "input": 8764,
+        "model": "claude-sonnet-5",
+        "output": 3168
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #1",
+      "ts": "08:00"
+     },
+     {
+      "date": "2026-07-02",
+      "index": 5,
+      "main": {
+       "cache_read": 1568877,
+       "cache_write": 72943,
+       "cost": 2.182518,
+       "input": 47898,
+       "output": 14898
+      },
+      "messages": 2,
+      "models": [
+       {
+        "cache_read": 817655,
+        "cache_write": 38729,
+        "cost": 1.99321,
+        "input": 34113,
+        "model": "claude-fable-5",
+        "output": 4937
+       },
+       {
+        "cache_read": 751222,
+        "cache_write": 34214,
+        "cost": 0.189308,
+        "input": 13785,
+        "model": "claude-haiku-4-5-20251001",
+        "output": 9961
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #5",
+      "ts": "12:00"
+     },
+     {
+      "date": "2026-07-03",
+      "index": 6,
+      "main": {
+       "cache_read": 1481106,
+       "cache_write": 48869,
+       "cost": 1.822505,
+       "input": 52118,
+       "output": 5622
+      },
+      "messages": 2,
+      "models": [
+       {
+        "cache_read": 673520,
+        "cache_write": 12882,
+        "cost": 1.13286,
+        "input": 13450,
+        "model": "claude-fable-5",
+        "output": 1344
+       },
+       {
+        "cache_read": 807586,
+        "cache_write": 35987,
+        "cost": 0.689645,
+        "input": 38668,
+        "model": "claude-opus-5-5",
+        "output": 4278
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #6",
+      "ts": "13:00"
+     }
+    ],
+    "session_id": "00000000-0000-4000-8000-000000000002",
+    "started": "2026-07-01 11:00",
+    "subagent_messages": 1,
+    "total": 6.853339
+   },
+   {
+    "byModel": {
+     "claude-fable-5": 4.710503,
+     "claude-fable-5-1": 2.602124,
+     "claude-haiku-4-5-20251001": 0.335323,
+     "claude-opus-4-8": 1.452041,
+     "claude-opus-5-5": 0.242787,
+     "claude-sonnet-5": 0.640078
+    },
+    "daily": {
+     "2026-07-02": 3.285505,
+     "2026-07-03": 0.396917,
+     "2026-07-04": 0.951392,
+     "2026-07-05": 1.687668,
+     "2026-07-06": 3.661372
+    },
+    "host": "desktop",
+    "last": "2026-07-06 13:31",
+    "messages": 16,
+    "models": [
+     {
+      "cache_read": 1576275,
+      "cache_write": 81817,
+      "cost": 4.710503,
+      "input": 67754,
+      "model": "claude-fable-5",
+      "output": 17635
+     },
+     {
+      "cache_read": 917144,
+      "cache_write": 66764,
+      "cost": 2.602124,
+      "input": 39291,
+      "model": "claude-fable-5-1",
+      "output": 17136
+     },
+     {
+      "cache_read": 641604,
+      "cache_write": 55980,
+      "cost": 0.335323,
+      "input": 59463,
+      "model": "claude-haiku-4-5-20251001",
+      "output": 19948
+     },
+     {
+      "cache_read": 1139186,
+      "cache_write": 24521,
+      "cost": 1.452041,
+      "input": 70363,
+      "model": "claude-opus-4-8",
+      "output": 12589
+     },
+     {
+      "cache_read": 316335,
+      "cache_write": 0,
+      "cost": 0.242787,
+      "input": 16415,
+      "model": "claude-opus-5-5",
+      "output": 5693
+     },
+     {
+      "cache_read": 486106,
+      "cache_write": 75085,
+      "cost": 0.640078,
+      "input": 61261,
+      "model": "claude-sonnet-5",
+      "output": 18434
+     }
+    ],
+    "project": "C--work-demo-project-0",
+    "promptCount": 5,
+    "prompts": [
+     {
+      "date": "2026-07-02",
+      "index": 0,
+      "main": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "messages": 6,
+      "models": [],
+      "sub": {
+       "cache_read": 1848590,
+       "cache_write": 133529,
+       "cost": 3.635663,
+       "input": 125049,
+       "output": 40643
+      },
+      "subModels": [
+       {
+        "cache_read": 917144,
+        "cache_write": 66764,
+        "cost": 2.602124,
+        "input": 39291,
+        "model": "claude-fable-5-1",
+        "output": 17136
+       },
+       {
+        "cache_read": 333877,
+        "cache_write": 38030,
+        "cost": 0.208046,
+        "input": 32863,
+        "model": "claude-haiku-4-5-20251001",
+        "output": 13147
+       },
+       {
+        "cache_read": 339571,
+        "cache_write": 24521,
+        "cost": 0.655618,
+        "input": 31790,
+        "model": "claude-opus-4-8",
+        "output": 4439
+       },
+       {
+        "cache_read": 257998,
+        "cache_write": 4214,
+        "cost": 0.169876,
+        "input": 21105,
+        "model": "claude-sonnet-5",
+        "output": 5921
+       }
+      ],
+      "text": "(pre-prompt)",
+      "ts": "09:30"
+     },
+     {
+      "date": "2026-07-02",
+      "index": 2,
+      "main": {
+       "cache_read": 581645,
+       "cache_write": 58373,
+       "cost": 1.480886,
+       "input": 40903,
+       "output": 9365
+      },
+      "messages": 2,
+      "models": [
+       {
+        "cache_read": 273918,
+        "cache_write": 40423,
+        "cost": 1.353608,
+        "input": 14303,
+        "model": "claude-fable-5",
+        "output": 2564
+       },
+       {
+        "cache_read": 307727,
+        "cache_write": 17950,
+        "cost": 0.127278,
+        "input": 26600,
+        "model": "claude-haiku-4-5-20251001",
+        "output": 6801
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #2",
+      "ts": "09:00"
+     },
+     {
+      "date": "2026-07-03",
+      "index": 3,
+      "main": {
+       "cache_read": 58307,
+       "cache_write": 0,
+       "cost": 0.396917,
+       "input": 28281,
+       "output": 1116
+      },
+      "messages": 1,
+      "models": [
+       {
+        "cache_read": 58307,
+        "cache_write": 0,
+        "cost": 0.396917,
+        "input": 28281,
+        "model": "claude-fable-5",
+        "output": 1116
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #3",
+      "ts": "10:00"
+     },
+     {
+      "date": "2026-07-04",
+      "index": 4,
+      "main": {
+       "cache_read": 799615,
+       "cache_write": 0,
+       "cost": 0.796423,
+       "input": 38573,
+       "output": 8150
+      },
+      "messages": 1,
+      "models": [
+       {
+        "cache_read": 799615,
+        "cache_write": 0,
+        "cost": 0.796423,
+        "input": 38573,
+        "model": "claude-opus-4-8",
+        "output": 8150
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #4",
+      "ts": "11:00"
+     },
+     {
+      "date": "2026-07-05",
+      "index": 5,
+      "main": {
+       "cache_read": 709960,
+       "cache_write": 65903,
+       "cost": 1.687668,
+       "input": 53935,
+       "output": 11328
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 373788,
+        "cache_write": 31956,
+        "cost": 1.275946,
+        "input": 17954,
+        "model": "claude-fable-5",
+        "output": 2898
+       },
+       {
+        "cache_read": 316335,
+        "cache_write": 0,
+        "cost": 0.242787,
+        "input": 16415,
+        "model": "claude-opus-5-5",
+        "output": 5693
+       },
+       {
+        "cache_read": 19837,
+        "cache_write": 33947,
+        "cost": 0.168936,
+        "input": 19566,
+        "model": "claude-sonnet-5",
+        "output": 2737
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #5",
+      "ts": "12:00"
+     },
+     {
+      "date": "2026-07-06",
+      "index": 6,
+      "main": {
+       "cache_read": 1644969,
+       "cache_write": 83345,
+       "cost": 1.985298,
+       "input": 59393,
+       "output": 32369
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 870262,
+        "cache_write": 9438,
+        "cost": 1.684032,
+        "input": 7216,
+        "model": "claude-fable-5",
+        "output": 11057
+       },
+       {
+        "cache_read": 208271,
+        "cache_write": 36924,
+        "cost": 0.301266,
+        "input": 20590,
+        "model": "claude-sonnet-5",
+        "output": 9776
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #6",
+      "ts": "13:00"
+     }
+    ],
+    "session_id": "00000000-0000-4000-8000-000000000000",
+    "started": "2026-07-01 08:00",
+    "subagent_messages": 6,
+    "total": 9.982855
+   },
+   {
+    "byModel": {
+     "claude-fable-5": 2.450976,
+     "claude-fable-5-1": 1.145349,
+     "claude-haiku-4-5-20251001": 0.094315,
+     "claude-opus-4-8": 1.958967,
+     "claude-opus-5-5": 1.854868,
+     "claude-sonnet-5": 0.51848
+    },
+    "daily": {
+     "2026-07-02": 2.30624,
+     "2026-07-03": 1.87814,
+     "2026-07-04": 1.19827,
+     "2026-07-05": 1.991498,
+     "2026-07-06": 0.648807
+    },
+    "host": "laptop",
+    "last": "2026-07-06 13:31",
+    "messages": 20,
+    "models": [
+     {
+      "cache_read": 1179596,
+      "cache_write": 8997,
+      "cost": 2.450976,
+      "input": 38904,
+      "model": "claude-fable-5",
+      "output": 14048
+     },
+     {
+      "cache_read": 1031595,
+      "cache_write": 1496,
+      "cost": 1.145349,
+      "input": 49473,
+      "model": "claude-fable-5-1",
+      "output": 7256
+     },
+     {
+      "cache_read": 461883,
+      "cache_write": 0,
+      "cost": 0.094315,
+      "input": 9927,
+      "model": "claude-haiku-4-5-20251001",
+      "output": 7640
+     },
+     {
+      "cache_read": 480834,
+      "cache_write": 81564,
+      "cost": 1.958967,
+      "input": 84563,
+      "model": "claude-opus-4-8",
+      "output": 20303
+     },
+     {
+      "cache_read": 1854285,
+      "cache_write": 82078,
+      "cost": 1.854868,
+      "input": 95183,
+      "model": "claude-opus-5-5",
+      "output": 26670
+     },
+     {
+      "cache_read": 254024,
+      "cache_write": 78230,
+      "cost": 0.51848,
+      "input": 25927,
+      "model": "claude-sonnet-5",
+      "output": 15403
+     }
+    ],
+    "project": "C--work-demo-project-3",
+    "promptCount": 5,
+    "prompts": [
+     {
+      "date": "2026-07-02",
+      "index": 0,
+      "main": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "messages": 8,
+      "models": [],
+      "sub": {
+       "cache_read": 2080161,
+       "cache_write": 121132,
+       "cost": 2.661763,
+       "input": 134241,
+       "output": 54580
+      },
+      "subModels": [
+       {
+        "cache_read": 233580,
+        "cache_write": 0,
+        "cost": 0.348535,
+        "input": 12804,
+        "model": "claude-fable-5-1",
+        "output": 3242
+       },
+       {
+        "cache_read": 461883,
+        "cache_write": 0,
+        "cost": 0.094315,
+        "input": 9927,
+        "model": "claude-haiku-4-5-20251001",
+        "output": 7640
+       },
+       {
+        "cache_read": 379130,
+        "cache_write": 21862,
+        "cost": 0.84504,
+        "input": 31467,
+        "model": "claude-opus-4-8",
+        "output": 12280
+       },
+       {
+        "cache_read": 751544,
+        "cache_write": 21040,
+        "cost": 0.855393,
+        "input": 54116,
+        "model": "claude-opus-5-5",
+        "output": 16015
+       },
+       {
+        "cache_read": 254024,
+        "cache_write": 78230,
+        "cost": 0.51848,
+        "input": 25927,
+        "model": "claude-sonnet-5",
+        "output": 15403
+       }
+      ],
+      "text": "(pre-prompt)",
+      "ts": "09:30"
+     },
+     {
+      "date": "2026-07-02",
+      "index": 2,
+      "main": {
+       "cache_read": 1251551,
+       "cache_write": 59702,
+       "cost": 1.491553,
+       "input": 100927,
+       "output": 16869
+      },
+      "messages": 4,
+      "models": [
+       {
+        "cache_read": 354825,
+        "cache_write": 0,
+        "cost": 0.377626,
+        "input": 24182,
+        "model": "claude-fable-5-1",
+        "output": 942
+       },
+       {
+        "cache_read": 101704,
+        "cache_write": 59702,
+        "cost": 1.113927,
+        "input": 53096,
+        "model": "claude-opus-4-8",
+        "output": 8023
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #2",
+      "ts": "09:00"
+     },
+     {
+      "date": "2026-07-03",
+      "index": 3,
+      "main": {
+       "cache_read": 1674932,
+       "cache_write": 28254,
+       "cost": 1.87814,
+       "input": 46292,
+       "output": 14095
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 592188,
+        "cache_write": 0,
+        "cost": 0.874038,
+        "input": 10665,
+        "model": "claude-fable-5",
+        "output": 3504
+       },
+       {
+        "cache_read": 443190,
+        "cache_write": 1496,
+        "cost": 0.419187,
+        "input": 12487,
+        "model": "claude-fable-5-1",
+        "output": 3072
+       },
+       {
+        "cache_read": 639554,
+        "cache_write": 26758,
+        "cost": 0.584915,
+        "input": 23140,
+        "model": "claude-opus-5-5",
+        "output": 7519
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #3",
+      "ts": "10:00"
+     },
+     {
+      "date": "2026-07-04",
+      "index": 4,
+      "main": {
+       "cache_read": 191573,
+       "cache_write": 11448,
+       "cost": 0.0,
+       "input": 33204,
+       "output": 2917
+      },
+      "messages": 1,
+      "models": [],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #4",
+      "ts": "11:00"
+     },
+     {
+      "date": "2026-07-05",
+      "index": 5,
+      "main": {
+       "cache_read": 1473934,
+       "cache_write": 43277,
+       "cost": 1.991498,
+       "input": 50149,
+       "output": 22281
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 587408,
+        "cache_write": 8997,
+        "cost": 1.576938,
+        "input": 28239,
+        "model": "claude-fable-5",
+        "output": 10544
+       },
+       {
+        "cache_read": 463187,
+        "cache_write": 34280,
+        "cost": 0.41456,
+        "input": 17927,
+        "model": "claude-opus-5-5",
+        "output": 3136
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #5",
+      "ts": "12:00"
+     },
+     {
+      "date": "2026-07-06",
+      "index": 6,
+      "main": {
+       "cache_read": 31950,
+       "cache_write": 6877,
+       "cost": 0.0,
+       "input": 4797,
+       "output": 7301
+      },
+      "messages": 1,
+      "models": [],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #6",
+      "ts": "13:00"
+     }
+    ],
+    "session_id": "00000000-0000-4000-8000-000000000003",
+    "started": "2026-07-01 08:00",
+    "subagent_messages": 8,
+    "total": 8.022955
+   }
+  ],
+  "subagents": [
+   {
+    "cache_read": 777001,
+    "cache_write": 27353,
+    "cost": 1.897299,
+    "daily": {
+     "2026-07-05": 1.897299
+    },
+    "input": 38078,
+    "key": "a11f00d",
+    "messages": 1,
+    "model": "claude-fable-5",
+    "output": 5010,
+    "session": "00000000-0000-4000-8000-000000000001"
+   },
+   {
+    "cache_read": 654989,
+    "cache_write": 39661,
+    "cost": 1.581667,
+    "daily": {
+     "2026-07-02": 1.581667
+    },
+    "input": 34132,
+    "key": "a01f00d",
+    "messages": 1,
+    "model": "claude-fable-5-1",
+    "output": 7749,
+    "session": "00000000-0000-4000-8000-000000000000"
+   },
+   {
+    "cache_read": 262155,
+    "cache_write": 27103,
+    "cost": 1.020456,
+    "daily": {
+     "2026-07-06": 1.020456
+    },
+    "input": 5159,
+    "key": "a05f00d",
+    "messages": 1,
+    "model": "claude-fable-5-1",
+    "output": 9387,
+    "session": "00000000-0000-4000-8000-000000000000"
+   },
+   {
+    "cache_read": 562466,
+    "cache_write": 47643,
+    "cost": 0.946063,
+    "daily": {
+     "2026-07-03": 0.946063
+    },
+    "input": 8125,
+    "key": "a25f00d",
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 5911,
+    "session": "00000000-0000-4000-8000-000000000002"
+   },
+   {
+    "cache_read": 339571,
+    "cache_write": 24521,
+    "cost": 0.655618,
+    "daily": {
+     "2026-07-06": 0.655618
+    },
+    "input": 31790,
+    "key": "a05f00d",
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 4439,
+    "session": "00000000-0000-4000-8000-000000000000"
+   },
+   {
+    "cache_read": 438778,
+    "cache_write": 13546,
+    "cost": 0.510548,
+    "daily": {
+     "2026-07-04": 0.510548
+    },
+    "input": 20466,
+    "key": "a33f00d",
+    "messages": 1,
+    "model": "claude-opus-5-5",
+    "output": 11628,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 283606,
+    "cache_write": 0,
+    "cost": 0.505853,
+    "daily": {
+     "2026-07-06": 0.505853
+    },
+    "input": 24600,
+    "key": "a35f00d",
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 9642,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 355566,
+    "cache_write": 0,
+    "cost": 0.390732,
+    "daily": {
+     "2026-07-07": 0.390732
+    },
+    "input": 3464,
+    "key": "a13f00d",
+    "messages": 1,
+    "model": "claude-fable-5-1",
+    "output": 5344,
+    "session": "00000000-0000-4000-8000-000000000001"
+   },
+   {
+    "cache_read": 228467,
+    "cache_write": 54297,
+    "cost": 0.375526,
+    "daily": {
+     "2026-07-02": 0.375526
+    },
+    "input": 19715,
+    "key": "a31f00d",
+    "messages": 1,
+    "model": "claude-sonnet-5",
+    "output": 11587,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 233580,
+    "cache_write": 0,
+    "cost": 0.348535,
+    "daily": {
+     "2026-07-04": 0.348535
+    },
+    "input": 12804,
+    "key": "a33f00d",
+    "messages": 1,
+    "model": "claude-fable-5-1",
+    "output": 3242,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 312766,
+    "cache_write": 7494,
+    "cost": 0.344845,
+    "daily": {
+     "2026-07-02": 0.344845
+    },
+    "input": 33650,
+    "key": "a31f00d",
+    "messages": 1,
+    "model": "claude-opus-5-5",
+    "output": 4387,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 95524,
+    "cache_write": 21862,
+    "cost": 0.339187,
+    "daily": {
+     "2026-07-04": 0.339187
+    },
+    "input": 6867,
+    "key": "a33f00d",
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 2638,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 257998,
+    "cache_write": 4214,
+    "cost": 0.169876,
+    "daily": {
+     "2026-07-02": 0.169876
+    },
+    "input": 21105,
+    "key": "a01f00d",
+    "messages": 1,
+    "model": "claude-sonnet-5",
+    "output": 5921,
+    "session": "00000000-0000-4000-8000-000000000000"
+   },
+   {
+    "cache_read": 857371,
+    "cache_write": 9230,
+    "cost": 0.167341,
+    "daily": {
+     "2026-07-05": 0.167341
+    },
+    "input": 38644,
+    "key": "a11f00d",
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 5304,
+    "session": "00000000-0000-4000-8000-000000000001"
+   },
+   {
+    "cache_read": 66685,
+    "cache_write": 0,
+    "cost": 0.156853,
+    "daily": {
+     "2026-07-07": 0.156853
+    },
+    "input": 31659,
+    "key": "a13f00d",
+    "messages": 1,
+    "model": "claude-opus-5-5",
+    "output": 844,
+    "session": "00000000-0000-4000-8000-000000000001"
+   },
+   {
+    "cache_read": 319312,
+    "cache_write": 38030,
+    "cost": 0.154969,
+    "daily": {
+     "2026-07-04": 0.154969
+    },
+    "input": 158,
+    "key": "a03f00d",
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 9364,
+    "session": "00000000-0000-4000-8000-000000000000"
+   },
+   {
+    "cache_read": 25557,
+    "cache_write": 23933,
+    "cost": 0.142954,
+    "daily": {
+     "2026-07-06": 0.142954
+    },
+    "input": 6212,
+    "key": "a35f00d",
+    "messages": 1,
+    "model": "claude-sonnet-5",
+    "output": 3816,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 461883,
+    "cache_write": 0,
+    "cost": 0.094315,
+    "daily": {
+     "2026-07-02": 0.094315
+    },
+    "input": 9927,
+    "key": "a31f00d",
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 7640,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 14565,
+    "cache_write": 0,
+    "cost": 0.053076,
+    "daily": {
+     "2026-07-02": 0.053076
+    },
+    "input": 32705,
+    "key": "a01f00d",
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 3783,
+    "session": "00000000-0000-4000-8000-000000000000"
+   }
+  ]
+ },
+ "/api/health": {
+  "hosts_seen": [
+   "desktop",
+   "laptop"
+  ],
+  "ok": true,
+  "unparsed_lines": 0
+ },
+ "/api/sessions": {
+  "sessions": [
+   {
+    "by_model_cost": {
+     "claude-fable-5": 3.9656365,
+     "claude-fable-5-1": 2.2492985,
+     "claude-haiku-4-5-20251001": 0.5259514,
+     "claude-opus-4-8": 1.0242635,
+     "claude-opus-5-5": 2.8053489999999996,
+     "claude-sonnet-5": 0.7107049999999999
+    },
+    "host": "laptop",
+    "last": "2026-07-09T13:32:00.000Z",
+    "messages": 25,
+    "project": "C--work-demo-project-1",
+    "prompts": 6,
+    "provider": "claude",
+    "session_id": "00000000-0000-4000-8000-000000000001",
+    "started": "2026-07-04T08:00:30.000Z",
+    "subagent_messages": 7,
+    "total_cost_usd": 11.2812039
+   },
+   {
+    "by_model_cost": {
+     "claude-fable-5": 5.966027,
+     "claude-fable-5-1": 1.4804620000000002,
+     "claude-haiku-4-5-20251001": 0.1893082,
+     "claude-opus-4-8": 2.5374670000000004,
+     "claude-opus-5-5": 1.291852,
+     "claude-sonnet-5": 0.5031366
+    },
+    "host": "desktop",
+    "last": "2026-07-09T10:00:30.000Z",
+    "messages": 17,
+    "project": "C--work-demo-project-2",
+    "prompts": 6,
+    "provider": "claude",
+    "session_id": "00000000-0000-4000-8000-000000000002",
+    "started": "2026-07-01T11:00:30.000Z",
+    "subagent_messages": 5,
+    "total_cost_usd": 11.9682528
+   },
+   {
+    "by_model_cost": {
+     "claude-fable-5": 4.7105025000000005,
+     "claude-fable-5-1": 3.3766882500000004,
+     "claude-haiku-4-5-20251001": 0.3353234,
+     "claude-opus-4-8": 1.4520405,
+     "claude-opus-5-5": 0.24278700000000003,
+     "claude-sonnet-5": 0.7376979
+    },
+    "host": "desktop",
+    "last": "2026-07-06T13:31:00.000Z",
+    "messages": 19,
+    "project": "C--work-demo-project-0",
+    "prompts": 6,
+    "provider": "claude",
+    "session_id": "00000000-0000-4000-8000-000000000000",
+    "started": "2026-07-01T08:00:30.000Z",
+    "subagent_messages": 6,
+    "total_cost_usd": 10.85503955
+   },
+   {
+    "by_model_cost": {
+     "claude-fable-5": 2.450976,
+     "claude-fable-5-1": 1.14534875,
+     "claude-haiku-4-5-20251001": 0.09431529999999999,
+     "claude-opus-4-8": 2.8440060000000003,
+     "claude-opus-5-5": 2.0977376000000003,
+     "claude-sonnet-5": 0.5184797999999999
+    },
+    "host": "laptop",
+    "last": "2026-07-06T13:31:00.000Z",
+    "messages": 22,
+    "project": "C--work-demo-project-3",
+    "prompts": 6,
+    "provider": "claude",
+    "session_id": "00000000-0000-4000-8000-000000000003",
+    "started": "2026-07-01T08:00:30.000Z",
+    "subagent_messages": 8,
+    "total_cost_usd": 9.150863450000001
+   },
+   {
+    "by_model_cost": {
+     "claude-opus-4-8": 0.245245
+    },
+    "host": "desktop",
+    "last": "2025-05-29T08:24:31.639Z",
+    "messages": 1,
+    "project": "C--work-demo-app",
+    "prompts": 1,
+    "provider": "claude",
+    "session_id": "b296a0b0-0a5d-4be5-8037-6911bddbffdc",
+    "started": "2025-05-29T08:24:31.639Z",
+    "subagent_messages": 1,
+    "total_cost_usd": 0.245245
+   },
+   {
+    "by_model_cost": {
+     "claude-fable-5": 0.603628,
+     "claude-opus-4-8": 6.488040000000001
+    },
+    "host": "desktop",
+    "last": "2025-05-13T14:15:14.381Z",
+    "messages": 3,
+    "project": "C--work-demo-app",
+    "prompts": 1,
+    "provider": "claude",
+    "session_id": "60ce41f3-dfbc-472e-8297-629a073f21dd",
+    "started": "2025-05-08T10:20:25.886Z",
+    "subagent_messages": 0,
+    "total_cost_usd": 7.091668
+   }
+  ]
+ },
+ "/api/sessions/00000000-0000-4000-8000-000000000000": {
+  "prompts": [
+   {
+    "main": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "messages": [
+     {
+      "cache_read": 14565,
+      "cache_write": 0,
+      "cost_usd": 0.0530765,
+      "input": 32705,
+      "is_sidechain": true,
+      "message_id": "msg_sub_0_1_0",
+      "model": "claude-haiku-4-5-20251001",
+      "output": 3783,
+      "provider": "claude",
+      "sidechain_key": "a01f00d",
+      "ts": "2026-07-02T09:30:00.000Z"
+     },
+     {
+      "cache_read": 654989,
+      "cache_write": 39661,
+      "cost_usd": 1.5816672500000002,
+      "input": 34132,
+      "is_sidechain": true,
+      "message_id": "msg_sub_0_1_1",
+      "model": "claude-fable-5-1",
+      "output": 7749,
+      "provider": "claude",
+      "sidechain_key": "a01f00d",
+      "ts": "2026-07-02T09:31:00.000Z"
+     },
+     {
+      "cache_read": 257998,
+      "cache_write": 4214,
+      "cost_usd": 0.16987560000000002,
+      "input": 21105,
+      "is_sidechain": true,
+      "message_id": "msg_sub_0_1_2",
+      "model": "claude-sonnet-5",
+      "output": 5921,
+      "provider": "claude",
+      "sidechain_key": "a01f00d",
+      "ts": "2026-07-02T09:32:00.000Z"
+     },
+     {
+      "cache_read": 319312,
+      "cache_write": 38030,
+      "cost_usd": 0.1549692,
+      "input": 158,
+      "is_sidechain": true,
+      "message_id": "msg_sub_0_3_0",
+      "model": "claude-haiku-4-5-20251001",
+      "output": 9364,
+      "provider": "claude",
+      "sidechain_key": "a03f00d",
+      "ts": "2026-07-04T11:30:00.000Z"
+     },
+     {
+      "cache_read": 262155,
+      "cache_write": 27103,
+      "cost_usd": 1.02045625,
+      "input": 5159,
+      "is_sidechain": true,
+      "message_id": "msg_sub_0_5_0",
+      "model": "claude-fable-5-1",
+      "output": 9387,
+      "provider": "claude",
+      "sidechain_key": "a05f00d",
+      "ts": "2026-07-06T13:30:00.000Z"
+     },
+     {
+      "cache_read": 339571,
+      "cache_write": 24521,
+      "cost_usd": 0.655618,
+      "input": 31790,
+      "is_sidechain": true,
+      "message_id": "msg_sub_0_5_1",
+      "model": "claude-opus-4-8",
+      "output": 4439,
+      "provider": "claude",
+      "sidechain_key": "a05f00d",
+      "ts": "2026-07-06T13:31:00.000Z"
+     }
+    ],
+    "prompt_index": 0,
+    "subagents": {
+     "cache_read": 1848590,
+     "cache_write": 133529,
+     "cost_usd": 3.6356628000000004,
+     "input": 125049,
+     "output": 40643
+    },
+    "ts_first": "2026-07-02T09:30:00.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1141145,
+     "cache_write": 14898,
+     "cost_usd": 0.8721849500000001,
+     "input": 60609,
+     "output": 24666
+    },
+    "messages": [
+     {
+      "cache_read": 99471,
+      "cache_write": 0,
+      "cost_usd": 0.0976202,
+      "input": 26203,
+      "is_sidechain": false,
+      "message_id": "msg_0_0_0",
+      "model": "claude-sonnet-5",
+      "output": 2532,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-01T08:00:30.000Z"
+     },
+     {
+      "cache_read": 301139,
+      "cache_write": 0,
+      "cost_usd": 0.77456475,
+      "input": 7323,
+      "is_sidechain": false,
+      "message_id": "msg_0_0_1",
+      "model": "claude-fable-5-1",
+      "output": 12521,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-01T08:01:30.000Z"
+     },
+     {
+      "cache_read": 740535,
+      "cache_write": 14898,
+      "cost_usd": null,
+      "input": 27083,
+      "is_sidechain": false,
+      "message_id": "msg_0_0_2",
+      "model": "claude-invented-model-9",
+      "output": 9613,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-01T08:02:30.000Z"
+     }
+    ],
+    "prompt_index": 1,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-01T08:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 581645,
+     "cache_write": 58373,
+     "cost_usd": 1.4808857,
+     "input": 40903,
+     "output": 9365
+    },
+    "messages": [
+     {
+      "cache_read": 307727,
+      "cache_write": 17950,
+      "cost_usd": 0.1272777,
+      "input": 26600,
+      "is_sidechain": false,
+      "message_id": "msg_0_1_0",
+      "model": "claude-haiku-4-5-20251001",
+      "output": 6801,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-02T09:00:30.000Z"
+     },
+     {
+      "cache_read": 273918,
+      "cache_write": 40423,
+      "cost_usd": 1.353608,
+      "input": 14303,
+      "is_sidechain": false,
+      "message_id": "msg_0_1_1",
+      "model": "claude-fable-5",
+      "output": 2564,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-02T09:01:30.000Z"
+     }
+    ],
+    "prompt_index": 2,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-02T09:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 58307,
+     "cache_write": 0,
+     "cost_usd": 0.396917,
+     "input": 28281,
+     "output": 1116
+    },
+    "messages": [
+     {
+      "cache_read": 58307,
+      "cache_write": 0,
+      "cost_usd": 0.396917,
+      "input": 28281,
+      "is_sidechain": false,
+      "message_id": "msg_0_2_0",
+      "model": "claude-fable-5",
+      "output": 1116,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-03T10:00:30.000Z"
+     }
+    ],
+    "prompt_index": 3,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-03T10:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 799615,
+     "cache_write": 0,
+     "cost_usd": 0.7964225,
+     "input": 38573,
+     "output": 8150
+    },
+    "messages": [
+     {
+      "cache_read": 799615,
+      "cache_write": 0,
+      "cost_usd": 0.7964225,
+      "input": 38573,
+      "is_sidechain": false,
+      "message_id": "msg_0_3_0",
+      "model": "claude-opus-4-8",
+      "output": 8150,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-04T11:00:30.000Z"
+     }
+    ],
+    "prompt_index": 4,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-04T11:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 709960,
+     "cache_write": 65903,
+     "cost_usd": 1.6876684000000002,
+     "input": 53935,
+     "output": 11328
+    },
+    "messages": [
+     {
+      "cache_read": 19837,
+      "cache_write": 33947,
+      "cost_usd": 0.1689359,
+      "input": 19566,
+      "is_sidechain": false,
+      "message_id": "msg_0_4_0",
+      "model": "claude-sonnet-5",
+      "output": 2737,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-05T12:00:30.000Z"
+     },
+     {
+      "cache_read": 373788,
+      "cache_write": 31956,
+      "cost_usd": 1.2759455000000002,
+      "input": 17954,
+      "is_sidechain": false,
+      "message_id": "msg_0_4_1",
+      "model": "claude-fable-5",
+      "output": 2898,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-05T12:01:30.000Z"
+     },
+     {
+      "cache_read": 316335,
+      "cache_write": 0,
+      "cost_usd": 0.24278700000000003,
+      "input": 16415,
+      "is_sidechain": false,
+      "message_id": "msg_0_4_2",
+      "model": "claude-opus-5-5",
+      "output": 5693,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-05T12:02:30.000Z"
+     }
+    ],
+    "prompt_index": 5,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-05T12:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1644969,
+     "cache_write": 83345,
+     "cost_usd": 1.9852982,
+     "input": 59393,
+     "output": 32369
+    },
+    "messages": [
+     {
+      "cache_read": 870262,
+      "cache_write": 9438,
+      "cost_usd": 1.684032,
+      "input": 7216,
+      "is_sidechain": false,
+      "message_id": "msg_0_5_0",
+      "model": "claude-fable-5",
+      "output": 11057,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-06T13:00:30.000Z"
+     },
+     {
+      "cache_read": 208271,
+      "cache_write": 36924,
+      "cost_usd": 0.30126620000000004,
+      "input": 20590,
+      "is_sidechain": false,
+      "message_id": "msg_0_5_1",
+      "model": "claude-sonnet-5",
+      "output": 9776,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-06T13:01:30.000Z"
+     },
+     {
+      "cache_read": 566436,
+      "cache_write": 36983,
+      "cost_usd": null,
+      "input": 31587,
+      "is_sidechain": false,
+      "message_id": "msg_0_5_2",
+      "model": "<synthetic>",
+      "output": 11536,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-06T13:02:30.000Z"
+     }
+    ],
+    "prompt_index": 6,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-06T13:00:30.000Z"
+   }
+  ],
+  "session": {
+   "by_model_cost": {
+    "claude-fable-5": 4.7105025000000005,
+    "claude-fable-5-1": 3.3766882500000004,
+    "claude-haiku-4-5-20251001": 0.3353234,
+    "claude-opus-4-8": 1.4520405,
+    "claude-opus-5-5": 0.24278700000000003,
+    "claude-sonnet-5": 0.7376979
+   },
+   "host": "desktop",
+   "last": "2026-07-06T13:31:00.000Z",
+   "messages": 19,
+   "project": "C--work-demo-project-0",
+   "prompts": 6,
+   "provider": "claude",
+   "session_id": "00000000-0000-4000-8000-000000000000",
+   "started": "2026-07-01T08:00:30.000Z",
+   "subagent_messages": 6,
+   "total_cost_usd": 10.85503955
+  }
+ },
+ "/api/sessions/00000000-0000-4000-8000-000000000001": {
+  "prompts": [
+   {
+    "main": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "messages": [
+     {
+      "cache_read": 857371,
+      "cache_write": 9230,
+      "cost_usd": 0.1673406,
+      "input": 38644,
+      "is_sidechain": true,
+      "message_id": "msg_sub_1_1_0",
+      "model": "claude-haiku-4-5-20251001",
+      "output": 5304,
+      "provider": "claude",
+      "sidechain_key": "a11f00d",
+      "ts": "2026-07-05T09:30:00.000Z"
+     },
+     {
+      "cache_read": 777001,
+      "cache_write": 27353,
+      "cost_usd": 1.8972985000000002,
+      "input": 38078,
+      "is_sidechain": true,
+      "message_id": "msg_sub_1_1_1",
+      "model": "claude-fable-5",
+      "output": 5010,
+      "provider": "claude",
+      "sidechain_key": "a11f00d",
+      "ts": "2026-07-05T09:31:00.000Z"
+     },
+     {
+      "cache_read": 355566,
+      "cache_write": 0,
+      "cost_usd": 0.3907315,
+      "input": 3464,
+      "is_sidechain": true,
+      "message_id": "msg_sub_1_3_0",
+      "model": "claude-fable-5-1",
+      "output": 5344,
+      "provider": "claude",
+      "sidechain_key": "a13f00d",
+      "ts": "2026-07-07T11:30:00.000Z"
+     },
+     {
+      "cache_read": 66685,
+      "cache_write": 0,
+      "cost_usd": 0.156853,
+      "input": 31659,
+      "is_sidechain": true,
+      "message_id": "msg_sub_1_3_1",
+      "model": "claude-opus-5-5",
+      "output": 844,
+      "provider": "claude",
+      "sidechain_key": "a13f00d",
+      "ts": "2026-07-07T11:31:00.000Z"
+     },
+     {
+      "cache_read": 340566,
+      "cache_write": 31602,
+      "cost_usd": 0.6222492,
+      "input": 31645,
+      "is_sidechain": true,
+      "message_id": "msg_sub_1_5_0",
+      "model": "claude-opus-5-5",
+      "output": 8737,
+      "provider": "claude",
+      "sidechain_key": "a15f00d",
+      "ts": "2026-07-09T13:30:00.000Z"
+     },
+     {
+      "cache_read": 399819,
+      "cache_write": 40604,
+      "cost_usd": 0.6731118,
+      "input": 31433,
+      "is_sidechain": true,
+      "message_id": "msg_sub_1_5_1",
+      "model": "claude-opus-5-5",
+      "output": 9393,
+      "provider": "claude",
+      "sidechain_key": "a15f00d",
+      "ts": "2026-07-09T13:31:00.000Z"
+     },
+     {
+      "cache_read": 680996,
+      "cache_write": 35650,
+      "cost_usd": 0.18467435000000001,
+      "input": 15098,
+      "is_sidechain": true,
+      "message_id": "msg_sub_1_5_2",
+      "model": "claude-haiku-4-5-20251001",
+      "output": 7519,
+      "provider": "claude",
+      "sidechain_key": "a15f00d",
+      "ts": "2026-07-09T13:32:00.000Z"
+     }
+    ],
+    "prompt_index": 0,
+    "subagents": {
+     "cache_read": 3478004,
+     "cache_write": 144439,
+     "cost_usd": 4.09225895,
+     "input": 190021,
+     "output": 42151
+    },
+    "ts_first": "2026-07-05T09:30:00.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1284022,
+     "cache_write": 68056,
+     "cost_usd": 0.9862336,
+     "input": 8723,
+     "output": 20146
+    },
+    "messages": [
+     {
+      "cache_read": 798769,
+      "cache_write": 37980,
+      "cost_usd": 0.8198570000000001,
+      "input": 3482,
+      "is_sidechain": false,
+      "message_id": "msg_1_0_0",
+      "model": "claude-opus-4-8",
+      "output": 4949,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-04T08:00:30.000Z"
+     },
+     {
+      "cache_read": 458073,
+      "cache_write": 0,
+      "cost_usd": 0.16637659999999999,
+      "input": 4746,
+      "is_sidechain": false,
+      "message_id": "msg_1_0_1",
+      "model": "claude-sonnet-5",
+      "output": 6527,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-04T08:01:30.000Z"
+     },
+     {
+      "cache_read": 27180,
+      "cache_write": 30076,
+      "cost_usd": null,
+      "input": 495,
+      "is_sidechain": false,
+      "message_id": "msg_1_0_2",
+      "model": "claude-invented-model-9",
+      "output": 8670,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-04T08:02:30.000Z"
+     }
+    ],
+    "prompt_index": 1,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-04T08:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1326513,
+     "cache_write": 110907,
+     "cost_usd": 0.17393645,
+     "input": 41140,
+     "output": 23440
+    },
+    "messages": [
+     {
+      "cache_read": 65967,
+      "cache_write": 27619,
+      "cost_usd": null,
+      "input": 653,
+      "is_sidechain": false,
+      "message_id": "msg_1_1_0",
+      "model": "claude-invented-model-9",
+      "output": 7694,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-05T09:00:30.000Z"
+     },
+     {
+      "cache_read": 679192,
+      "cache_write": 39109,
+      "cost_usd": 0.17393645,
+      "input": 5481,
+      "is_sidechain": false,
+      "message_id": "msg_1_1_1",
+      "model": "claude-haiku-4-5-20251001",
+      "output": 7735,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-05T09:01:30.000Z"
+     },
+     {
+      "cache_read": 581354,
+      "cache_write": 44179,
+      "cost_usd": null,
+      "input": 35006,
+      "is_sidechain": false,
+      "message_id": "msg_1_1_2",
+      "model": "claude-invented-model-9",
+      "output": 8011,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-05T09:02:30.000Z"
+     }
+    ],
+    "prompt_index": 2,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-05T09:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 2057412,
+     "cache_write": 40732,
+     "cost_usd": 1.49695855,
+     "input": 90433,
+     "output": 32295
+    },
+    "messages": [
+     {
+      "cache_read": 521229,
+      "cache_write": 18403,
+      "cost_usd": 0.3246538,
+      "input": 25268,
+      "is_sidechain": false,
+      "message_id": "msg_1_2_0",
+      "model": "claude-sonnet-5",
+      "output": 10967,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-06T10:00:30.000Z"
+     },
+     {
+      "cache_read": 837575,
+      "cache_write": 0,
+      "cost_usd": 0.300159,
+      "input": 11766,
+      "is_sidechain": false,
+      "message_id": "msg_1_2_1",
+      "model": "claude-opus-5-5",
+      "output": 4279,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-06T10:01:30.000Z"
+     },
+     {
+      "cache_read": 419383,
+      "cache_write": 0,
+      "cost_usd": 0.8721457499999999,
+      "input": 37260,
+      "is_sidechain": false,
+      "message_id": "msg_1_2_2",
+      "model": "claude-fable-5-1",
+      "output": 7894,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-06T10:02:30.000Z"
+     },
+     {
+      "cache_read": 279225,
+      "cache_write": 22329,
+      "cost_usd": null,
+      "input": 16139,
+      "is_sidechain": false,
+      "message_id": "msg_1_2_3",
+      "model": "claude-invented-model-9",
+      "output": 9155,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-06T10:03:30.000Z"
+     }
+    ],
+    "prompt_index": 3,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-06T10:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1482367,
+     "cache_write": 49109,
+     "cost_usd": 2.8635517999999998,
+     "input": 72456,
+     "output": 29665
+    },
+    "messages": [
+     {
+      "cache_read": 321891,
+      "cache_write": 29905,
+      "cost_usd": 1.7529409999999999,
+      "input": 32908,
+      "is_sidechain": false,
+      "message_id": "msg_1_3_0",
+      "model": "claude-fable-5",
+      "output": 11074,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-07T11:00:30.000Z"
+     },
+     {
+      "cache_read": 28167,
+      "cache_write": 5934,
+      "cost_usd": 0.315397,
+      "input": 15015,
+      "is_sidechain": false,
+      "message_id": "msg_1_3_1",
+      "model": "claude-fable-5",
+      "output": 368,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-07T11:01:30.000Z"
+     },
+     {
+      "cache_read": 522377,
+      "cache_write": 13270,
+      "cost_usd": 0.4551834,
+      "input": 17202,
+      "is_sidechain": false,
+      "message_id": "msg_1_3_2",
+      "model": "claude-opus-5-5",
+      "output": 8787,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-07T11:02:30.000Z"
+     },
+     {
+      "cache_read": 609932,
+      "cache_write": 0,
+      "cost_usd": 0.3400304,
+      "input": 7331,
+      "is_sidechain": false,
+      "message_id": "msg_1_3_3",
+      "model": "claude-opus-5-5",
+      "output": 9436,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-07T11:03:30.000Z"
+     }
+    ],
+    "prompt_index": 4,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-07T11:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 336991,
+     "cache_write": 0,
+     "cost_usd": 0.25776219999999994,
+     "input": 39311,
+     "output": 1656
+    },
+    "messages": [
+     {
+      "cache_read": 336991,
+      "cache_write": 0,
+      "cost_usd": 0.25776219999999994,
+      "input": 39311,
+      "is_sidechain": false,
+      "message_id": "msg_1_4_0",
+      "model": "claude-opus-5-5",
+      "output": 1656,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-08T12:00:30.000Z"
+     }
+    ],
+    "prompt_index": 5,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-08T12:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1220171,
+     "cache_write": 38484,
+     "cost_usd": 1.41050235,
+     "input": 64570,
+     "output": 10258
+    },
+    "messages": [
+     {
+      "cache_read": 873125,
+      "cache_write": 21335,
+      "cost_usd": 0.98642125,
+      "input": 25469,
+      "is_sidechain": false,
+      "message_id": "msg_1_5_0",
+      "model": "claude-fable-5-1",
+      "output": 1735,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-09T13:00:30.000Z"
+     },
+     {
+      "cache_read": 302963,
+      "cache_write": 17149,
+      "cost_usd": 0.2196746,
+      "input": 25093,
+      "is_sidechain": false,
+      "message_id": "msg_1_5_1",
+      "model": "claude-sonnet-5",
+      "output": 4030,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-09T13:01:30.000Z"
+     },
+     {
+      "cache_read": 44083,
+      "cache_write": 0,
+      "cost_usd": 0.2044065,
+      "input": 14008,
+      "is_sidechain": false,
+      "message_id": "msg_1_5_2",
+      "model": "claude-opus-4-8",
+      "output": 4493,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-09T13:02:30.000Z"
+     }
+    ],
+    "prompt_index": 6,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-09T13:00:30.000Z"
+   }
+  ],
+  "session": {
+   "by_model_cost": {
+    "claude-fable-5": 3.9656365,
+    "claude-fable-5-1": 2.2492985,
+    "claude-haiku-4-5-20251001": 0.5259514,
+    "claude-opus-4-8": 1.0242635,
+    "claude-opus-5-5": 2.8053489999999996,
+    "claude-sonnet-5": 0.7107049999999999
+   },
+   "host": "laptop",
+   "last": "2026-07-09T13:32:00.000Z",
+   "messages": 25,
+   "project": "C--work-demo-project-1",
+   "prompts": 6,
+   "provider": "claude",
+   "session_id": "00000000-0000-4000-8000-000000000001",
+   "started": "2026-07-04T08:00:30.000Z",
+   "subagent_messages": 7,
+   "total_cost_usd": 11.2812039
+  }
+ },
+ "/api/sessions/00000000-0000-4000-8000-000000000002": {
+  "prompts": [
+   {
+    "main": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "messages": [
+     {
+      "cache_read": 368562,
+      "cache_write": 11371,
+      "cost_usd": 0.467221,
+      "input": 10241,
+      "is_sidechain": true,
+      "message_id": "msg_sub_2_3_0",
+      "model": "claude-opus-4-8",
+      "output": 4721,
+      "provider": "claude",
+      "sidechain_key": "a23f00d",
+      "ts": "2026-07-01T11:30:00.000Z"
+     },
+     {
+      "cache_read": 876909,
+      "cache_write": 51847,
+      "cost_usd": 0.6022068,
+      "input": 2475,
+      "is_sidechain": true,
+      "message_id": "msg_sub_2_3_1",
+      "model": "claude-opus-5-5",
+      "output": 3542,
+      "provider": "claude",
+      "sidechain_key": "a23f00d",
+      "ts": "2026-07-01T11:31:00.000Z"
+     },
+     {
+      "cache_read": 380512,
+      "cache_write": 7391,
+      "cost_usd": 1.2360520000000002,
+      "input": 30207,
+      "is_sidechain": true,
+      "message_id": "msg_sub_2_3_2",
+      "model": "claude-fable-5",
+      "output": 9106,
+      "provider": "claude",
+      "sidechain_key": "a23f00d",
+      "ts": "2026-07-01T11:32:00.000Z"
+     },
+     {
+      "cache_read": 562466,
+      "cache_write": 47643,
+      "cost_usd": 0.946063,
+      "input": 8125,
+      "is_sidechain": true,
+      "message_id": "msg_sub_2_5_0",
+      "model": "claude-opus-4-8",
+      "output": 5911,
+      "provider": "claude",
+      "sidechain_key": "a25f00d",
+      "ts": "2026-07-03T13:30:00.000Z"
+     },
+     {
+      "cache_read": 449078,
+      "cache_write": 0,
+      "cost_usd": 0.1796316,
+      "input": 39873,
+      "is_sidechain": true,
+      "message_id": "msg_sub_2_1_0",
+      "model": "claude-sonnet-5",
+      "output": 1007,
+      "provider": "claude",
+      "sidechain_key": "a21f00d",
+      "ts": "2026-07-08T09:30:00.000Z"
+     }
+    ],
+    "prompt_index": 0,
+    "subagents": {
+     "cache_read": 2637527,
+     "cache_write": 118252,
+     "cost_usd": 3.4311744000000006,
+     "input": 90921,
+     "output": 24287
+    },
+    "ts_first": "2026-07-01T11:30:00.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1211564,
+     "cache_write": 138414,
+     "cost_usd": 1.9022527500000002,
+     "input": 54124,
+     "output": 14797
+    },
+    "messages": [
+     {
+      "cache_read": 490982,
+      "cache_write": 39312,
+      "cost_usd": null,
+      "input": 1891,
+      "is_sidechain": false,
+      "message_id": "msg_2_0_0",
+      "model": "<synthetic>",
+      "output": 552,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-07T08:00:30.000Z"
+     },
+     {
+      "cache_read": 157146,
+      "cache_write": 29369,
+      "cost_usd": 0.55658675,
+      "input": 9024,
+      "is_sidechain": false,
+      "message_id": "msg_2_0_1",
+      "model": "claude-opus-4-8",
+      "output": 9255,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-07T08:01:30.000Z"
+     },
+     {
+      "cache_read": 492405,
+      "cache_write": 43954,
+      "cost_usd": 0.32350500000000004,
+      "input": 8764,
+      "is_sidechain": false,
+      "message_id": "msg_2_0_2",
+      "model": "claude-sonnet-5",
+      "output": 3168,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-07T08:02:30.000Z"
+     },
+     {
+      "cache_read": 71031,
+      "cache_write": 25779,
+      "cost_usd": 1.022161,
+      "input": 34445,
+      "is_sidechain": false,
+      "message_id": "msg_2_0_3",
+      "model": "claude-fable-5",
+      "output": 1822,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-07T08:03:30.000Z"
+     }
+    ],
+    "prompt_index": 1,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-07T08:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1079242,
+     "cache_write": 49775,
+     "cost_usd": 2.062206,
+     "input": 30318,
+     "output": 5405
+    },
+    "messages": [
+     {
+      "cache_read": 781288,
+      "cache_write": 49775,
+      "cost_usd": 1.4804620000000002,
+      "input": 7804,
+      "is_sidechain": false,
+      "message_id": "msg_2_1_0",
+      "model": "claude-fable-5-1",
+      "output": 4232,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-08T09:00:30.000Z"
+     },
+     {
+      "cache_read": 297954,
+      "cache_write": 0,
+      "cost_usd": 0.581744,
+      "input": 22514,
+      "is_sidechain": false,
+      "message_id": "msg_2_1_1",
+      "model": "claude-fable-5",
+      "output": 1173,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-08T09:01:30.000Z"
+     }
+    ],
+    "prompt_index": 2,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-08T09:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 372870,
+     "cache_write": 27572,
+     "cost_usd": 0.56759625,
+     "input": 28525,
+     "output": 791
+    },
+    "messages": [
+     {
+      "cache_read": 372870,
+      "cache_write": 27572,
+      "cost_usd": 0.56759625,
+      "input": 28525,
+      "is_sidechain": false,
+      "message_id": "msg_2_2_0",
+      "model": "claude-opus-4-8",
+      "output": 791,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-09T10:00:30.000Z"
+     }
+    ],
+    "prompt_index": 3,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-09T10:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 399253,
+     "cache_write": 11398,
+     "cost_usd": 0.0,
+     "input": 32928,
+     "output": 9404
+    },
+    "messages": [
+     {
+      "cache_read": 399253,
+      "cache_write": 11398,
+      "cost_usd": null,
+      "input": 32928,
+      "is_sidechain": false,
+      "message_id": "msg_2_3_0",
+      "model": "claude-invented-model-9",
+      "output": 9404,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-01T11:00:30.000Z"
+     }
+    ],
+    "prompt_index": 4,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-01T11:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1568877,
+     "cache_write": 72943,
+     "cost_usd": 2.1825182,
+     "input": 47898,
+     "output": 14898
+    },
+    "messages": [
+     {
+      "cache_read": 817655,
+      "cache_write": 38729,
+      "cost_usd": 1.99321,
+      "input": 34113,
+      "is_sidechain": false,
+      "message_id": "msg_2_4_0",
+      "model": "claude-fable-5",
+      "output": 4937,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-02T12:00:30.000Z"
+     },
+     {
+      "cache_read": 751222,
+      "cache_write": 34214,
+      "cost_usd": 0.1893082,
+      "input": 13785,
+      "is_sidechain": false,
+      "message_id": "msg_2_4_1",
+      "model": "claude-haiku-4-5-20251001",
+      "output": 9961,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-02T12:01:30.000Z"
+     }
+    ],
+    "prompt_index": 5,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-02T12:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1481106,
+     "cache_write": 48869,
+     "cost_usd": 1.8225052,
+     "input": 52118,
+     "output": 5622
+    },
+    "messages": [
+     {
+      "cache_read": 807586,
+      "cache_write": 35987,
+      "cost_usd": 0.6896452,
+      "input": 38668,
+      "is_sidechain": false,
+      "message_id": "msg_2_5_0",
+      "model": "claude-opus-5-5",
+      "output": 4278,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-03T13:00:30.000Z"
+     },
+     {
+      "cache_read": 673520,
+      "cache_write": 12882,
+      "cost_usd": 1.13286,
+      "input": 13450,
+      "is_sidechain": false,
+      "message_id": "msg_2_5_1",
+      "model": "claude-fable-5",
+      "output": 1344,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-03T13:01:30.000Z"
+     }
+    ],
+    "prompt_index": 6,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-03T13:00:30.000Z"
+   }
+  ],
+  "session": {
+   "by_model_cost": {
+    "claude-fable-5": 5.966027,
+    "claude-fable-5-1": 1.4804620000000002,
+    "claude-haiku-4-5-20251001": 0.1893082,
+    "claude-opus-4-8": 2.5374670000000004,
+    "claude-opus-5-5": 1.291852,
+    "claude-sonnet-5": 0.5031366
+   },
+   "host": "desktop",
+   "last": "2026-07-09T10:00:30.000Z",
+   "messages": 17,
+   "project": "C--work-demo-project-2",
+   "prompts": 6,
+   "provider": "claude",
+   "session_id": "00000000-0000-4000-8000-000000000002",
+   "started": "2026-07-01T11:00:30.000Z",
+   "subagent_messages": 5,
+   "total_cost_usd": 11.9682528
+  }
+ },
+ "/api/sessions/00000000-0000-4000-8000-000000000003": {
+  "prompts": [
+   {
+    "main": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "messages": [
+     {
+      "cache_read": 312766,
+      "cache_write": 7494,
+      "cost_usd": 0.34484519999999996,
+      "input": 33650,
+      "is_sidechain": true,
+      "message_id": "msg_sub_3_1_0",
+      "model": "claude-opus-5-5",
+      "output": 4387,
+      "provider": "claude",
+      "sidechain_key": "a31f00d",
+      "ts": "2026-07-02T09:30:00.000Z"
+     },
+     {
+      "cache_read": 461883,
+      "cache_write": 0,
+      "cost_usd": 0.09431529999999999,
+      "input": 9927,
+      "is_sidechain": true,
+      "message_id": "msg_sub_3_1_1",
+      "model": "claude-haiku-4-5-20251001",
+      "output": 7640,
+      "provider": "claude",
+      "sidechain_key": "a31f00d",
+      "ts": "2026-07-02T09:31:00.000Z"
+     },
+     {
+      "cache_read": 228467,
+      "cache_write": 54297,
+      "cost_usd": 0.37552589999999997,
+      "input": 19715,
+      "is_sidechain": true,
+      "message_id": "msg_sub_3_1_2",
+      "model": "claude-sonnet-5",
+      "output": 11587,
+      "provider": "claude",
+      "sidechain_key": "a31f00d",
+      "ts": "2026-07-02T09:32:00.000Z"
+     },
+     {
+      "cache_read": 438778,
+      "cache_write": 13546,
+      "cost_usd": 0.5105476,
+      "input": 20466,
+      "is_sidechain": true,
+      "message_id": "msg_sub_3_3_0",
+      "model": "claude-opus-5-5",
+      "output": 11628,
+      "provider": "claude",
+      "sidechain_key": "a33f00d",
+      "ts": "2026-07-04T11:30:00.000Z"
+     },
+     {
+      "cache_read": 95524,
+      "cache_write": 21862,
+      "cost_usd": 0.339187,
+      "input": 6867,
+      "is_sidechain": true,
+      "message_id": "msg_sub_3_3_1",
+      "model": "claude-opus-4-8",
+      "output": 2638,
+      "provider": "claude",
+      "sidechain_key": "a33f00d",
+      "ts": "2026-07-04T11:31:00.000Z"
+     },
+     {
+      "cache_read": 233580,
+      "cache_write": 0,
+      "cost_usd": 0.34853499999999993,
+      "input": 12804,
+      "is_sidechain": true,
+      "message_id": "msg_sub_3_3_2",
+      "model": "claude-fable-5-1",
+      "output": 3242,
+      "provider": "claude",
+      "sidechain_key": "a33f00d",
+      "ts": "2026-07-04T11:32:00.000Z"
+     },
+     {
+      "cache_read": 25557,
+      "cache_write": 23933,
+      "cost_usd": 0.1429539,
+      "input": 6212,
+      "is_sidechain": true,
+      "message_id": "msg_sub_3_5_0",
+      "model": "claude-sonnet-5",
+      "output": 3816,
+      "provider": "claude",
+      "sidechain_key": "a35f00d",
+      "ts": "2026-07-06T13:30:00.000Z"
+     },
+     {
+      "cache_read": 283606,
+      "cache_write": 0,
+      "cost_usd": 0.505853,
+      "input": 24600,
+      "is_sidechain": true,
+      "message_id": "msg_sub_3_5_1",
+      "model": "claude-opus-4-8",
+      "output": 9642,
+      "provider": "claude",
+      "sidechain_key": "a35f00d",
+      "ts": "2026-07-06T13:31:00.000Z"
+     }
+    ],
+    "prompt_index": 0,
+    "subagents": {
+     "cache_read": 2080161,
+     "cache_write": 121132,
+     "cost_usd": 2.6617629000000003,
+     "input": 134241,
+     "output": 54580
+    },
+    "ts_first": "2026-07-02T09:30:00.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1262436,
+     "cache_write": 11364,
+     "cost_usd": 1.1279086,
+     "input": 36920,
+     "output": 14216
+    },
+    "messages": [
+     {
+      "cache_read": 877508,
+      "cache_write": 11280,
+      "cost_usd": 0.885039,
+      "input": 21987,
+      "is_sidechain": false,
+      "message_id": "msg_3_0_0",
+      "model": "claude-opus-4-8",
+      "output": 8942,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-01T08:00:30.000Z"
+     },
+     {
+      "cache_read": 384928,
+      "cache_write": 84,
+      "cost_usd": 0.24286960000000002,
+      "input": 14933,
+      "is_sidechain": false,
+      "message_id": "msg_3_0_1",
+      "model": "claude-opus-5-5",
+      "output": 5274,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-01T08:01:30.000Z"
+     }
+    ],
+    "prompt_index": 1,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-01T08:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1251551,
+     "cache_write": 59702,
+     "cost_usd": 1.4915532500000002,
+     "input": 100927,
+     "output": 16869
+    },
+    "messages": [
+     {
+      "cache_read": 50578,
+      "cache_write": 41305,
+      "cost_usd": 0.790734,
+      "input": 34814,
+      "is_sidechain": false,
+      "message_id": "msg_3_1_0",
+      "model": "claude-opus-4-8",
+      "output": 7133,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-02T09:00:30.000Z"
+     },
+     {
+      "cache_read": 795022,
+      "cache_write": 0,
+      "cost_usd": null,
+      "input": 23649,
+      "is_sidechain": false,
+      "message_id": "msg_3_1_1",
+      "model": "<synthetic>",
+      "output": 7904,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-02T09:01:30.000Z"
+     },
+     {
+      "cache_read": 354825,
+      "cache_write": 0,
+      "cost_usd": 0.37762625,
+      "input": 24182,
+      "is_sidechain": false,
+      "message_id": "msg_3_1_2",
+      "model": "claude-fable-5-1",
+      "output": 942,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-02T09:02:30.000Z"
+     },
+     {
+      "cache_read": 51126,
+      "cache_write": 18397,
+      "cost_usd": 0.323193,
+      "input": 18282,
+      "is_sidechain": false,
+      "message_id": "msg_3_1_3",
+      "model": "claude-opus-4-8",
+      "output": 890,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-02T09:03:30.000Z"
+     }
+    ],
+    "prompt_index": 2,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-02T09:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1674932,
+     "cache_write": 28254,
+     "cost_usd": 1.8781403,
+     "input": 46292,
+     "output": 14095
+    },
+    "messages": [
+     {
+      "cache_read": 639554,
+      "cache_write": 26758,
+      "cost_usd": 0.5849148000000001,
+      "input": 23140,
+      "is_sidechain": false,
+      "message_id": "msg_3_2_0",
+      "model": "claude-opus-5-5",
+      "output": 7519,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-03T10:00:30.000Z"
+     },
+     {
+      "cache_read": 592188,
+      "cache_write": 0,
+      "cost_usd": 0.8740380000000001,
+      "input": 10665,
+      "is_sidechain": false,
+      "message_id": "msg_3_2_1",
+      "model": "claude-fable-5",
+      "output": 3504,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-03T10:01:30.000Z"
+     },
+     {
+      "cache_read": 443190,
+      "cache_write": 1496,
+      "cost_usd": 0.4191875,
+      "input": 12487,
+      "is_sidechain": false,
+      "message_id": "msg_3_2_2",
+      "model": "claude-fable-5-1",
+      "output": 3072,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-03T10:02:30.000Z"
+     }
+    ],
+    "prompt_index": 3,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-03T10:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 191573,
+     "cache_write": 11448,
+     "cost_usd": 0.0,
+     "input": 33204,
+     "output": 2917
+    },
+    "messages": [
+     {
+      "cache_read": 191573,
+      "cache_write": 11448,
+      "cost_usd": null,
+      "input": 33204,
+      "is_sidechain": false,
+      "message_id": "msg_3_3_0",
+      "model": "<synthetic>",
+      "output": 2917,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-04T11:00:30.000Z"
+     }
+    ],
+    "prompt_index": 4,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-04T11:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 1473934,
+     "cache_write": 43277,
+     "cost_usd": 1.9914984,
+     "input": 50149,
+     "output": 22281
+    },
+    "messages": [
+     {
+      "cache_read": 587408,
+      "cache_write": 8997,
+      "cost_usd": 1.576938,
+      "input": 28239,
+      "is_sidechain": false,
+      "message_id": "msg_3_4_0",
+      "model": "claude-fable-5",
+      "output": 10544,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-05T12:00:30.000Z"
+     },
+     {
+      "cache_read": 463187,
+      "cache_write": 34280,
+      "cost_usd": 0.41456040000000005,
+      "input": 17927,
+      "is_sidechain": false,
+      "message_id": "msg_3_4_1",
+      "model": "claude-opus-5-5",
+      "output": 3136,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-05T12:01:30.000Z"
+     },
+     {
+      "cache_read": 423339,
+      "cache_write": 0,
+      "cost_usd": null,
+      "input": 3983,
+      "is_sidechain": false,
+      "message_id": "msg_3_4_2",
+      "model": "<synthetic>",
+      "output": 8601,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-05T12:02:30.000Z"
+     }
+    ],
+    "prompt_index": 5,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-05T12:00:30.000Z"
+   },
+   {
+    "main": {
+     "cache_read": 31950,
+     "cache_write": 6877,
+     "cost_usd": 0.0,
+     "input": 4797,
+     "output": 7301
+    },
+    "messages": [
+     {
+      "cache_read": 31950,
+      "cache_write": 6877,
+      "cost_usd": null,
+      "input": 4797,
+      "is_sidechain": false,
+      "message_id": "msg_3_5_0",
+      "model": "claude-invented-model-9",
+      "output": 7301,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2026-07-06T13:00:30.000Z"
+     }
+    ],
+    "prompt_index": 6,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2026-07-06T13:00:30.000Z"
+   }
+  ],
+  "session": {
+   "by_model_cost": {
+    "claude-fable-5": 2.450976,
+    "claude-fable-5-1": 1.14534875,
+    "claude-haiku-4-5-20251001": 0.09431529999999999,
+    "claude-opus-4-8": 2.8440060000000003,
+    "claude-opus-5-5": 2.0977376000000003,
+    "claude-sonnet-5": 0.5184797999999999
+   },
+   "host": "laptop",
+   "last": "2026-07-06T13:31:00.000Z",
+   "messages": 22,
+   "project": "C--work-demo-project-3",
+   "prompts": 6,
+   "provider": "claude",
+   "session_id": "00000000-0000-4000-8000-000000000003",
+   "started": "2026-07-01T08:00:30.000Z",
+   "subagent_messages": 8,
+   "total_cost_usd": 9.150863450000001
+  }
+ },
+ "/api/sessions/60ce41f3-dfbc-472e-8297-629a073f21dd": {
+  "prompts": [
+   {
+    "main": {
+     "cache_read": 47968,
+     "cache_write": 643716,
+     "cost_usd": 7.091668,
+     "input": 13557,
+     "output": 10437
+    },
+    "messages": [
+     {
+      "cache_read": 23938,
+      "cache_write": 7355,
+      "cost_usd": 0.603628,
+      "input": 12864,
+      "is_sidechain": false,
+      "message_id": "msg_gPu7cuJN9vuFN2yz0ipSpXfu",
+      "model": "claude-fable-5",
+      "output": 6079,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2025-05-08T10:20:25.886Z"
+     },
+     {
+      "cache_read": 0,
+      "cache_write": 0,
+      "cost_usd": null,
+      "input": 0,
+      "is_sidechain": false,
+      "message_id": "62d4d485-c575-4c0f-8dce-0151b1752949",
+      "model": "<synthetic>",
+      "output": 0,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2025-05-13T14:14:06.136Z"
+     },
+     {
+      "cache_read": 24030,
+      "cache_write": 636361,
+      "cost_usd": 6.488040000000001,
+      "input": 693,
+      "is_sidechain": false,
+      "message_id": "msg_zn24IV6HQSz799KChwAcWYyR",
+      "model": "claude-opus-4-8",
+      "output": 4358,
+      "provider": "claude",
+      "sidechain_key": null,
+      "ts": "2025-05-13T14:15:14.381Z"
+     }
+    ],
+    "prompt_index": 1,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "ts_first": "2025-05-08T10:20:25.886Z"
+   }
+  ],
+  "session": {
+   "by_model_cost": {
+    "claude-fable-5": 0.603628,
+    "claude-opus-4-8": 6.488040000000001
+   },
+   "host": "desktop",
+   "last": "2025-05-13T14:15:14.381Z",
+   "messages": 3,
+   "project": "C--work-demo-app",
+   "prompts": 1,
+   "provider": "claude",
+   "session_id": "60ce41f3-dfbc-472e-8297-629a073f21dd",
+   "started": "2025-05-08T10:20:25.886Z",
+   "subagent_messages": 0,
+   "total_cost_usd": 7.091668
+  }
+ },
+ "/api/sessions/b296a0b0-0a5d-4be5-8037-6911bddbffdc": {
+  "prompts": [
+   {
+    "main": {
+     "cache_read": 0,
+     "cache_write": 0,
+     "cost_usd": 0.0,
+     "input": 0,
+     "output": 0
+    },
+    "messages": [
+     {
+      "cache_read": 0,
+      "cache_write": 32396,
+      "cost_usd": 0.245245,
+      "input": 8544,
+      "is_sidechain": true,
+      "message_id": "msg_xFSE8wTM8jPvyZ95JE3Jt2Ux",
+      "model": "claude-opus-4-8",
+      "output": 2,
+      "provider": "claude",
+      "sidechain_key": "a1097c2b70a1dff39",
+      "ts": "2025-05-29T08:24:31.639Z"
+     }
+    ],
+    "prompt_index": 1,
+    "subagents": {
+     "cache_read": 0,
+     "cache_write": 32396,
+     "cost_usd": 0.245245,
+     "input": 8544,
+     "output": 2
+    },
+    "ts_first": "2025-05-29T08:24:31.639Z"
+   }
+  ],
+  "session": {
+   "by_model_cost": {
+    "claude-opus-4-8": 0.245245
+   },
+   "host": "desktop",
+   "last": "2025-05-29T08:24:31.639Z",
+   "messages": 1,
+   "project": "C--work-demo-app",
+   "prompts": 1,
+   "provider": "claude",
+   "session_id": "b296a0b0-0a5d-4be5-8037-6911bddbffdc",
+   "started": "2025-05-29T08:24:31.639Z",
+   "subagent_messages": 1,
+   "total_cost_usd": 0.245245
+  }
+ },
+ "/api/spend/daily": {
+  "days": [
+   {
+    "by_model": {
+     "claude-fable-5": 0.603628
+    },
+    "date": "2025-05-08",
+    "total_usd": 0.603628
+   },
+   {
+    "by_model": {
+     "claude-opus-4-8": 6.488040000000001
+    },
+    "date": "2025-05-13",
+    "total_usd": 6.488040000000001
+   },
+   {
+    "by_model": {
+     "claude-opus-4-8": 0.245245
+    },
+    "date": "2025-05-29",
+    "total_usd": 0.245245
+   },
+   {
+    "by_model": {
+     "claude-fable-5": 1.2360520000000002,
+     "claude-fable-5-1": 0.77456475,
+     "claude-opus-4-8": 1.35226,
+     "claude-opus-5-5": 0.8450764000000001,
+     "claude-sonnet-5": 0.0976202
+    },
+    "date": "2026-07-01",
+    "total_usd": 4.30557335
+   },
+   {
+    "by_model": {
+     "claude-fable-5": 3.346818,
+     "claude-fable-5-1": 1.9592935000000002,
+     "claude-haiku-4-5-20251001": 0.46397770000000005,
+     "claude-opus-4-8": 1.1139270000000001,
+     "claude-opus-5-5": 0.34484519999999996,
+     "claude-sonnet-5": 0.5454015
+    },
+    "date": "2026-07-02",
+    "total_usd": 7.7742629
+   },
+   {
+    "by_model": {
+     "claude-fable-5": 2.403815,
+     "claude-fable-5-1": 0.4191875,
+     "claude-opus-4-8": 0.946063,
+     "claude-opus-5-5": 1.2745600000000001
+    },
+    "date": "2026-07-03",
+    "total_usd": 5.0436255
+   },
+   {
+    "by_model": {
+     "claude-fable-5-1": 0.34853499999999993,
+     "claude-haiku-4-5-20251001": 0.1549692,
+     "claude-opus-4-8": 1.9554665,
+     "claude-opus-5-5": 0.5105476,
+     "claude-sonnet-5": 0.16637659999999999
+    },
+    "date": "2026-07-04",
+    "total_usd": 3.1358949
+   },
+   {
+    "by_model": {
+     "claude-fable-5": 4.750182000000001,
+     "claude-haiku-4-5-20251001": 0.34127704999999997,
+     "claude-opus-5-5": 0.6573474000000001,
+     "claude-sonnet-5": 0.1689359
+    },
+    "date": "2026-07-05",
+    "total_usd": 5.917742350000001
+   },
+   {
+    "by_model": {
+     "claude-fable-5": 1.684032,
+     "claude-fable-5-1": 1.8926020000000001,
+     "claude-opus-4-8": 1.1614710000000001,
+     "claude-opus-5-5": 0.300159,
+     "claude-sonnet-5": 0.7688739
+    },
+    "date": "2026-07-06",
+    "total_usd": 5.8071379
+   },
+   {
+    "by_model": {
+     "claude-fable-5": 3.090499,
+     "claude-fable-5-1": 0.3907315,
+     "claude-opus-4-8": 0.55658675,
+     "claude-opus-5-5": 0.9520668,
+     "claude-sonnet-5": 0.32350500000000004
+    },
+    "date": "2026-07-07",
+    "total_usd": 5.31338905
+   },
+   {
+    "by_model": {
+     "claude-fable-5": 0.581744,
+     "claude-fable-5-1": 1.4804620000000002,
+     "claude-opus-5-5": 0.25776219999999994,
+     "claude-sonnet-5": 0.1796316
+    },
+    "date": "2026-07-08",
+    "total_usd": 2.4995998000000004
+   },
+   {
+    "by_model": {
+     "claude-fable-5-1": 0.98642125,
+     "claude-haiku-4-5-20251001": 0.18467435000000001,
+     "claude-opus-4-8": 0.77200275,
+     "claude-opus-5-5": 1.295361,
+     "claude-sonnet-5": 0.2196746
+    },
+    "date": "2026-07-09",
+    "total_usd": 3.45813395
+   }
+  ],
+  "projection_method": "period_average_daily_total_usd_x_30",
+  "projection_month_usd": 126.48068175
+ },
+ "/api/subagents": {
+  "grand_total_usd": 12.961912049999999,
+  "subagents": [
+   {
+    "cache_read": 654989,
+    "cache_write": 39661,
+    "cost_usd": 1.5816672500000002,
+    "input": 34132,
+    "messages": 1,
+    "model": "claude-fable-5-1",
+    "output": 7749,
+    "session_id": "00000000-0000-4000-8000-000000000000",
+    "sidechain_key": "a01f00d"
+   },
+   {
+    "cache_read": 14565,
+    "cache_write": 0,
+    "cost_usd": 0.0530765,
+    "input": 32705,
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 3783,
+    "session_id": "00000000-0000-4000-8000-000000000000",
+    "sidechain_key": "a01f00d"
+   },
+   {
+    "cache_read": 257998,
+    "cache_write": 4214,
+    "cost_usd": 0.16987560000000002,
+    "input": 21105,
+    "messages": 1,
+    "model": "claude-sonnet-5",
+    "output": 5921,
+    "session_id": "00000000-0000-4000-8000-000000000000",
+    "sidechain_key": "a01f00d"
+   },
+   {
+    "cache_read": 319312,
+    "cache_write": 38030,
+    "cost_usd": 0.1549692,
+    "input": 158,
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 9364,
+    "session_id": "00000000-0000-4000-8000-000000000000",
+    "sidechain_key": "a03f00d"
+   },
+   {
+    "cache_read": 262155,
+    "cache_write": 27103,
+    "cost_usd": 1.02045625,
+    "input": 5159,
+    "messages": 1,
+    "model": "claude-fable-5-1",
+    "output": 9387,
+    "session_id": "00000000-0000-4000-8000-000000000000",
+    "sidechain_key": "a05f00d"
+   },
+   {
+    "cache_read": 339571,
+    "cache_write": 24521,
+    "cost_usd": 0.655618,
+    "input": 31790,
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 4439,
+    "session_id": "00000000-0000-4000-8000-000000000000",
+    "sidechain_key": "a05f00d"
+   },
+   {
+    "cache_read": 0,
+    "cache_write": 32396,
+    "cost_usd": 0.245245,
+    "input": 8544,
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 2,
+    "session_id": "b296a0b0-0a5d-4be5-8037-6911bddbffdc",
+    "sidechain_key": "a1097c2b70a1dff39"
+   },
+   {
+    "cache_read": 777001,
+    "cache_write": 27353,
+    "cost_usd": 1.8972985000000002,
+    "input": 38078,
+    "messages": 1,
+    "model": "claude-fable-5",
+    "output": 5010,
+    "session_id": "00000000-0000-4000-8000-000000000001",
+    "sidechain_key": "a11f00d"
+   },
+   {
+    "cache_read": 857371,
+    "cache_write": 9230,
+    "cost_usd": 0.1673406,
+    "input": 38644,
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 5304,
+    "session_id": "00000000-0000-4000-8000-000000000001",
+    "sidechain_key": "a11f00d"
+   },
+   {
+    "cache_read": 355566,
+    "cache_write": 0,
+    "cost_usd": 0.3907315,
+    "input": 3464,
+    "messages": 1,
+    "model": "claude-fable-5-1",
+    "output": 5344,
+    "session_id": "00000000-0000-4000-8000-000000000001",
+    "sidechain_key": "a13f00d"
+   },
+   {
+    "cache_read": 66685,
+    "cache_write": 0,
+    "cost_usd": 0.156853,
+    "input": 31659,
+    "messages": 1,
+    "model": "claude-opus-5-5",
+    "output": 844,
+    "session_id": "00000000-0000-4000-8000-000000000001",
+    "sidechain_key": "a13f00d"
+   },
+   {
+    "cache_read": 680996,
+    "cache_write": 35650,
+    "cost_usd": 0.18467435000000001,
+    "input": 15098,
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 7519,
+    "session_id": "00000000-0000-4000-8000-000000000001",
+    "sidechain_key": "a15f00d"
+   },
+   {
+    "cache_read": 740385,
+    "cache_write": 72206,
+    "cost_usd": 1.042545,
+    "input": 63078,
+    "messages": 2,
+    "model": "claude-opus-5-5",
+    "output": 18130,
+    "session_id": "00000000-0000-4000-8000-000000000001",
+    "sidechain_key": "a15f00d"
+   },
+   {
+    "cache_read": 449078,
+    "cache_write": 0,
+    "cost_usd": 0.1796316,
+    "input": 39873,
+    "messages": 1,
+    "model": "claude-sonnet-5",
+    "output": 1007,
+    "session_id": "00000000-0000-4000-8000-000000000002",
+    "sidechain_key": "a21f00d"
+   },
+   {
+    "cache_read": 380512,
+    "cache_write": 7391,
+    "cost_usd": 1.2360520000000002,
+    "input": 30207,
+    "messages": 1,
+    "model": "claude-fable-5",
+    "output": 9106,
+    "session_id": "00000000-0000-4000-8000-000000000002",
+    "sidechain_key": "a23f00d"
+   },
+   {
+    "cache_read": 368562,
+    "cache_write": 11371,
+    "cost_usd": 0.467221,
+    "input": 10241,
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 4721,
+    "session_id": "00000000-0000-4000-8000-000000000002",
+    "sidechain_key": "a23f00d"
+   },
+   {
+    "cache_read": 876909,
+    "cache_write": 51847,
+    "cost_usd": 0.6022068,
+    "input": 2475,
+    "messages": 1,
+    "model": "claude-opus-5-5",
+    "output": 3542,
+    "session_id": "00000000-0000-4000-8000-000000000002",
+    "sidechain_key": "a23f00d"
+   },
+   {
+    "cache_read": 562466,
+    "cache_write": 47643,
+    "cost_usd": 0.946063,
+    "input": 8125,
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 5911,
+    "session_id": "00000000-0000-4000-8000-000000000002",
+    "sidechain_key": "a25f00d"
+   },
+   {
+    "cache_read": 461883,
+    "cache_write": 0,
+    "cost_usd": 0.09431529999999999,
+    "input": 9927,
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 7640,
+    "session_id": "00000000-0000-4000-8000-000000000003",
+    "sidechain_key": "a31f00d"
+   },
+   {
+    "cache_read": 312766,
+    "cache_write": 7494,
+    "cost_usd": 0.34484519999999996,
+    "input": 33650,
+    "messages": 1,
+    "model": "claude-opus-5-5",
+    "output": 4387,
+    "session_id": "00000000-0000-4000-8000-000000000003",
+    "sidechain_key": "a31f00d"
+   },
+   {
+    "cache_read": 228467,
+    "cache_write": 54297,
+    "cost_usd": 0.37552589999999997,
+    "input": 19715,
+    "messages": 1,
+    "model": "claude-sonnet-5",
+    "output": 11587,
+    "session_id": "00000000-0000-4000-8000-000000000003",
+    "sidechain_key": "a31f00d"
+   },
+   {
+    "cache_read": 233580,
+    "cache_write": 0,
+    "cost_usd": 0.34853499999999993,
+    "input": 12804,
+    "messages": 1,
+    "model": "claude-fable-5-1",
+    "output": 3242,
+    "session_id": "00000000-0000-4000-8000-000000000003",
+    "sidechain_key": "a33f00d"
+   },
+   {
+    "cache_read": 95524,
+    "cache_write": 21862,
+    "cost_usd": 0.339187,
+    "input": 6867,
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 2638,
+    "session_id": "00000000-0000-4000-8000-000000000003",
+    "sidechain_key": "a33f00d"
+   },
+   {
+    "cache_read": 438778,
+    "cache_write": 13546,
+    "cost_usd": 0.5105476,
+    "input": 20466,
+    "messages": 1,
+    "model": "claude-opus-5-5",
+    "output": 11628,
+    "session_id": "00000000-0000-4000-8000-000000000003",
+    "sidechain_key": "a33f00d"
+   },
+   {
+    "cache_read": 283606,
+    "cache_write": 0,
+    "cost_usd": 0.505853,
+    "input": 24600,
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 9642,
+    "session_id": "00000000-0000-4000-8000-000000000003",
+    "sidechain_key": "a35f00d"
+   },
+   {
+    "cache_read": 25557,
+    "cache_write": 23933,
+    "cost_usd": 0.1429539,
+    "input": 6212,
+    "messages": 1,
+    "model": "claude-sonnet-5",
+    "output": 3816,
+    "session_id": "00000000-0000-4000-8000-000000000003",
+    "sidechain_key": "a35f00d"
+   }
+  ],
+  "totals_by_model": [
+   {
+    "cache_read": 1157513,
+    "cache_write": 34744,
+    "cost_usd": 3.1333504999999997,
+    "input": 68285,
+    "model": "claude-fable-5",
+    "output": 14116
+   },
+   {
+    "cache_read": 1506290,
+    "cache_write": 66764,
+    "cost_usd": 3.3413899999999996,
+    "input": 55559,
+    "model": "claude-fable-5-1",
+    "output": 25722
+   },
+   {
+    "cache_read": 2334127,
+    "cache_write": 82910,
+    "cost_usd": 0.57831595,
+    "input": 96532,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 33610
+   },
+   {
+    "cache_read": 1649729,
+    "cache_write": 137793,
+    "cost_usd": 2.5690470000000003,
+    "input": 90167,
+    "model": "claude-opus-4-8",
+    "output": 27353
+   },
+   {
+    "cache_read": 2435523,
+    "cache_write": 145093,
+    "cost_usd": 2.4886776,
+    "input": 151328,
+    "model": "claude-opus-5-5",
+    "output": 38531
+   },
+   {
+    "cache_read": 961100,
+    "cache_write": 82444,
+    "cost_usd": 0.851131,
+    "input": 86905,
+    "model": "claude-sonnet-5",
+    "output": 22331
+   }
+  ]
+ },
+ "/api/summary": {
+  "by_host": [
+   {
+    "cache_read": 15582638,
+    "cache_write": 1499383,
+    "cost_usd": 30.16020535,
+    "host": "desktop",
+    "input": 765676,
+    "output": 213280
+   },
+   {
+    "cache_read": 19152017,
+    "cache_write": 733781,
+    "cost_usd": 20.432067350000008,
+    "host": "laptop",
+    "input": 913184,
+    "output": 291870
+   }
+  ],
+  "by_model": [
+   {
+    "cache_read": 2467352,
+    "cache_write": 87743,
+    "cost_usd": null,
+    "input": 94314,
+    "model": "<synthetic>",
+    "output": 31510
+   },
+   {
+    "cache_read": 6147540,
+    "cache_write": 246142,
+    "cost_usd": 15.62771,
+    "input": 340252,
+    "model": "claude-fable-5",
+    "output": 72596
+   },
+   {
+    "cache_read": 4679240,
+    "cache_write": 139370,
+    "cost_usd": 6.7996775,
+    "input": 170084,
+    "model": "claude-fable-5-1",
+    "output": 56118
+   },
+   {
+    "cache_read": 4072268,
+    "cache_write": 174183,
+    "cost_usd": 1.0329383,
+    "input": 142398,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 58107
+   },
+   {
+    "cache_read": 2125464,
+    "cache_write": 157376,
+    "cost_usd": null,
+    "input": 117101,
+    "model": "claude-invented-model-9",
+    "output": 59848
+   },
+   {
+    "cache_read": 4825454,
+    "cache_write": 940057,
+    "cost_usd": 13.291101999999999,
+    "input": 259555,
+    "model": "claude-opus-4-8",
+    "output": 76314
+   },
+   {
+    "cache_read": 7353988,
+    "cache_write": 255472,
+    "cost_usd": 5.4077976,
+    "input": 338021,
+    "model": "claude-opus-5-5",
+    "output": 88589
+   },
+   {
+    "cache_read": 3063349,
+    "cache_write": 232821,
+    "cost_usd": 2.2087513000000003,
+    "input": 217135,
+    "model": "claude-sonnet-5",
+    "output": 62068
+   }
+  ],
+  "by_provider": [
+   {
+    "cache_read": 34734655,
+    "cache_write": 2233164,
+    "cost_usd": 50.5922727,
+    "input": 1678860,
+    "output": 505150,
+    "provider": "claude",
+    "reasoning": 0
+   }
+  ],
+  "period": {
+   "from": null,
+   "to": null
+  },
+  "total_cost_usd": 44.3679767,
+  "unpriced_models": [
+   "claude-invented-model-9"
+  ]
+ },
+ "/api/summary?from=2026-07-03&to=2026-07-06": {
+  "by_host": [
+   {
+    "cache_read": 6177461,
+    "cache_write": 335414,
+    "cost_usd": 9.465917750000001,
+    "host": "desktop",
+    "input": 277532,
+    "output": 87686
+   },
+   {
+    "cache_read": 10751753,
+    "cache_write": 405475,
+    "cost_usd": 10.438482900000002,
+    "host": "laptop",
+    "input": 422409,
+    "output": 163755
+   }
+  ],
+  "by_model": [
+   {
+    "cache_read": 1181348,
+    "cache_write": 48431,
+    "cost_usd": null,
+    "input": 68774,
+    "model": "<synthetic>",
+    "output": 23054
+   },
+   {
+    "cache_read": 3932474,
+    "cache_write": 90626,
+    "cost_usd": 8.211689,
+    "input": 143883,
+    "model": "claude-fable-5",
+    "output": 35473
+   },
+   {
+    "cache_read": 1358308,
+    "cache_write": 28599,
+    "cost_usd": 2.6304045,
+    "input": 67710,
+    "model": "claude-fable-5-1",
+    "output": 23595
+   },
+   {
+    "cache_read": 1855875,
+    "cache_write": 86369,
+    "cost_usd": 0.42018625,
+    "input": 44283,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 22403
+   },
+   {
+    "cache_read": 985676,
+    "cache_write": 131080,
+    "cost_usd": null,
+    "input": 57090,
+    "model": "claude-invented-model-9",
+    "output": 40831
+   },
+   {
+    "cache_read": 2879551,
+    "cache_write": 132006,
+    "cost_usd": 3.5865705,
+    "input": 113437,
+    "model": "claude-opus-4-8",
+    "output": 35729
+   },
+   {
+    "cache_read": 3503015,
+    "cache_write": 110571,
+    "cost_usd": 2.132286,
+    "input": 128382,
+    "model": "claude-opus-5-5",
+    "output": 36533
+   },
+   {
+    "cache_read": 1232967,
+    "cache_write": 113207,
+    "cost_usd": 1.1041864000000001,
+    "input": 76382,
+    "model": "claude-sonnet-5",
+    "output": 33823
+   }
+  ],
+  "by_provider": [
+   {
+    "cache_read": 16929214,
+    "cache_write": 740889,
+    "cost_usd": 19.904400649999996,
+    "input": 699941,
+    "output": 251441,
+    "provider": "claude",
+    "reasoning": 0
+   }
+  ],
+  "period": {
+   "from": "2026-07-03",
+   "to": "2026-07-06"
+  },
+  "total_cost_usd": 18.085322650000002,
+  "unpriced_models": [
+   "claude-invented-model-9"
+  ]
+ },
+ "/api/summary?host=desktop": {
+  "by_host": [
+   {
+    "cache_read": 15582638,
+    "cache_write": 1499383,
+    "cost_usd": 30.16020535,
+    "host": "desktop",
+    "input": 765676,
+    "output": 213280
+   }
+  ],
+  "by_model": [
+   {
+    "cache_read": 1057418,
+    "cache_write": 76295,
+    "cost_usd": null,
+    "input": 33478,
+    "model": "<synthetic>",
+    "output": 12088
+   },
+   {
+    "cache_read": 3840885,
+    "cache_write": 173953,
+    "cost_usd": 9.509717499999999,
+    "input": 215347,
+    "model": "claude-fable-5",
+    "output": 42096
+   },
+   {
+    "cache_read": 1999571,
+    "cache_write": 116539,
+    "cost_usd": 3.8616502500000003,
+    "input": 54418,
+    "model": "claude-fable-5-1",
+    "output": 33889
+   },
+   {
+    "cache_read": 1392826,
+    "cache_write": 90194,
+    "cost_usd": 0.4126716,
+    "input": 73248,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 29909
+   },
+   {
+    "cache_read": 1139788,
+    "cache_write": 26296,
+    "cost_usd": null,
+    "input": 60011,
+    "model": "claude-invented-model-9",
+    "output": 19017
+   },
+   {
+    "cache_read": 2624260,
+    "cache_write": 809233,
+    "cost_usd": 10.1326525,
+    "input": 135515,
+    "model": "claude-opus-4-8",
+    "output": 37627
+   },
+   {
+    "cache_read": 2000830,
+    "cache_write": 87834,
+    "cost_usd": 1.246743,
+    "input": 57558,
+    "model": "claude-opus-5-5",
+    "output": 13513
+   },
+   {
+    "cache_read": 1527060,
+    "cache_write": 119039,
+    "cost_usd": 1.0481625,
+    "input": 136101,
+    "model": "claude-sonnet-5",
+    "output": 25141
+   }
+  ],
+  "by_provider": [
+   {
+    "cache_read": 15582638,
+    "cache_write": 1499383,
+    "cost_usd": 30.16020535,
+    "input": 765676,
+    "output": 213280,
+    "provider": "claude",
+    "reasoning": 0
+   }
+  ],
+  "period": {
+   "from": null,
+   "to": null
+  },
+  "total_cost_usd": 26.21159735,
+  "unpriced_models": [
+   "claude-invented-model-9"
+  ]
+ },
+ "ccdata": {
+  "allDays": [
+   {
+    "byHost": {
+     "desktop": 0.603628
+    },
+    "byModel": {
+     "claude-fable-5": 0.603628
+    },
+    "byModelTok": {
+     "claude-fable-5": [
+      12864,
+      6079,
+      23938,
+      7355
+     ]
+    },
+    "date": "2025-05-08",
+    "rawTok": {
+     "cache_read": 167566,
+     "cache_write": 51485,
+     "input": 90048,
+     "output": 42553
+    },
+    "total": 0.603628
+   },
+   {
+    "byHost": {
+     "desktop": 6.48804
+    },
+    "byModel": {
+     "claude-opus-4-8": 6.48804
+    },
+    "byModelTok": {
+     "claude-opus-4-8": [
+      693,
+      4358,
+      24030,
+      636361
+     ]
+    },
+    "date": "2025-05-13",
+    "rawTok": {
+     "cache_read": 24030,
+     "cache_write": 636361,
+     "input": 693,
+     "output": 4358
+    },
+    "total": 6.48804
+   },
+   {
+    "byHost": {
+     "desktop": 0.245245
+    },
+    "byModel": {
+     "claude-opus-4-8": 0.245245
+    },
+    "byModelTok": {
+     "claude-opus-4-8": [
+      8544,
+      2,
+      0,
+      32396
+     ]
+    },
+    "date": "2025-05-29",
+    "rawTok": {
+     "cache_read": 0,
+     "cache_write": 32396,
+     "input": 8544,
+     "output": 2
+    },
+    "total": 0.245245
+   },
+   {
+    "byHost": {
+     "desktop": 3.177665,
+     "laptop": 1.127909
+    },
+    "byModel": {
+     "claude-fable-5": 1.236052,
+     "claude-fable-5-1": 0.774565,
+     "claude-opus-4-8": 1.35226,
+     "claude-opus-5-5": 0.845076,
+     "claude-sonnet-5": 0.09762
+    },
+    "byModelTok": {
+     "claude-fable-5": [
+      30207,
+      9106,
+      380512,
+      7391
+     ],
+     "claude-fable-5-1": [
+      7323,
+      12521,
+      301139,
+      0
+     ],
+     "claude-invented-model-9": [
+      60011,
+      19017,
+      1139788,
+      26296
+     ],
+     "claude-opus-4-8": [
+      32228,
+      13663,
+      1246070,
+      22651
+     ],
+     "claude-opus-5-5": [
+      17408,
+      8816,
+      1261837,
+      51931
+     ],
+     "claude-sonnet-5": [
+      26203,
+      2532,
+      99471,
+      0
+     ]
+    },
+    "date": "2026-07-01",
+    "rawTok": {
+     "cache_read": 4729956,
+     "cache_write": 108269,
+     "input": 180703,
+     "output": 77399
+    },
+    "total": 4.305573
+   },
+   {
+    "byHost": {
+     "desktop": 5.468023,
+     "laptop": 2.30624
+    },
+    "byModel": {
+     "claude-fable-5": 3.346818,
+     "claude-fable-5-1": 1.959294,
+     "claude-haiku-4-5-20251001": 0.463978,
+     "claude-opus-4-8": 1.113927,
+     "claude-opus-5-5": 0.344845,
+     "claude-sonnet-5": 0.545401
+    },
+    "byModelTok": {
+     "claude-fable-5": [
+      48416,
+      7501,
+      1091573,
+      79152
+     ],
+     "claude-fable-5-1": [
+      58314,
+      8691,
+      1009814,
+      39661
+     ],
+     "claude-haiku-4-5-20251001": [
+      83017,
+      28185,
+      1535397,
+      52164
+     ],
+     "claude-opus-4-8": [
+      53096,
+      8023,
+      101704,
+      59702
+     ],
+     "claude-opus-5-5": [
+      33650,
+      4387,
+      312766,
+      7494
+     ],
+     "claude-sonnet-5": [
+      40820,
+      17508,
+      486465,
+      58511
+     ]
+    },
+    "date": "2026-07-02",
+    "rawTok": {
+     "cache_read": 4896024,
+     "cache_write": 355939,
+     "input": 378727,
+     "output": 86675
+    },
+    "total": 7.774263
+   },
+   {
+    "byHost": {
+     "desktop": 3.165485,
+     "laptop": 1.87814
+    },
+    "byModel": {
+     "claude-fable-5": 2.403815,
+     "claude-fable-5-1": 0.419187,
+     "claude-opus-4-8": 0.946063,
+     "claude-opus-5-5": 1.27456
+    },
+    "byModelTok": {
+     "claude-fable-5": [
+      52396,
+      5964,
+      1324015,
+      12882
+     ],
+     "claude-fable-5-1": [
+      12487,
+      3072,
+      443190,
+      1496
+     ],
+     "claude-opus-4-8": [
+      8125,
+      5911,
+      562466,
+      47643
+     ],
+     "claude-opus-5-5": [
+      61808,
+      11797,
+      1447140,
+      62745
+     ]
+    },
+    "date": "2026-07-03",
+    "rawTok": {
+     "cache_read": 5027587,
+     "cache_write": 162249,
+     "input": 185971,
+     "output": 32540
+    },
+    "total": 5.043625
+   },
+   {
+    "byHost": {
+     "desktop": 0.951392,
+     "laptop": 2.184503
+    },
+    "byModel": {
+     "claude-fable-5-1": 0.348535,
+     "claude-haiku-4-5-20251001": 0.154969,
+     "claude-opus-4-8": 1.955466,
+     "claude-opus-5-5": 0.510548,
+     "claude-sonnet-5": 0.166377
+    },
+    "byModelTok": {
+     "claude-fable-5-1": [
+      12804,
+      3242,
+      233580,
+      0
+     ],
+     "claude-haiku-4-5-20251001": [
+      158,
+      9364,
+      319312,
+      38030
+     ],
+     "claude-invented-model-9": [
+      495,
+      8670,
+      27180,
+      30076
+     ],
+     "claude-opus-4-8": [
+      48922,
+      15737,
+      1693908,
+      59842
+     ],
+     "claude-opus-5-5": [
+      20466,
+      11628,
+      438778,
+      13546
+     ],
+     "claude-sonnet-5": [
+      4746,
+      6527,
+      458073,
+      0
+     ]
+    },
+    "date": "2026-07-04",
+    "rawTok": {
+     "cache_read": 3170831,
+     "cache_write": 141494,
+     "input": 87591,
+     "output": 55168
+    },
+    "total": 3.135895
+   },
+   {
+    "byHost": {
+     "desktop": 1.687668,
+     "laptop": 4.230074
+    },
+    "byModel": {
+     "claude-fable-5": 4.750182,
+     "claude-haiku-4-5-20251001": 0.341277,
+     "claude-opus-5-5": 0.657347,
+     "claude-sonnet-5": 0.168936
+    },
+    "byModelTok": {
+     "claude-fable-5": [
+      84271,
+      18452,
+      1738197,
+      68306
+     ],
+     "claude-haiku-4-5-20251001": [
+      44125,
+      13039,
+      1536563,
+      48339
+     ],
+     "claude-invented-model-9": [
+      35659,
+      15705,
+      647321,
+      71798
+     ],
+     "claude-opus-5-5": [
+      34342,
+      8829,
+      779522,
+      34280
+     ],
+     "claude-sonnet-5": [
+      19566,
+      2737,
+      19837,
+      33947
+     ]
+    },
+    "date": "2026-07-05",
+    "rawTok": {
+     "cache_read": 5308848,
+     "cache_write": 265667,
+     "input": 246202,
+     "output": 68529
+    },
+    "total": 5.917742
+   },
+   {
+    "byHost": {
+     "desktop": 3.661372,
+     "laptop": 2.145765
+    },
+    "byModel": {
+     "claude-fable-5": 1.684032,
+     "claude-fable-5-1": 1.892602,
+     "claude-opus-4-8": 1.161471,
+     "claude-opus-5-5": 0.300159,
+     "claude-sonnet-5": 0.768874
+    },
+    "byModelTok": {
+     "claude-fable-5": [
+      7216,
+      11057,
+      870262,
+      9438
+     ],
+     "claude-fable-5-1": [
+      42419,
+      17281,
+      681538,
+      27103
+     ],
+     "claude-invented-model-9": [
+      20936,
+      16456,
+      311175,
+      29206
+     ],
+     "claude-opus-4-8": [
+      56390,
+      14081,
+      623177,
+      24521
+     ],
+     "claude-opus-5-5": [
+      11766,
+      4279,
+      837575,
+      0
+     ],
+     "claude-sonnet-5": [
+      52070,
+      24559,
+      755057,
+      79260
+     ]
+    },
+    "date": "2026-07-06",
+    "rawTok": {
+     "cache_read": 4078784,
+     "cache_write": 169528,
+     "input": 190797,
+     "output": 87713
+    },
+    "total": 5.807138
+   },
+   {
+    "byHost": {
+     "desktop": 1.902253,
+     "laptop": 3.411136
+    },
+    "byModel": {
+     "claude-fable-5": 3.090499,
+     "claude-fable-5-1": 0.390732,
+     "claude-opus-4-8": 0.556587,
+     "claude-opus-5-5": 0.952067,
+     "claude-sonnet-5": 0.323505
+    },
+    "byModelTok": {
+     "claude-fable-5": [
+      82368,
+      13264,
+      421089,
+      61618
+     ],
+     "claude-fable-5-1": [
+      3464,
+      5344,
+      355566,
+      0
+     ],
+     "claude-opus-4-8": [
+      9024,
+      9255,
+      157146,
+      29369
+     ],
+     "claude-opus-5-5": [
+      56192,
+      19067,
+      1198994,
+      13270
+     ],
+     "claude-sonnet-5": [
+      8764,
+      3168,
+      492405,
+      43954
+     ]
+    },
+    "date": "2026-07-07",
+    "rawTok": {
+     "cache_read": 3884683,
+     "cache_write": 221534,
+     "input": 184931,
+     "output": 69626
+    },
+    "total": 5.31339
+   },
+   {
+    "byHost": {
+     "desktop": 2.241838,
+     "laptop": 0.257762
+    },
+    "byModel": {
+     "claude-fable-5": 0.581744,
+     "claude-fable-5-1": 1.480462,
+     "claude-opus-5-5": 0.257762,
+     "claude-sonnet-5": 0.179632
+    },
+    "byModelTok": {
+     "claude-fable-5": [
+      22514,
+      1173,
+      297954,
+      0
+     ],
+     "claude-fable-5-1": [
+      7804,
+      4232,
+      781288,
+      49775
+     ],
+     "claude-opus-5-5": [
+      39311,
+      1656,
+      336991,
+      0
+     ],
+     "claude-sonnet-5": [
+      39873,
+      1007,
+      449078,
+      0
+     ]
+    },
+    "date": "2026-07-08",
+    "rawTok": {
+     "cache_read": 2944553,
+     "cache_write": 99550,
+     "input": 139820,
+     "output": 11919
+    },
+    "total": 2.4996
+   },
+   {
+    "byHost": {
+     "desktop": 0.567596,
+     "laptop": 2.890538
+    },
+    "byModel": {
+     "claude-fable-5-1": 0.986421,
+     "claude-haiku-4-5-20251001": 0.184674,
+     "claude-opus-4-8": 0.772003,
+     "claude-opus-5-5": 1.295361,
+     "claude-sonnet-5": 0.219675
+    },
+    "byModelTok": {
+     "claude-fable-5-1": [
+      25469,
+      1735,
+      873125,
+      21335
+     ],
+     "claude-haiku-4-5-20251001": [
+      15098,
+      7519,
+      680996,
+      35650
+     ],
+     "claude-opus-4-8": [
+      42533,
+      5284,
+      416953,
+      27572
+     ],
+     "claude-opus-5-5": [
+      63078,
+      18130,
+      740385,
+      72206
+     ],
+     "claude-sonnet-5": [
+      25093,
+      4030,
+      302963,
+      17149
+     ]
+    },
+    "date": "2026-07-09",
+    "rawTok": {
+     "cache_read": 3058505,
+     "cache_write": 173912,
+     "input": 185279,
+     "output": 40414
+    },
+    "total": 3.458134
+   }
+  ],
+  "cache": {
+   "input": 1584546,
+   "output": 473640,
+   "read": 32267303,
+   "write": 2145421
+  },
+  "days": [
+   {
+    "byHost": {
+     "desktop": 3.165485,
+     "laptop": 1.87814
+    },
+    "byModel": {
+     "claude-fable-5": 2.403815,
+     "claude-fable-5-1": 0.419187,
+     "claude-opus-4-8": 0.946063,
+     "claude-opus-5-5": 1.27456
+    },
+    "byModelTok": {
+     "claude-fable-5": [
+      52396,
+      5964,
+      1324015,
+      12882
+     ],
+     "claude-fable-5-1": [
+      12487,
+      3072,
+      443190,
+      1496
+     ],
+     "claude-opus-4-8": [
+      8125,
+      5911,
+      562466,
+      47643
+     ],
+     "claude-opus-5-5": [
+      61808,
+      11797,
+      1447140,
+      62745
+     ]
+    },
+    "date": "2026-07-03",
+    "rawTok": {
+     "cache_read": 5027587,
+     "cache_write": 162249,
+     "input": 185971,
+     "output": 32540
+    },
+    "total": 5.043625
+   },
+   {
+    "byHost": {
+     "desktop": 0.951392,
+     "laptop": 2.184503
+    },
+    "byModel": {
+     "claude-fable-5-1": 0.348535,
+     "claude-haiku-4-5-20251001": 0.154969,
+     "claude-opus-4-8": 1.955466,
+     "claude-opus-5-5": 0.510548,
+     "claude-sonnet-5": 0.166377
+    },
+    "byModelTok": {
+     "claude-fable-5-1": [
+      12804,
+      3242,
+      233580,
+      0
+     ],
+     "claude-haiku-4-5-20251001": [
+      158,
+      9364,
+      319312,
+      38030
+     ],
+     "claude-invented-model-9": [
+      495,
+      8670,
+      27180,
+      30076
+     ],
+     "claude-opus-4-8": [
+      48922,
+      15737,
+      1693908,
+      59842
+     ],
+     "claude-opus-5-5": [
+      20466,
+      11628,
+      438778,
+      13546
+     ],
+     "claude-sonnet-5": [
+      4746,
+      6527,
+      458073,
+      0
+     ]
+    },
+    "date": "2026-07-04",
+    "rawTok": {
+     "cache_read": 3170831,
+     "cache_write": 141494,
+     "input": 87591,
+     "output": 55168
+    },
+    "total": 3.135895
+   },
+   {
+    "byHost": {
+     "desktop": 1.687668,
+     "laptop": 4.230074
+    },
+    "byModel": {
+     "claude-fable-5": 4.750182,
+     "claude-haiku-4-5-20251001": 0.341277,
+     "claude-opus-5-5": 0.657347,
+     "claude-sonnet-5": 0.168936
+    },
+    "byModelTok": {
+     "claude-fable-5": [
+      84271,
+      18452,
+      1738197,
+      68306
+     ],
+     "claude-haiku-4-5-20251001": [
+      44125,
+      13039,
+      1536563,
+      48339
+     ],
+     "claude-invented-model-9": [
+      35659,
+      15705,
+      647321,
+      71798
+     ],
+     "claude-opus-5-5": [
+      34342,
+      8829,
+      779522,
+      34280
+     ],
+     "claude-sonnet-5": [
+      19566,
+      2737,
+      19837,
+      33947
+     ]
+    },
+    "date": "2026-07-05",
+    "rawTok": {
+     "cache_read": 5308848,
+     "cache_write": 265667,
+     "input": 246202,
+     "output": 68529
+    },
+    "total": 5.917742
+   },
+   {
+    "byHost": {
+     "desktop": 3.661372,
+     "laptop": 2.145765
+    },
+    "byModel": {
+     "claude-fable-5": 1.684032,
+     "claude-fable-5-1": 1.892602,
+     "claude-opus-4-8": 1.161471,
+     "claude-opus-5-5": 0.300159,
+     "claude-sonnet-5": 0.768874
+    },
+    "byModelTok": {
+     "claude-fable-5": [
+      7216,
+      11057,
+      870262,
+      9438
+     ],
+     "claude-fable-5-1": [
+      42419,
+      17281,
+      681538,
+      27103
+     ],
+     "claude-invented-model-9": [
+      20936,
+      16456,
+      311175,
+      29206
+     ],
+     "claude-opus-4-8": [
+      56390,
+      14081,
+      623177,
+      24521
+     ],
+     "claude-opus-5-5": [
+      11766,
+      4279,
+      837575,
+      0
+     ],
+     "claude-sonnet-5": [
+      52070,
+      24559,
+      755057,
+      79260
+     ]
+    },
+    "date": "2026-07-06",
+    "rawTok": {
+     "cache_read": 4078784,
+     "cache_write": 169528,
+     "input": 190797,
+     "output": 87713
+    },
+    "total": 5.807138
+   },
+   {
+    "byHost": {
+     "desktop": 1.902253,
+     "laptop": 3.411136
+    },
+    "byModel": {
+     "claude-fable-5": 3.090499,
+     "claude-fable-5-1": 0.390732,
+     "claude-opus-4-8": 0.556587,
+     "claude-opus-5-5": 0.952067,
+     "claude-sonnet-5": 0.323505
+    },
+    "byModelTok": {
+     "claude-fable-5": [
+      82368,
+      13264,
+      421089,
+      61618
+     ],
+     "claude-fable-5-1": [
+      3464,
+      5344,
+      355566,
+      0
+     ],
+     "claude-opus-4-8": [
+      9024,
+      9255,
+      157146,
+      29369
+     ],
+     "claude-opus-5-5": [
+      56192,
+      19067,
+      1198994,
+      13270
+     ],
+     "claude-sonnet-5": [
+      8764,
+      3168,
+      492405,
+      43954
+     ]
+    },
+    "date": "2026-07-07",
+    "rawTok": {
+     "cache_read": 3884683,
+     "cache_write": 221534,
+     "input": 184931,
+     "output": 69626
+    },
+    "total": 5.31339
+   },
+   {
+    "byHost": {
+     "desktop": 2.241838,
+     "laptop": 0.257762
+    },
+    "byModel": {
+     "claude-fable-5": 0.581744,
+     "claude-fable-5-1": 1.480462,
+     "claude-opus-5-5": 0.257762,
+     "claude-sonnet-5": 0.179632
+    },
+    "byModelTok": {
+     "claude-fable-5": [
+      22514,
+      1173,
+      297954,
+      0
+     ],
+     "claude-fable-5-1": [
+      7804,
+      4232,
+      781288,
+      49775
+     ],
+     "claude-opus-5-5": [
+      39311,
+      1656,
+      336991,
+      0
+     ],
+     "claude-sonnet-5": [
+      39873,
+      1007,
+      449078,
+      0
+     ]
+    },
+    "date": "2026-07-08",
+    "rawTok": {
+     "cache_read": 2944553,
+     "cache_write": 99550,
+     "input": 139820,
+     "output": 11919
+    },
+    "total": 2.4996
+   },
+   {
+    "byHost": {
+     "desktop": 0.567596,
+     "laptop": 2.890538
+    },
+    "byModel": {
+     "claude-fable-5-1": 0.986421,
+     "claude-haiku-4-5-20251001": 0.184674,
+     "claude-opus-4-8": 0.772003,
+     "claude-opus-5-5": 1.295361,
+     "claude-sonnet-5": 0.219675
+    },
+    "byModelTok": {
+     "claude-fable-5-1": [
+      25469,
+      1735,
+      873125,
+      21335
+     ],
+     "claude-haiku-4-5-20251001": [
+      15098,
+      7519,
+      680996,
+      35650
+     ],
+     "claude-opus-4-8": [
+      42533,
+      5284,
+      416953,
+      27572
+     ],
+     "claude-opus-5-5": [
+      63078,
+      18130,
+      740385,
+      72206
+     ],
+     "claude-sonnet-5": [
+      25093,
+      4030,
+      302963,
+      17149
+     ]
+    },
+    "date": "2026-07-09",
+    "rawTok": {
+     "cache_read": 3058505,
+     "cache_write": 173912,
+     "input": 185279,
+     "output": 40414
+    },
+    "total": 3.458134
+   }
+  ],
+  "health": {
+   "hosts_seen": [
+    "desktop",
+    "laptop"
+   ],
+   "unparsed_lines": 0
+  },
+  "hosts": [
+   {
+    "cache_read": 15582638,
+    "cache_write": 1499383,
+    "cost": 30.160205,
+    "host": "desktop",
+    "input": 765676,
+    "output": 213280
+   },
+   {
+    "cache_read": 19152017,
+    "cache_write": 733781,
+    "cost": 20.432067,
+    "host": "laptop",
+    "input": 913184,
+    "output": 291870
+   }
+  ],
+  "models": [
+   {
+    "cache_read": 6147540,
+    "cache_write": 246142,
+    "cost": 17.69677,
+    "input": 340252,
+    "model": "claude-fable-5",
+    "output": 72596
+   },
+   {
+    "cache_read": 4825454,
+    "cache_write": 940057,
+    "cost": 14.591062,
+    "input": 259555,
+    "model": "claude-opus-4-8",
+    "output": 76314
+   },
+   {
+    "cache_read": 4679240,
+    "cache_write": 139370,
+    "cost": 8.251798,
+    "input": 170084,
+    "model": "claude-fable-5-1",
+    "output": 56118
+   },
+   {
+    "cache_read": 7353988,
+    "cache_write": 255472,
+    "cost": 6.437726,
+    "input": 338021,
+    "model": "claude-opus-5-5",
+    "output": 88589
+   },
+   {
+    "cache_read": 3063349,
+    "cache_write": 232821,
+    "cost": 2.470019,
+    "input": 217135,
+    "model": "claude-sonnet-5",
+    "output": 62068
+   },
+   {
+    "cache_read": 4072268,
+    "cache_write": 174183,
+    "cost": 1.144898,
+    "input": 142398,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 58107
+   },
+   {
+    "cache_read": 2125464,
+    "cache_write": 157376,
+    "cost": 0.0,
+    "input": 117101,
+    "model": "claude-invented-model-9",
+    "output": 59848
+   }
+  ],
+  "projectionMonth": 133.609389,
+  "rawUsage": {
+   "models": [
+    {
+     "cache_read": 8771506,
+     "cache_write": 291459,
+     "input": 384020,
+     "messages": 17,
+     "model": "claude-opus-5-5",
+     "output": 100749
+    },
+    {
+     "cache_read": 7176530,
+     "cache_write": 299269,
+     "input": 468189,
+     "messages": 23,
+     "model": "claude-fable-5",
+     "output": 119233
+    },
+    {
+     "cache_read": 6204857,
+     "cache_write": 190641,
+     "input": 197698,
+     "messages": 13,
+     "model": "claude-fable-5-1",
+     "output": 73612
+    },
+    {
+     "cache_read": 5077261,
+     "cache_write": 1010731,
+     "input": 317401,
+     "messages": 18,
+     "model": "claude-opus-4-8",
+     "output": 94864
+    },
+    {
+     "cache_read": 4379995,
+     "cache_write": 192133,
+     "input": 168998,
+     "messages": 9,
+     "model": "claude-haiku-4-5-20251001",
+     "output": 64131
+    },
+    {
+     "cache_read": 3555754,
+     "cache_write": 276775,
+     "input": 225899,
+     "messages": 12,
+     "model": "claude-sonnet-5",
+     "output": 64459
+    },
+    {
+     "cache_read": 2125464,
+     "cache_write": 157376,
+     "input": 117101,
+     "messages": 7,
+     "model": "claude-invented-model-9",
+     "output": 59848
+    }
+   ],
+   "total": {
+    "cache_read": 37291367,
+    "cache_write": 2418384,
+    "input": 1879306,
+    "output": 576896
+   }
+  },
+  "sessions": [
+   {
+    "byModel": {
+     "claude-fable-5": 3.965637,
+     "claude-fable-5-1": 2.249299,
+     "claude-haiku-4-5-20251001": 0.525951,
+     "claude-opus-4-8": 1.024263,
+     "claude-opus-5-5": 2.805349,
+     "claude-sonnet-5": 0.710705
+    },
+    "daily": {
+     "2026-07-04": 0.986234,
+     "2026-07-05": 2.238576,
+     "2026-07-06": 1.496959,
+     "2026-07-07": 3.411136,
+     "2026-07-08": 0.257762,
+     "2026-07-09": 2.890538
+    },
+    "host": "laptop",
+    "last": "2026-07-09 13:32",
+    "messages": 25,
+    "models": [
+     {
+      "cache_read": 1127059,
+      "cache_write": 63192,
+      "cost": 3.965637,
+      "input": 86001,
+      "model": "claude-fable-5",
+      "output": 16452
+     },
+     {
+      "cache_read": 1648074,
+      "cache_write": 21335,
+      "cost": 2.249299,
+      "input": 66193,
+      "model": "claude-fable-5-1",
+      "output": 14973
+     },
+     {
+      "cache_read": 2217559,
+      "cache_write": 83989,
+      "cost": 0.525951,
+      "input": 59223,
+      "model": "claude-haiku-4-5-20251001",
+      "output": 20558
+     },
+     {
+      "cache_read": 842852,
+      "cache_write": 37980,
+      "cost": 1.024263,
+      "input": 17490,
+      "model": "claude-opus-4-8",
+      "output": 9442
+     },
+     {
+      "cache_read": 3113945,
+      "cache_write": 85476,
+      "cost": 2.805349,
+      "input": 170347,
+      "model": "claude-opus-5-5",
+      "output": 43132
+     },
+     {
+      "cache_read": 1282265,
+      "cache_write": 35552,
+      "cost": 0.710705,
+      "input": 55107,
+      "model": "claude-sonnet-5",
+      "output": 21524
+     }
+    ],
+    "project": "C--work-demo-project-1",
+    "promptCount": 6,
+    "prompts": [
+     {
+      "date": "2026-07-05",
+      "index": 0,
+      "main": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "messages": 7,
+      "models": [],
+      "sub": {
+       "cache_read": 3478004,
+       "cache_write": 144439,
+       "cost": 4.092259,
+       "input": 190021,
+       "output": 42151
+      },
+      "subModels": [
+       {
+        "cache_read": 777001,
+        "cache_write": 27353,
+        "cost": 1.897299,
+        "input": 38078,
+        "model": "claude-fable-5",
+        "output": 5010
+       },
+       {
+        "cache_read": 355566,
+        "cache_write": 0,
+        "cost": 0.390732,
+        "input": 3464,
+        "model": "claude-fable-5-1",
+        "output": 5344
+       },
+       {
+        "cache_read": 1538367,
+        "cache_write": 44880,
+        "cost": 0.352015,
+        "input": 53742,
+        "model": "claude-haiku-4-5-20251001",
+        "output": 12823
+       },
+       {
+        "cache_read": 807070,
+        "cache_write": 72206,
+        "cost": 1.452214,
+        "input": 94737,
+        "model": "claude-opus-5-5",
+        "output": 18974
+       }
+      ],
+      "text": "(pre-prompt)",
+      "ts": "09:30"
+     },
+     {
+      "date": "2026-07-04",
+      "index": 1,
+      "main": {
+       "cache_read": 1284022,
+       "cache_write": 68056,
+       "cost": 0.986234,
+       "input": 8723,
+       "output": 20146
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 798769,
+        "cache_write": 37980,
+        "cost": 0.819857,
+        "input": 3482,
+        "model": "claude-opus-4-8",
+        "output": 4949
+       },
+       {
+        "cache_read": 458073,
+        "cache_write": 0,
+        "cost": 0.166377,
+        "input": 4746,
+        "model": "claude-sonnet-5",
+        "output": 6527
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #1",
+      "ts": "08:00"
+     },
+     {
+      "date": "2026-07-05",
+      "index": 2,
+      "main": {
+       "cache_read": 1326513,
+       "cache_write": 110907,
+       "cost": 0.173936,
+       "input": 41140,
+       "output": 23440
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 679192,
+        "cache_write": 39109,
+        "cost": 0.173936,
+        "input": 5481,
+        "model": "claude-haiku-4-5-20251001",
+        "output": 7735
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #2",
+      "ts": "09:00"
+     },
+     {
+      "date": "2026-07-06",
+      "index": 3,
+      "main": {
+       "cache_read": 2057412,
+       "cache_write": 40732,
+       "cost": 1.496959,
+       "input": 90433,
+       "output": 32295
+      },
+      "messages": 4,
+      "models": [
+       {
+        "cache_read": 419383,
+        "cache_write": 0,
+        "cost": 0.872146,
+        "input": 37260,
+        "model": "claude-fable-5-1",
+        "output": 7894
+       },
+       {
+        "cache_read": 837575,
+        "cache_write": 0,
+        "cost": 0.300159,
+        "input": 11766,
+        "model": "claude-opus-5-5",
+        "output": 4279
+       },
+       {
+        "cache_read": 521229,
+        "cache_write": 18403,
+        "cost": 0.324654,
+        "input": 25268,
+        "model": "claude-sonnet-5",
+        "output": 10967
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #3",
+      "ts": "10:00"
+     },
+     {
+      "date": "2026-07-07",
+      "index": 4,
+      "main": {
+       "cache_read": 1482367,
+       "cache_write": 49109,
+       "cost": 2.863552,
+       "input": 72456,
+       "output": 29665
+      },
+      "messages": 4,
+      "models": [
+       {
+        "cache_read": 350058,
+        "cache_write": 35839,
+        "cost": 2.068338,
+        "input": 47923,
+        "model": "claude-fable-5",
+        "output": 11442
+       },
+       {
+        "cache_read": 1132309,
+        "cache_write": 13270,
+        "cost": 0.795214,
+        "input": 24533,
+        "model": "claude-opus-5-5",
+        "output": 18223
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #4",
+      "ts": "11:00"
+     },
+     {
+      "date": "2026-07-08",
+      "index": 5,
+      "main": {
+       "cache_read": 336991,
+       "cache_write": 0,
+       "cost": 0.257762,
+       "input": 39311,
+       "output": 1656
+      },
+      "messages": 1,
+      "models": [
+       {
+        "cache_read": 336991,
+        "cache_write": 0,
+        "cost": 0.257762,
+        "input": 39311,
+        "model": "claude-opus-5-5",
+        "output": 1656
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #5",
+      "ts": "12:00"
+     },
+     {
+      "date": "2026-07-09",
+      "index": 6,
+      "main": {
+       "cache_read": 1220171,
+       "cache_write": 38484,
+       "cost": 1.410502,
+       "input": 64570,
+       "output": 10258
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 873125,
+        "cache_write": 21335,
+        "cost": 0.986421,
+        "input": 25469,
+        "model": "claude-fable-5-1",
+        "output": 1735
+       },
+       {
+        "cache_read": 44083,
+        "cache_write": 0,
+        "cost": 0.204406,
+        "input": 14008,
+        "model": "claude-opus-4-8",
+        "output": 4493
+       },
+       {
+        "cache_read": 302963,
+        "cache_write": 17149,
+        "cost": 0.219675,
+        "input": 25093,
+        "model": "claude-sonnet-5",
+        "output": 4030
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #6",
+      "ts": "13:00"
+     }
+    ],
+    "session_id": "00000000-0000-4000-8000-000000000001",
+    "started": "2026-07-04 08:00",
+    "subagent_messages": 7,
+    "total": 11.281204
+   },
+   {
+    "byModel": {
+     "claude-fable-5": 5.966027,
+     "claude-fable-5-1": 1.480462,
+     "claude-haiku-4-5-20251001": 0.189308,
+     "claude-opus-4-8": 2.537467,
+     "claude-opus-5-5": 1.291852,
+     "claude-sonnet-5": 0.503137
+    },
+    "daily": {
+     "2026-07-01": 2.30548,
+     "2026-07-02": 2.182518,
+     "2026-07-03": 2.768568,
+     "2026-07-07": 1.902253,
+     "2026-07-08": 2.241838,
+     "2026-07-09": 0.567596
+    },
+    "host": "desktop",
+    "last": "2026-07-09 10:00",
+    "messages": 17,
+    "models": [
+     {
+      "cache_read": 2240672,
+      "cache_write": 84781,
+      "cost": 5.966027,
+      "input": 134729,
+      "model": "claude-fable-5",
+      "output": 18382
+     },
+     {
+      "cache_read": 781288,
+      "cache_write": 49775,
+      "cost": 1.480462,
+      "input": 7804,
+      "model": "claude-fable-5-1",
+      "output": 4232
+     },
+     {
+      "cache_read": 751222,
+      "cache_write": 34214,
+      "cost": 0.189308,
+      "input": 13785,
+      "model": "claude-haiku-4-5-20251001",
+      "output": 9961
+     },
+     {
+      "cache_read": 1461044,
+      "cache_write": 115955,
+      "cost": 2.537467,
+      "input": 55915,
+      "model": "claude-opus-4-8",
+      "output": 20678
+     },
+     {
+      "cache_read": 1684495,
+      "cache_write": 87834,
+      "cost": 1.291852,
+      "input": 41143,
+      "model": "claude-opus-5-5",
+      "output": 7820
+     },
+     {
+      "cache_read": 941483,
+      "cache_write": 43954,
+      "cost": 0.503137,
+      "input": 48637,
+      "model": "claude-sonnet-5",
+      "output": 4175
+     }
+    ],
+    "project": "C--work-demo-project-2",
+    "promptCount": 6,
+    "prompts": [
+     {
+      "date": "2026-07-01",
+      "index": 0,
+      "main": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "messages": 5,
+      "models": [],
+      "sub": {
+       "cache_read": 2637527,
+       "cache_write": 118252,
+       "cost": 3.431174,
+       "input": 90921,
+       "output": 24287
+      },
+      "subModels": [
+       {
+        "cache_read": 380512,
+        "cache_write": 7391,
+        "cost": 1.236052,
+        "input": 30207,
+        "model": "claude-fable-5",
+        "output": 9106
+       },
+       {
+        "cache_read": 931028,
+        "cache_write": 59014,
+        "cost": 1.413284,
+        "input": 18366,
+        "model": "claude-opus-4-8",
+        "output": 10632
+       },
+       {
+        "cache_read": 876909,
+        "cache_write": 51847,
+        "cost": 0.602207,
+        "input": 2475,
+        "model": "claude-opus-5-5",
+        "output": 3542
+       },
+       {
+        "cache_read": 449078,
+        "cache_write": 0,
+        "cost": 0.179632,
+        "input": 39873,
+        "model": "claude-sonnet-5",
+        "output": 1007
+       }
+      ],
+      "text": "(pre-prompt)",
+      "ts": "11:30"
+     },
+     {
+      "date": "2026-07-07",
+      "index": 1,
+      "main": {
+       "cache_read": 1211564,
+       "cache_write": 138414,
+       "cost": 1.902253,
+       "input": 54124,
+       "output": 14797
+      },
+      "messages": 4,
+      "models": [
+       {
+        "cache_read": 71031,
+        "cache_write": 25779,
+        "cost": 1.022161,
+        "input": 34445,
+        "model": "claude-fable-5",
+        "output": 1822
+       },
+       {
+        "cache_read": 157146,
+        "cache_write": 29369,
+        "cost": 0.556587,
+        "input": 9024,
+        "model": "claude-opus-4-8",
+        "output": 9255
+       },
+       {
+        "cache_read": 492405,
+        "cache_write": 43954,
+        "cost": 0.323505,
+        "input": 8764,
+        "model": "claude-sonnet-5",
+        "output": 3168
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #1",
+      "ts": "08:00"
+     },
+     {
+      "date": "2026-07-08",
+      "index": 2,
+      "main": {
+       "cache_read": 1079242,
+       "cache_write": 49775,
+       "cost": 2.062206,
+       "input": 30318,
+       "output": 5405
+      },
+      "messages": 2,
+      "models": [
+       {
+        "cache_read": 297954,
+        "cache_write": 0,
+        "cost": 0.581744,
+        "input": 22514,
+        "model": "claude-fable-5",
+        "output": 1173
+       },
+       {
+        "cache_read": 781288,
+        "cache_write": 49775,
+        "cost": 1.480462,
+        "input": 7804,
+        "model": "claude-fable-5-1",
+        "output": 4232
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #2",
+      "ts": "09:00"
+     },
+     {
+      "date": "2026-07-09",
+      "index": 3,
+      "main": {
+       "cache_read": 372870,
+       "cache_write": 27572,
+       "cost": 0.567596,
+       "input": 28525,
+       "output": 791
+      },
+      "messages": 1,
+      "models": [
+       {
+        "cache_read": 372870,
+        "cache_write": 27572,
+        "cost": 0.567596,
+        "input": 28525,
+        "model": "claude-opus-4-8",
+        "output": 791
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #3",
+      "ts": "10:00"
+     },
+     {
+      "date": "2026-07-01",
+      "index": 4,
+      "main": {
+       "cache_read": 399253,
+       "cache_write": 11398,
+       "cost": 0.0,
+       "input": 32928,
+       "output": 9404
+      },
+      "messages": 1,
+      "models": [],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #4",
+      "ts": "11:00"
+     },
+     {
+      "date": "2026-07-02",
+      "index": 5,
+      "main": {
+       "cache_read": 1568877,
+       "cache_write": 72943,
+       "cost": 2.182518,
+       "input": 47898,
+       "output": 14898
+      },
+      "messages": 2,
+      "models": [
+       {
+        "cache_read": 817655,
+        "cache_write": 38729,
+        "cost": 1.99321,
+        "input": 34113,
+        "model": "claude-fable-5",
+        "output": 4937
+       },
+       {
+        "cache_read": 751222,
+        "cache_write": 34214,
+        "cost": 0.189308,
+        "input": 13785,
+        "model": "claude-haiku-4-5-20251001",
+        "output": 9961
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #5",
+      "ts": "12:00"
+     },
+     {
+      "date": "2026-07-03",
+      "index": 6,
+      "main": {
+       "cache_read": 1481106,
+       "cache_write": 48869,
+       "cost": 1.822505,
+       "input": 52118,
+       "output": 5622
+      },
+      "messages": 2,
+      "models": [
+       {
+        "cache_read": 673520,
+        "cache_write": 12882,
+        "cost": 1.13286,
+        "input": 13450,
+        "model": "claude-fable-5",
+        "output": 1344
+       },
+       {
+        "cache_read": 807586,
+        "cache_write": 35987,
+        "cost": 0.689645,
+        "input": 38668,
+        "model": "claude-opus-5-5",
+        "output": 4278
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #6",
+      "ts": "13:00"
+     }
+    ],
+    "session_id": "00000000-0000-4000-8000-000000000002",
+    "started": "2026-07-01 11:00",
+    "subagent_messages": 5,
+    "total": 11.968253
+   },
+   {
+    "byModel": {
+     "claude-fable-5": 4.710503,
+     "claude-fable-5-1": 3.376688,
+     "claude-haiku-4-5-20251001": 0.335323,
+     "claude-opus-4-8": 1.452041,
+     "claude-opus-5-5": 0.242787,
+     "claude-sonnet-5": 0.737698
+    },
+    "daily": {
+     "2026-07-01": 0.872185,
+     "2026-07-02": 3.285505,
+     "2026-07-03": 0.396917,
+     "2026-07-04": 0.951392,
+     "2026-07-05": 1.687668,
+     "2026-07-06": 3.661372
+    },
+    "host": "desktop",
+    "last": "2026-07-06 13:31",
+    "messages": 19,
+    "models": [
+     {
+      "cache_read": 1576275,
+      "cache_write": 81817,
+      "cost": 4.710503,
+      "input": 67754,
+      "model": "claude-fable-5",
+      "output": 17635
+     },
+     {
+      "cache_read": 1218283,
+      "cache_write": 66764,
+      "cost": 3.376688,
+      "input": 46614,
+      "model": "claude-fable-5-1",
+      "output": 29657
+     },
+     {
+      "cache_read": 641604,
+      "cache_write": 55980,
+      "cost": 0.335323,
+      "input": 59463,
+      "model": "claude-haiku-4-5-20251001",
+      "output": 19948
+     },
+     {
+      "cache_read": 1139186,
+      "cache_write": 24521,
+      "cost": 1.452041,
+      "input": 70363,
+      "model": "claude-opus-4-8",
+      "output": 12589
+     },
+     {
+      "cache_read": 316335,
+      "cache_write": 0,
+      "cost": 0.242787,
+      "input": 16415,
+      "model": "claude-opus-5-5",
+      "output": 5693
+     },
+     {
+      "cache_read": 585577,
+      "cache_write": 75085,
+      "cost": 0.737698,
+      "input": 87464,
+      "model": "claude-sonnet-5",
+      "output": 20966
+     }
+    ],
+    "project": "C--work-demo-project-0",
+    "promptCount": 6,
+    "prompts": [
+     {
+      "date": "2026-07-02",
+      "index": 0,
+      "main": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "messages": 6,
+      "models": [],
+      "sub": {
+       "cache_read": 1848590,
+       "cache_write": 133529,
+       "cost": 3.635663,
+       "input": 125049,
+       "output": 40643
+      },
+      "subModels": [
+       {
+        "cache_read": 917144,
+        "cache_write": 66764,
+        "cost": 2.602124,
+        "input": 39291,
+        "model": "claude-fable-5-1",
+        "output": 17136
+       },
+       {
+        "cache_read": 333877,
+        "cache_write": 38030,
+        "cost": 0.208046,
+        "input": 32863,
+        "model": "claude-haiku-4-5-20251001",
+        "output": 13147
+       },
+       {
+        "cache_read": 339571,
+        "cache_write": 24521,
+        "cost": 0.655618,
+        "input": 31790,
+        "model": "claude-opus-4-8",
+        "output": 4439
+       },
+       {
+        "cache_read": 257998,
+        "cache_write": 4214,
+        "cost": 0.169876,
+        "input": 21105,
+        "model": "claude-sonnet-5",
+        "output": 5921
+       }
+      ],
+      "text": "(pre-prompt)",
+      "ts": "09:30"
+     },
+     {
+      "date": "2026-07-01",
+      "index": 1,
+      "main": {
+       "cache_read": 1141145,
+       "cache_write": 14898,
+       "cost": 0.872185,
+       "input": 60609,
+       "output": 24666
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 301139,
+        "cache_write": 0,
+        "cost": 0.774565,
+        "input": 7323,
+        "model": "claude-fable-5-1",
+        "output": 12521
+       },
+       {
+        "cache_read": 99471,
+        "cache_write": 0,
+        "cost": 0.09762,
+        "input": 26203,
+        "model": "claude-sonnet-5",
+        "output": 2532
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #1",
+      "ts": "08:00"
+     },
+     {
+      "date": "2026-07-02",
+      "index": 2,
+      "main": {
+       "cache_read": 581645,
+       "cache_write": 58373,
+       "cost": 1.480886,
+       "input": 40903,
+       "output": 9365
+      },
+      "messages": 2,
+      "models": [
+       {
+        "cache_read": 273918,
+        "cache_write": 40423,
+        "cost": 1.353608,
+        "input": 14303,
+        "model": "claude-fable-5",
+        "output": 2564
+       },
+       {
+        "cache_read": 307727,
+        "cache_write": 17950,
+        "cost": 0.127278,
+        "input": 26600,
+        "model": "claude-haiku-4-5-20251001",
+        "output": 6801
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #2",
+      "ts": "09:00"
+     },
+     {
+      "date": "2026-07-03",
+      "index": 3,
+      "main": {
+       "cache_read": 58307,
+       "cache_write": 0,
+       "cost": 0.396917,
+       "input": 28281,
+       "output": 1116
+      },
+      "messages": 1,
+      "models": [
+       {
+        "cache_read": 58307,
+        "cache_write": 0,
+        "cost": 0.396917,
+        "input": 28281,
+        "model": "claude-fable-5",
+        "output": 1116
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #3",
+      "ts": "10:00"
+     },
+     {
+      "date": "2026-07-04",
+      "index": 4,
+      "main": {
+       "cache_read": 799615,
+       "cache_write": 0,
+       "cost": 0.796423,
+       "input": 38573,
+       "output": 8150
+      },
+      "messages": 1,
+      "models": [
+       {
+        "cache_read": 799615,
+        "cache_write": 0,
+        "cost": 0.796423,
+        "input": 38573,
+        "model": "claude-opus-4-8",
+        "output": 8150
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #4",
+      "ts": "11:00"
+     },
+     {
+      "date": "2026-07-05",
+      "index": 5,
+      "main": {
+       "cache_read": 709960,
+       "cache_write": 65903,
+       "cost": 1.687668,
+       "input": 53935,
+       "output": 11328
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 373788,
+        "cache_write": 31956,
+        "cost": 1.275946,
+        "input": 17954,
+        "model": "claude-fable-5",
+        "output": 2898
+       },
+       {
+        "cache_read": 316335,
+        "cache_write": 0,
+        "cost": 0.242787,
+        "input": 16415,
+        "model": "claude-opus-5-5",
+        "output": 5693
+       },
+       {
+        "cache_read": 19837,
+        "cache_write": 33947,
+        "cost": 0.168936,
+        "input": 19566,
+        "model": "claude-sonnet-5",
+        "output": 2737
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #5",
+      "ts": "12:00"
+     },
+     {
+      "date": "2026-07-06",
+      "index": 6,
+      "main": {
+       "cache_read": 1644969,
+       "cache_write": 83345,
+       "cost": 1.985298,
+       "input": 59393,
+       "output": 32369
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 870262,
+        "cache_write": 9438,
+        "cost": 1.684032,
+        "input": 7216,
+        "model": "claude-fable-5",
+        "output": 11057
+       },
+       {
+        "cache_read": 208271,
+        "cache_write": 36924,
+        "cost": 0.301266,
+        "input": 20590,
+        "model": "claude-sonnet-5",
+        "output": 9776
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #6",
+      "ts": "13:00"
+     }
+    ],
+    "session_id": "00000000-0000-4000-8000-000000000000",
+    "started": "2026-07-01 08:00",
+    "subagent_messages": 6,
+    "total": 10.85504
+   },
+   {
+    "byModel": {
+     "claude-fable-5": 2.450976,
+     "claude-fable-5-1": 1.145349,
+     "claude-haiku-4-5-20251001": 0.094315,
+     "claude-opus-4-8": 2.844006,
+     "claude-opus-5-5": 2.097738,
+     "claude-sonnet-5": 0.51848
+    },
+    "daily": {
+     "2026-07-01": 1.127909,
+     "2026-07-02": 2.30624,
+     "2026-07-03": 1.87814,
+     "2026-07-04": 1.19827,
+     "2026-07-05": 1.991498,
+     "2026-07-06": 0.648807
+    },
+    "host": "laptop",
+    "last": "2026-07-06 13:31",
+    "messages": 22,
+    "models": [
+     {
+      "cache_read": 1179596,
+      "cache_write": 8997,
+      "cost": 2.450976,
+      "input": 38904,
+      "model": "claude-fable-5",
+      "output": 14048
+     },
+     {
+      "cache_read": 1031595,
+      "cache_write": 1496,
+      "cost": 1.145349,
+      "input": 49473,
+      "model": "claude-fable-5-1",
+      "output": 7256
+     },
+     {
+      "cache_read": 461883,
+      "cache_write": 0,
+      "cost": 0.094315,
+      "input": 9927,
+      "model": "claude-haiku-4-5-20251001",
+      "output": 7640
+     },
+     {
+      "cache_read": 1358342,
+      "cache_write": 92844,
+      "cost": 2.844006,
+      "input": 106550,
+      "model": "claude-opus-4-8",
+      "output": 29245
+     },
+     {
+      "cache_read": 2239213,
+      "cache_write": 82162,
+      "cost": 2.097738,
+      "input": 110116,
+      "model": "claude-opus-5-5",
+      "output": 31944
+     },
+     {
+      "cache_read": 254024,
+      "cache_write": 78230,
+      "cost": 0.51848,
+      "input": 25927,
+      "model": "claude-sonnet-5",
+      "output": 15403
+     }
+    ],
+    "project": "C--work-demo-project-3",
+    "promptCount": 6,
+    "prompts": [
+     {
+      "date": "2026-07-02",
+      "index": 0,
+      "main": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "messages": 8,
+      "models": [],
+      "sub": {
+       "cache_read": 2080161,
+       "cache_write": 121132,
+       "cost": 2.661763,
+       "input": 134241,
+       "output": 54580
+      },
+      "subModels": [
+       {
+        "cache_read": 233580,
+        "cache_write": 0,
+        "cost": 0.348535,
+        "input": 12804,
+        "model": "claude-fable-5-1",
+        "output": 3242
+       },
+       {
+        "cache_read": 461883,
+        "cache_write": 0,
+        "cost": 0.094315,
+        "input": 9927,
+        "model": "claude-haiku-4-5-20251001",
+        "output": 7640
+       },
+       {
+        "cache_read": 379130,
+        "cache_write": 21862,
+        "cost": 0.84504,
+        "input": 31467,
+        "model": "claude-opus-4-8",
+        "output": 12280
+       },
+       {
+        "cache_read": 751544,
+        "cache_write": 21040,
+        "cost": 0.855393,
+        "input": 54116,
+        "model": "claude-opus-5-5",
+        "output": 16015
+       },
+       {
+        "cache_read": 254024,
+        "cache_write": 78230,
+        "cost": 0.51848,
+        "input": 25927,
+        "model": "claude-sonnet-5",
+        "output": 15403
+       }
+      ],
+      "text": "(pre-prompt)",
+      "ts": "09:30"
+     },
+     {
+      "date": "2026-07-01",
+      "index": 1,
+      "main": {
+       "cache_read": 1262436,
+       "cache_write": 11364,
+       "cost": 1.127909,
+       "input": 36920,
+       "output": 14216
+      },
+      "messages": 2,
+      "models": [
+       {
+        "cache_read": 877508,
+        "cache_write": 11280,
+        "cost": 0.885039,
+        "input": 21987,
+        "model": "claude-opus-4-8",
+        "output": 8942
+       },
+       {
+        "cache_read": 384928,
+        "cache_write": 84,
+        "cost": 0.24287,
+        "input": 14933,
+        "model": "claude-opus-5-5",
+        "output": 5274
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #1",
+      "ts": "08:00"
+     },
+     {
+      "date": "2026-07-02",
+      "index": 2,
+      "main": {
+       "cache_read": 1251551,
+       "cache_write": 59702,
+       "cost": 1.491553,
+       "input": 100927,
+       "output": 16869
+      },
+      "messages": 4,
+      "models": [
+       {
+        "cache_read": 354825,
+        "cache_write": 0,
+        "cost": 0.377626,
+        "input": 24182,
+        "model": "claude-fable-5-1",
+        "output": 942
+       },
+       {
+        "cache_read": 101704,
+        "cache_write": 59702,
+        "cost": 1.113927,
+        "input": 53096,
+        "model": "claude-opus-4-8",
+        "output": 8023
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #2",
+      "ts": "09:00"
+     },
+     {
+      "date": "2026-07-03",
+      "index": 3,
+      "main": {
+       "cache_read": 1674932,
+       "cache_write": 28254,
+       "cost": 1.87814,
+       "input": 46292,
+       "output": 14095
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 592188,
+        "cache_write": 0,
+        "cost": 0.874038,
+        "input": 10665,
+        "model": "claude-fable-5",
+        "output": 3504
+       },
+       {
+        "cache_read": 443190,
+        "cache_write": 1496,
+        "cost": 0.419187,
+        "input": 12487,
+        "model": "claude-fable-5-1",
+        "output": 3072
+       },
+       {
+        "cache_read": 639554,
+        "cache_write": 26758,
+        "cost": 0.584915,
+        "input": 23140,
+        "model": "claude-opus-5-5",
+        "output": 7519
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #3",
+      "ts": "10:00"
+     },
+     {
+      "date": "2026-07-04",
+      "index": 4,
+      "main": {
+       "cache_read": 191573,
+       "cache_write": 11448,
+       "cost": 0.0,
+       "input": 33204,
+       "output": 2917
+      },
+      "messages": 1,
+      "models": [],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #4",
+      "ts": "11:00"
+     },
+     {
+      "date": "2026-07-05",
+      "index": 5,
+      "main": {
+       "cache_read": 1473934,
+       "cache_write": 43277,
+       "cost": 1.991498,
+       "input": 50149,
+       "output": 22281
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 587408,
+        "cache_write": 8997,
+        "cost": 1.576938,
+        "input": 28239,
+        "model": "claude-fable-5",
+        "output": 10544
+       },
+       {
+        "cache_read": 463187,
+        "cache_write": 34280,
+        "cost": 0.41456,
+        "input": 17927,
+        "model": "claude-opus-5-5",
+        "output": 3136
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #5",
+      "ts": "12:00"
+     },
+     {
+      "date": "2026-07-06",
+      "index": 6,
+      "main": {
+       "cache_read": 31950,
+       "cache_write": 6877,
+       "cost": 0.0,
+       "input": 4797,
+       "output": 7301
+      },
+      "messages": 1,
+      "models": [],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #6",
+      "ts": "13:00"
+     }
+    ],
+    "session_id": "00000000-0000-4000-8000-000000000003",
+    "started": "2026-07-01 08:00",
+    "subagent_messages": 8,
+    "total": 9.150863
+   },
+   {
+    "byModel": {
+     "claude-opus-4-8": 0.245245
+    },
+    "daily": {
+     "2025-05-29": 0.245245
+    },
+    "host": "desktop",
+    "last": "2025-05-29 08:24",
+    "messages": 1,
+    "models": [
+     {
+      "cache_read": 0,
+      "cache_write": 32396,
+      "cost": 0.245245,
+      "input": 8544,
+      "model": "claude-opus-4-8",
+      "output": 2
+     }
+    ],
+    "project": "C--work-demo-app",
+    "promptCount": 1,
+    "prompts": [
+     {
+      "date": "2025-05-29",
+      "index": 1,
+      "main": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "messages": 1,
+      "models": [],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 32396,
+       "cost": 0.245245,
+       "input": 8544,
+       "output": 2
+      },
+      "subModels": [
+       {
+        "cache_read": 0,
+        "cache_write": 32396,
+        "cost": 0.245245,
+        "input": 8544,
+        "model": "claude-opus-4-8",
+        "output": 2
+       }
+      ],
+      "text": "Prompt #1",
+      "ts": "08:24"
+     }
+    ],
+    "session_id": "b296a0b0-0a5d-4be5-8037-6911bddbffdc",
+    "started": "2025-05-29 08:24",
+    "subagent_messages": 1,
+    "total": 0.245245
+   },
+   {
+    "byModel": {
+     "claude-fable-5": 0.603628,
+     "claude-opus-4-8": 6.48804
+    },
+    "daily": {
+     "2025-05-08": 0.603628,
+     "2025-05-13": 6.48804
+    },
+    "host": "desktop",
+    "last": "2025-05-13 14:15",
+    "messages": 3,
+    "models": [
+     {
+      "cache_read": 23938,
+      "cache_write": 7355,
+      "cost": 0.603628,
+      "input": 12864,
+      "model": "claude-fable-5",
+      "output": 6079
+     },
+     {
+      "cache_read": 24030,
+      "cache_write": 636361,
+      "cost": 6.48804,
+      "input": 693,
+      "model": "claude-opus-4-8",
+      "output": 4358
+     }
+    ],
+    "project": "C--work-demo-app",
+    "promptCount": 1,
+    "prompts": [
+     {
+      "date": "2025-05-08",
+      "index": 1,
+      "main": {
+       "cache_read": 47968,
+       "cache_write": 643716,
+       "cost": 7.091668,
+       "input": 13557,
+       "output": 10437
+      },
+      "messages": 3,
+      "models": [
+       {
+        "cache_read": 23938,
+        "cache_write": 7355,
+        "cost": 0.603628,
+        "input": 12864,
+        "model": "claude-fable-5",
+        "output": 6079
+       },
+       {
+        "cache_read": 24030,
+        "cache_write": 636361,
+        "cost": 6.48804,
+        "input": 693,
+        "model": "claude-opus-4-8",
+        "output": 4358
+       }
+      ],
+      "sub": {
+       "cache_read": 0,
+       "cache_write": 0,
+       "cost": 0.0,
+       "input": 0,
+       "output": 0
+      },
+      "subModels": [],
+      "text": "Prompt #1",
+      "ts": "10:20"
+     }
+    ],
+    "session_id": "60ce41f3-dfbc-472e-8297-629a073f21dd",
+    "started": "2025-05-08 10:20",
+    "subagent_messages": 0,
+    "total": 7.091668
+   }
+  ],
+  "subagents": [
+   {
+    "cache_read": 777001,
+    "cache_write": 27353,
+    "cost": 1.897299,
+    "daily": {
+     "2026-07-05": 1.897299
+    },
+    "input": 38078,
+    "key": "a11f00d",
+    "messages": 1,
+    "model": "claude-fable-5",
+    "output": 5010,
+    "session": "00000000-0000-4000-8000-000000000001"
+   },
+   {
+    "cache_read": 654989,
+    "cache_write": 39661,
+    "cost": 1.581667,
+    "daily": {
+     "2026-07-02": 1.581667
+    },
+    "input": 34132,
+    "key": "a01f00d",
+    "messages": 1,
+    "model": "claude-fable-5-1",
+    "output": 7749,
+    "session": "00000000-0000-4000-8000-000000000000"
+   },
+   {
+    "cache_read": 740385,
+    "cache_write": 72206,
+    "cost": 1.295361,
+    "daily": {
+     "2026-07-09": 1.295361
+    },
+    "input": 63078,
+    "key": "a15f00d",
+    "messages": 2,
+    "model": "claude-opus-5-5",
+    "output": 18130,
+    "session": "00000000-0000-4000-8000-000000000001"
+   },
+   {
+    "cache_read": 380512,
+    "cache_write": 7391,
+    "cost": 1.236052,
+    "daily": {
+     "2026-07-01": 1.236052
+    },
+    "input": 30207,
+    "key": "a23f00d",
+    "messages": 1,
+    "model": "claude-fable-5",
+    "output": 9106,
+    "session": "00000000-0000-4000-8000-000000000002"
+   },
+   {
+    "cache_read": 262155,
+    "cache_write": 27103,
+    "cost": 1.020456,
+    "daily": {
+     "2026-07-06": 1.020456
+    },
+    "input": 5159,
+    "key": "a05f00d",
+    "messages": 1,
+    "model": "claude-fable-5-1",
+    "output": 9387,
+    "session": "00000000-0000-4000-8000-000000000000"
+   },
+   {
+    "cache_read": 562466,
+    "cache_write": 47643,
+    "cost": 0.946063,
+    "daily": {
+     "2026-07-03": 0.946063
+    },
+    "input": 8125,
+    "key": "a25f00d",
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 5911,
+    "session": "00000000-0000-4000-8000-000000000002"
+   },
+   {
+    "cache_read": 339571,
+    "cache_write": 24521,
+    "cost": 0.655618,
+    "daily": {
+     "2026-07-06": 0.655618
+    },
+    "input": 31790,
+    "key": "a05f00d",
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 4439,
+    "session": "00000000-0000-4000-8000-000000000000"
+   },
+   {
+    "cache_read": 876909,
+    "cache_write": 51847,
+    "cost": 0.602207,
+    "daily": {
+     "2026-07-01": 0.602207
+    },
+    "input": 2475,
+    "key": "a23f00d",
+    "messages": 1,
+    "model": "claude-opus-5-5",
+    "output": 3542,
+    "session": "00000000-0000-4000-8000-000000000002"
+   },
+   {
+    "cache_read": 438778,
+    "cache_write": 13546,
+    "cost": 0.510548,
+    "daily": {
+     "2026-07-04": 0.510548
+    },
+    "input": 20466,
+    "key": "a33f00d",
+    "messages": 1,
+    "model": "claude-opus-5-5",
+    "output": 11628,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 283606,
+    "cache_write": 0,
+    "cost": 0.505853,
+    "daily": {
+     "2026-07-06": 0.505853
+    },
+    "input": 24600,
+    "key": "a35f00d",
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 9642,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 368562,
+    "cache_write": 11371,
+    "cost": 0.467221,
+    "daily": {
+     "2026-07-01": 0.467221
+    },
+    "input": 10241,
+    "key": "a23f00d",
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 4721,
+    "session": "00000000-0000-4000-8000-000000000002"
+   },
+   {
+    "cache_read": 355566,
+    "cache_write": 0,
+    "cost": 0.390732,
+    "daily": {
+     "2026-07-07": 0.390732
+    },
+    "input": 3464,
+    "key": "a13f00d",
+    "messages": 1,
+    "model": "claude-fable-5-1",
+    "output": 5344,
+    "session": "00000000-0000-4000-8000-000000000001"
+   },
+   {
+    "cache_read": 228467,
+    "cache_write": 54297,
+    "cost": 0.375526,
+    "daily": {
+     "2026-07-02": 0.375526
+    },
+    "input": 19715,
+    "key": "a31f00d",
+    "messages": 1,
+    "model": "claude-sonnet-5",
+    "output": 11587,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 233580,
+    "cache_write": 0,
+    "cost": 0.348535,
+    "daily": {
+     "2026-07-04": 0.348535
+    },
+    "input": 12804,
+    "key": "a33f00d",
+    "messages": 1,
+    "model": "claude-fable-5-1",
+    "output": 3242,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 312766,
+    "cache_write": 7494,
+    "cost": 0.344845,
+    "daily": {
+     "2026-07-02": 0.344845
+    },
+    "input": 33650,
+    "key": "a31f00d",
+    "messages": 1,
+    "model": "claude-opus-5-5",
+    "output": 4387,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 95524,
+    "cache_write": 21862,
+    "cost": 0.339187,
+    "daily": {
+     "2026-07-04": 0.339187
+    },
+    "input": 6867,
+    "key": "a33f00d",
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 2638,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 0,
+    "cache_write": 32396,
+    "cost": 0.245245,
+    "daily": {
+     "2025-05-29": 0.245245
+    },
+    "input": 8544,
+    "key": "a1097c2b70a1dff39",
+    "messages": 1,
+    "model": "claude-opus-4-8",
+    "output": 2,
+    "session": "b296a0b0-0a5d-4be5-8037-6911bddbffdc"
+   },
+   {
+    "cache_read": 680996,
+    "cache_write": 35650,
+    "cost": 0.184674,
+    "daily": {
+     "2026-07-09": 0.184674
+    },
+    "input": 15098,
+    "key": "a15f00d",
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 7519,
+    "session": "00000000-0000-4000-8000-000000000001"
+   },
+   {
+    "cache_read": 449078,
+    "cache_write": 0,
+    "cost": 0.179632,
+    "daily": {
+     "2026-07-08": 0.179632
+    },
+    "input": 39873,
+    "key": "a21f00d",
+    "messages": 1,
+    "model": "claude-sonnet-5",
+    "output": 1007,
+    "session": "00000000-0000-4000-8000-000000000002"
+   },
+   {
+    "cache_read": 257998,
+    "cache_write": 4214,
+    "cost": 0.169876,
+    "daily": {
+     "2026-07-02": 0.169876
+    },
+    "input": 21105,
+    "key": "a01f00d",
+    "messages": 1,
+    "model": "claude-sonnet-5",
+    "output": 5921,
+    "session": "00000000-0000-4000-8000-000000000000"
+   },
+   {
+    "cache_read": 857371,
+    "cache_write": 9230,
+    "cost": 0.167341,
+    "daily": {
+     "2026-07-05": 0.167341
+    },
+    "input": 38644,
+    "key": "a11f00d",
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 5304,
+    "session": "00000000-0000-4000-8000-000000000001"
+   },
+   {
+    "cache_read": 66685,
+    "cache_write": 0,
+    "cost": 0.156853,
+    "daily": {
+     "2026-07-07": 0.156853
+    },
+    "input": 31659,
+    "key": "a13f00d",
+    "messages": 1,
+    "model": "claude-opus-5-5",
+    "output": 844,
+    "session": "00000000-0000-4000-8000-000000000001"
+   },
+   {
+    "cache_read": 319312,
+    "cache_write": 38030,
+    "cost": 0.154969,
+    "daily": {
+     "2026-07-04": 0.154969
+    },
+    "input": 158,
+    "key": "a03f00d",
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 9364,
+    "session": "00000000-0000-4000-8000-000000000000"
+   },
+   {
+    "cache_read": 25557,
+    "cache_write": 23933,
+    "cost": 0.142954,
+    "daily": {
+     "2026-07-06": 0.142954
+    },
+    "input": 6212,
+    "key": "a35f00d",
+    "messages": 1,
+    "model": "claude-sonnet-5",
+    "output": 3816,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 461883,
+    "cache_write": 0,
+    "cost": 0.094315,
+    "daily": {
+     "2026-07-02": 0.094315
+    },
+    "input": 9927,
+    "key": "a31f00d",
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 7640,
+    "session": "00000000-0000-4000-8000-000000000003"
+   },
+   {
+    "cache_read": 14565,
+    "cache_write": 0,
+    "cost": 0.053076,
+    "daily": {
+     "2026-07-02": 0.053076
+    },
+    "input": 32705,
+    "key": "a01f00d",
+    "messages": 1,
+    "model": "claude-haiku-4-5-20251001",
+    "output": 3783,
+    "session": "00000000-0000-4000-8000-000000000000"
+   }
+  ],
+  "totalCost": 31.175524
+ },
+ "report": "ccmeter report - ultimi 7 giorni\n\nCosto per giorno per modello:\n- 2025-05-08 claude-fable-5: $0.603628\n- 2025-05-13 claude-opus-4-8: $6.488040\n- 2025-05-29 claude-opus-4-8: $0.245245\n- 2026-07-01 claude-fable-5: $1.236052\n- 2026-07-01 claude-fable-5-1: $0.774565\n- 2026-07-01 claude-opus-4-8: $1.352260\n- 2026-07-01 claude-opus-5-5: $0.845076\n- 2026-07-01 claude-sonnet-5: $0.097620\n- 2026-07-02 claude-fable-5: $3.346818\n- 2026-07-02 claude-fable-5-1: $1.959294\n- 2026-07-02 claude-haiku-4-5-20251001: $0.463978\n- 2026-07-02 claude-opus-4-8: $1.113927\n- 2026-07-02 claude-opus-5-5: $0.344845\n- 2026-07-02 claude-sonnet-5: $0.545401\n- 2026-07-03 claude-fable-5: $2.403815\n- 2026-07-03 claude-fable-5-1: $0.419187\n- 2026-07-03 claude-opus-4-8: $0.946063\n- 2026-07-03 claude-opus-5-5: $1.274560\n- 2026-07-04 claude-fable-5-1: $0.348535\n- 2026-07-04 claude-haiku-4-5-20251001: $0.154969\n- 2026-07-04 claude-opus-4-8: $1.955466\n- 2026-07-04 claude-opus-5-5: $0.510548\n- 2026-07-04 claude-sonnet-5: $0.166377\n- 2026-07-05 claude-fable-5: $4.750182\n- 2026-07-05 claude-haiku-4-5-20251001: $0.341277\n- 2026-07-05 claude-opus-5-5: $0.657347\n- 2026-07-05 claude-sonnet-5: $0.168936\n- 2026-07-06 claude-fable-5: $1.684032\n- 2026-07-06 claude-fable-5-1: $1.892602\n- 2026-07-06 claude-opus-4-8: $1.161471\n- 2026-07-06 claude-opus-5-5: $0.300159\n- 2026-07-06 claude-sonnet-5: $0.768874\n- 2026-07-07 claude-fable-5: $3.090499\n- 2026-07-07 claude-fable-5-1: $0.390732\n- 2026-07-07 claude-opus-4-8: $0.556587\n- 2026-07-07 claude-opus-5-5: $0.952067\n- 2026-07-07 claude-sonnet-5: $0.323505\n- 2026-07-08 claude-fable-5: $0.581744\n- 2026-07-08 claude-fable-5-1: $1.480462\n- 2026-07-08 claude-opus-5-5: $0.257762\n- 2026-07-08 claude-sonnet-5: $0.179632\n- 2026-07-09 claude-fable-5-1: $0.986421\n- 2026-07-09 claude-haiku-4-5-20251001: $0.184674\n- 2026-07-09 claude-opus-4-8: $0.772003\n- 2026-07-09 claude-opus-5-5: $1.295361\n- 2026-07-09 claude-sonnet-5: $0.219675\n\nTotale per host:\n- desktop: $30.160205\n- laptop: $20.432067\n\nProiezione mensile: $216.82\nCache hit rate: 95.39%\nModelli senza prezzo: claude-invented-model-9",
+ "report_after_reprocess": "ccmeter report - ultimi 7 giorni\n\nCosto per giorno per modello:\n- 2025-05-08 claude-fable-5: $0.603628\n- 2025-05-13 claude-opus-4-8: $6.488040\n- 2025-05-29 claude-opus-4-8: $0.245245\n- 2026-07-01 claude-fable-5: $1.236052\n- 2026-07-01 claude-fable-5-1: $0.774565\n- 2026-07-01 claude-opus-4-8: $1.352260\n- 2026-07-01 claude-opus-5-5: $0.845076\n- 2026-07-01 claude-sonnet-5: $0.097620\n- 2026-07-02 claude-fable-5: $3.346818\n- 2026-07-02 claude-fable-5-1: $1.959294\n- 2026-07-02 claude-haiku-4-5-20251001: $0.463978\n- 2026-07-02 claude-opus-4-8: $1.113927\n- 2026-07-02 claude-opus-5-5: $0.344845\n- 2026-07-02 claude-sonnet-5: $0.545401\n- 2026-07-03 claude-fable-5: $2.403815\n- 2026-07-03 claude-fable-5-1: $0.419187\n- 2026-07-03 claude-opus-4-8: $0.946063\n- 2026-07-03 claude-opus-5-5: $1.274560\n- 2026-07-04 claude-fable-5-1: $0.348535\n- 2026-07-04 claude-haiku-4-5-20251001: $0.154969\n- 2026-07-04 claude-opus-4-8: $1.955466\n- 2026-07-04 claude-opus-5-5: $0.510548\n- 2026-07-04 claude-sonnet-5: $0.166377\n- 2026-07-05 claude-fable-5: $4.750182\n- 2026-07-05 claude-haiku-4-5-20251001: $0.341277\n- 2026-07-05 claude-opus-5-5: $0.657347\n- 2026-07-05 claude-sonnet-5: $0.168936\n- 2026-07-06 claude-fable-5: $1.684032\n- 2026-07-06 claude-fable-5-1: $1.892602\n- 2026-07-06 claude-opus-4-8: $1.161471\n- 2026-07-06 claude-opus-5-5: $0.300159\n- 2026-07-06 claude-sonnet-5: $0.768874\n- 2026-07-07 claude-fable-5: $3.090499\n- 2026-07-07 claude-fable-5-1: $0.390732\n- 2026-07-07 claude-opus-4-8: $0.556587\n- 2026-07-07 claude-opus-5-5: $0.952067\n- 2026-07-07 claude-sonnet-5: $0.323505\n- 2026-07-08 claude-fable-5: $0.581744\n- 2026-07-08 claude-fable-5-1: $1.480462\n- 2026-07-08 claude-opus-5-5: $0.257762\n- 2026-07-08 claude-sonnet-5: $0.179632\n- 2026-07-09 claude-fable-5-1: $0.986421\n- 2026-07-09 claude-haiku-4-5-20251001: $0.184674\n- 2026-07-09 claude-opus-4-8: $0.772003\n- 2026-07-09 claude-opus-5-5: $1.295361\n- 2026-07-09 claude-sonnet-5: $0.219675\n\nTotale per host:\n- desktop: $30.160205\n- laptop: $20.432067\n\nProiezione mensile: $216.82\nCache hit rate: 95.39%\nModelli senza prezzo: claude-invented-model-9",
+ "reprocess": {
+  "duplicates": 18,
+  "errors": 0,
+  "messages": 87,
+  "parsed": 144,
+  "raw_lines": 144,
+  "sessions": 6
+ }
+}

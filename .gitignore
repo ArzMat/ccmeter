@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.pyright/
+*.egg-info/
+*.pyc
+*.pyo
+*.db
+*.sqlite
+*.sqlite3
+runtime_logs/
+dist/
+.runtime/
+
+# local data and tools
+*.db.lock
+demo.db
+.cross-review/

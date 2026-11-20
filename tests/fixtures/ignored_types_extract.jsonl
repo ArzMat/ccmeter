@@ -1,0 +1,6 @@
+{"type":"queue-operation","sessionId":"60ce41f3-dfbc-472e-8297-629a073f21dd","timestamp":"2025-05-08T10:18:50.325Z","operation":"enqueue","content":"[REDACTED]"}
+{"type":"attachment","uuid":"d4a1c103-76c7-4f18-8d6a-275e86977fe1","parentUuid":null,"sessionId":"60ce41f3-dfbc-472e-8297-629a073f21dd","timestamp":"2025-05-08T10:18:50.299Z","isSidechain":false,"cwd":"C:\\work\\demo-app","version":"2.1.170","attachment":"[REDACTED]"}
+{"type":"last-prompt","sessionId":"60ce41f3-dfbc-472e-8297-629a073f21dd","leafUuid":"55c31c66-5607-40fb-867e-56a010789b8f","lastPrompt":"[REDACTED]"}
+{"type":"system","uuid":"a41737d5-ca5a-4242-8d94-9940e90819fb","parentUuid":"779a95c5-10e5-44b8-8372-4bfdd3d9159c","sessionId":"60ce41f3-dfbc-472e-8297-629a073f21dd","timestamp":"2025-05-08T10:52:27.770Z","isSidechain":false,"cwd":"C:\\work\\demo-app","version":"2.1.170"}
+{"type":"mode","sessionId":"60ce41f3-dfbc-472e-8297-629a073f21dd","mode":"normal"}
+{"type":"custom-title","sessionId":"60ce41f3-dfbc-472e-8297-629a073f21dd","customTitle":"[REDACTED]"}

@@ -1,0 +1,53 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
+        with:
+          python-version: "3.15"
+      - run: uv sync --extra server --locked
+      - run: uv run ruff check
+      - run: uv run ruff format --check
+      - run: uv run pyright
+      - run: uv run pytest
+
+  install:
+    # the wheel, installed outside the checkout, with and without the server extra
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
+        with:
+          python-version: "3.15"
+      - run: uv build --wheel --out-dir dist
+      - name: install into clean environments
+        shell: bash
+        run: |
+          wheel=$(ls dist/*.whl)
+          uv venv "$RUNNER_TEMP/server-env"
+          uv pip install --python "$RUNNER_TEMP/server-env" "${wheel}[server]"
+          uv venv "$RUNNER_TEMP/agent-env"
+          uv pip install --python "$RUNNER_TEMP/agent-env" "$wheel"
+      - name: smoke test
+        shell: bash
+        working-directory: ${{ runner.temp }}
+        run: python "$GITHUB_WORKSPACE/scripts/smoke_install.py" --server-env "$RUNNER_TEMP/server-env" --agent-env "$RUNNER_TEMP/agent-env"

@@ -1,0 +1,393 @@
+{
+  "_note": "USD per million tokens. Anthropic source: https://platform.claude.com/docs/en/about-claude/pricing (checked 2026-11-20). General rule: cache_write_5m = input * 1.25, cache_write_1h = input * 2, cache_read = input * 0.1; exceptions: Fable 5.2 and Fable 5.1 cache_read 0.025x, Opus 5.5 and Sonnet 5.5 cache_read 0.05x; Haiku 5.5 has higher rates for prompts over 100,000 tokens (long_context, priced per request like the OpenAI entries). ORDER MATTERS: the first entry whose match text appears in the model name wins, so specific models (fable-5-2, fable-5-1, opus-5-5, sonnet-5-5, haiku-5-5) come before generic ones. OPENAI ENTRIES (Codex): source https://developers.openai.com/api/docs/pricing, Standard tier, checked 2026-11-20; the Fast tier (formerly priority) is not modeled. EXACT match on the model name (match_exact) to avoid substring collisions (gpt-5.5 / gpt-5.5-pro). Priced per request: when a request's input tokens, cache included, exceed threshold_input_tokens (272000) the long_context rates apply to the whole request. cache_read = cached input. codex-auto-review (guardian sub-agents) is excluded by the agent and the server: never counted or priced.",
+  "models": {
+    "fable-5-2": {
+      "match": [
+        "fable-5-2"
+      ],
+      "input": 8.0,
+      "output": 40.0,
+      "cache_read": 0.2,
+      "cache_write_5m": 10.0,
+      "cache_write_1h": 16.0,
+      "verified": "2026-11-20"
+    },
+    "fable-5-1": {
+      "match": [
+        "fable-5-1"
+      ],
+      "input": 10.0,
+      "output": 50.0,
+      "cache_read": 0.25,
+      "cache_write_5m": 12.5,
+      "cache_write_1h": 20.0,
+      "verified": "2026-10-05"
+    },
+    "fable-5": {
+      "match": [
+        "fable-5",
+        "fable"
+      ],
+      "input": 10.0,
+      "output": 50.0,
+      "cache_read": 1.0,
+      "cache_write_5m": 12.5,
+      "cache_write_1h": 20.0,
+      "verified": "2026-10-05"
+    },
+    "opus-5-5": {
+      "match": [
+        "opus-5-5"
+      ],
+      "input": 4.0,
+      "output": 20.0,
+      "cache_read": 0.2,
+      "cache_write_5m": 5.0,
+      "cache_write_1h": 8.0,
+      "verified": "2026-10-05"
+    },
+    "opus-5": {
+      "match": [
+        "opus-5"
+      ],
+      "input": 5.0,
+      "output": 25.0,
+      "cache_read": 0.5,
+      "cache_write_5m": 6.25,
+      "cache_write_1h": 10.0,
+      "verified": "2026-10-05"
+    },
+    "opus-4-8": {
+      "match": [
+        "opus-4-8"
+      ],
+      "input": 5.0,
+      "output": 25.0,
+      "cache_read": 0.5,
+      "cache_write_5m": 6.25,
+      "cache_write_1h": 10.0,
+      "verified": "2026-10-05"
+    },
+    "opus-4-7": {
+      "match": [
+        "opus-4-7"
+      ],
+      "input": 5.0,
+      "output": 25.0,
+      "cache_read": 0.5,
+      "cache_write_5m": 6.25,
+      "cache_write_1h": 10.0,
+      "verified": "2026-10-05"
+    },
+    "opus-4-6": {
+      "match": [
+        "opus-4-6"
+      ],
+      "input": 5.0,
+      "output": 25.0,
+      "cache_read": 0.5,
+      "cache_write_5m": 6.25,
+      "cache_write_1h": 10.0,
+      "verified": "2026-10-05"
+    },
+    "opus-4-5": {
+      "match": [
+        "opus-4-5"
+      ],
+      "input": 5.0,
+      "output": 25.0,
+      "cache_read": 0.5,
+      "cache_write_5m": 6.25,
+      "cache_write_1h": 10.0,
+      "verified": "2026-10-05"
+    },
+    "sonnet-5-5": {
+      "match": [
+        "sonnet-5-5"
+      ],
+      "input": 2.0,
+      "output": 10.0,
+      "cache_read": 0.1,
+      "cache_write_5m": 2.5,
+      "cache_write_1h": 4.0,
+      "verified": "2026-11-20"
+    },
+    "sonnet-5": {
+      "match": [
+        "sonnet-5"
+      ],
+      "input": 2.0,
+      "output": 10.0,
+      "cache_read": 0.2,
+      "cache_write_5m": 2.5,
+      "cache_write_1h": 4.0,
+      "verified": "2026-10-05",
+      "note": "the introductory 2/10 price became the standard price (no increase from 2026-09-01)"
+    },
+    "sonnet-4-6": {
+      "match": [
+        "sonnet-4-6"
+      ],
+      "input": 3.0,
+      "output": 15.0,
+      "cache_read": 0.3,
+      "cache_write_5m": 3.75,
+      "cache_write_1h": 6.0,
+      "verified": "2026-10-05"
+    },
+    "sonnet-4-5": {
+      "match": [
+        "sonnet-4-5"
+      ],
+      "input": 3.0,
+      "output": 15.0,
+      "cache_read": 0.3,
+      "cache_write_5m": 3.75,
+      "cache_write_1h": 6.0,
+      "verified": "2026-10-05"
+    },
+    "haiku-5-5": {
+      "match": [
+        "haiku-5-5"
+      ],
+      "input": 0.1,
+      "output": 0.5,
+      "cache_read": 0.01,
+      "cache_write_5m": 0.125,
+      "cache_write_1h": 0.2,
+      "long_context": {
+        "threshold_input_tokens": 100000,
+        "input": 0.5,
+        "output": 2.5,
+        "cache_read": 0.05,
+        "cache_write_5m": 0.625,
+        "cache_write_1h": 1.0
+      },
+      "verified": "2026-11-20",
+      "note": "priced by prompt length: a request whose prompt (input plus cache reads and writes) is over 100,000 tokens pays the long_context rates for the whole request"
+    },
+    "haiku-4-5": {
+      "match": [
+        "haiku-4-5",
+        "haiku"
+      ],
+      "input": 1.0,
+      "output": 5.0,
+      "cache_read": 0.1,
+      "cache_write_5m": 1.25,
+      "cache_write_1h": 2.0,
+      "verified": "2026-10-05"
+    },
+    "gpt-6.2-astra": {
+      "provider": "openai",
+      "match": [
+        "gpt-6.2-astra"
+      ],
+      "match_exact": true,
+      "input": 8.0,
+      "cache_read": 0.4,
+      "cache_write": 10.0,
+      "output": 40.0,
+      "long_context": {
+        "threshold_input_tokens": 272000,
+        "input": 16.0,
+        "cache_read": 0.8,
+        "cache_write": 20.0,
+        "output": 60.0
+      },
+      "verified": "2026-11-20"
+    },
+    "gpt-6.2-sol": {
+      "provider": "openai",
+      "match": [
+        "gpt-6.2-sol"
+      ],
+      "match_exact": true,
+      "input": 2.0,
+      "cache_read": 0.1,
+      "cache_write": 2.5,
+      "output": 10.0,
+      "long_context": {
+        "threshold_input_tokens": 272000,
+        "input": 4.0,
+        "cache_read": 0.2,
+        "cache_write": 5.0,
+        "output": 15.0
+      },
+      "verified": "2026-11-20"
+    },
+    "gpt-6.1-terra": {
+      "provider": "openai",
+      "match": [
+        "gpt-6.1-terra"
+      ],
+      "match_exact": true,
+      "input": 1.0,
+      "cache_read": 0.05,
+      "cache_write": 1.25,
+      "output": 5.0,
+      "long_context": {
+        "threshold_input_tokens": 272000,
+        "input": 2.0,
+        "cache_read": 0.1,
+        "cache_write": 2.5,
+        "output": 7.5
+      },
+      "verified": "2026-11-20"
+    },
+    "gpt-6-astra": {
+      "provider": "openai",
+      "match": [
+        "gpt-6-astra"
+      ],
+      "match_exact": true,
+      "input": 10.0,
+      "cache_read": 1.0,
+      "cache_write": 12.5,
+      "output": 50.0,
+      "long_context": {
+        "threshold_input_tokens": 272000,
+        "input": 20.0,
+        "cache_read": 2.0,
+        "cache_write": 25.0,
+        "output": 75.0
+      },
+      "verified": "2026-10-05"
+    },
+    "gpt-6.1-sol": {
+      "provider": "openai",
+      "match": [
+        "gpt-6.1-sol"
+      ],
+      "match_exact": true,
+      "input": 2.0,
+      "cache_read": 0.1,
+      "cache_write": 2.5,
+      "output": 10.0,
+      "long_context": {
+        "threshold_input_tokens": 272000,
+        "input": 4.0,
+        "cache_read": 0.2,
+        "cache_write": 5.0,
+        "output": 15.0
+      },
+      "verified": "2026-10-05"
+    },
+    "gpt-6-sol": {
+      "provider": "openai",
+      "match": [
+        "gpt-6-sol"
+      ],
+      "match_exact": true,
+      "input": 2.0,
+      "cache_read": 0.2,
+      "cache_write": 2.5,
+      "output": 10.0,
+      "long_context": {
+        "threshold_input_tokens": 272000,
+        "input": 4.0,
+        "cache_read": 0.4,
+        "cache_write": 5.0,
+        "output": 15.0
+      },
+      "verified": "2026-10-05"
+    },
+    "gpt-6-luna": {
+      "provider": "openai",
+      "match": [
+        "gpt-6-luna"
+      ],
+      "match_exact": true,
+      "input": 0.1,
+      "cache_read": 0.01,
+      "cache_write": 0.125,
+      "output": 0.5,
+      "long_context": {
+        "threshold_input_tokens": 272000,
+        "input": 0.2,
+        "cache_read": 0.02,
+        "cache_write": 0.25,
+        "output": 0.75
+      },
+      "verified": "2026-10-05"
+    },
+    "gpt-5.6-sol": {
+      "provider": "openai",
+      "match": [
+        "gpt-5.6-sol"
+      ],
+      "match_exact": true,
+      "input": 4.0,
+      "cache_read": 0.4,
+      "cache_write": 5.0,
+      "output": 20.0,
+      "long_context": {
+        "threshold_input_tokens": 272000,
+        "input": 8.0,
+        "cache_read": 0.8,
+        "cache_write": 10.0,
+        "output": 30.0
+      },
+      "verified": "2026-11-20",
+      "note": "the pricing page says GPT-5.6 Sol's promotional pricing is available until 2026-11-30 without saying which rates it covers: these are the listed Standard rates, re-check after that date"
+    },
+    "gpt-5.6-terra": {
+      "provider": "openai",
+      "match": [
+        "gpt-5.6-terra"
+      ],
+      "match_exact": true,
+      "input": 2.0,
+      "cache_read": 0.2,
+      "cache_write": 2.5,
+      "output": 12.0,
+      "long_context": {
+        "threshold_input_tokens": 272000,
+        "input": 4.0,
+        "cache_read": 0.4,
+        "cache_write": 5.0,
+        "output": 18.0
+      },
+      "verified": "2026-10-05"
+    },
+    "gpt-5.6-luna": {
+      "provider": "openai",
+      "match": [
+        "gpt-5.6-luna"
+      ],
+      "match_exact": true,
+      "input": 0.2,
+      "cache_read": 0.02,
+      "cache_write": 0.25,
+      "output": 1.2,
+      "long_context": {
+        "threshold_input_tokens": 272000,
+        "input": 0.4,
+        "cache_read": 0.04,
+        "cache_write": 0.5,
+        "output": 1.8
+      },
+      "verified": "2026-10-05"
+    },
+    "gpt-5.5": {
+      "provider": "openai",
+      "match": [
+        "gpt-5.5"
+      ],
+      "match_exact": true,
+      "input": 5.0,
+      "cache_read": 0.5,
+      "cache_write": null,
+      "output": 30.0,
+      "long_context": {
+        "threshold_input_tokens": 272000,
+        "input": 10.0,
+        "cache_read": 1.0,
+        "cache_write": null,
+        "output": 45.0
+      },
+      "verified": "2026-10-05",
+      "note": "no published cache write rate (null): the input rate is used if one is ever needed"
+    }
+  }
+}

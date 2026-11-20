@@ -1,0 +1,18 @@
+# ccmeter agent as a systemd user service (runs as you, reads your transcripts).
+#
+#   uv tool install "ccmeter @ git+https://github.com/ArzMat/ccmeter"
+#   ccmeter agent init --server http://SERVER:8787      # asks for the server's token
+#   mkdir -p ~/.config/systemd/user && cp ccmeter-agent.service ~/.config/systemd/user/
+#   systemctl --user daemon-reload && systemctl --user enable --now ccmeter-agent
+#   loginctl enable-linger "$USER"    # optional: keep it running without a login session
+
+[Unit]
+Description=ccmeter agent
+
+[Service]
+ExecStart=%h/.local/bin/ccmeter agent run
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=default.target

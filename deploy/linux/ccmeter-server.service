@@ -1,0 +1,41 @@
+# ccmeter server as a systemd service.
+#
+# Install (as root):
+#   useradd --system --home-dir /opt/ccmeter --shell /usr/sbin/nologin ccmeter
+#   install -d -o ccmeter -g ccmeter /opt/ccmeter
+#   sudo -u ccmeter env UV_TOOL_DIR=/opt/ccmeter/tools UV_TOOL_BIN_DIR=/opt/ccmeter/bin \
+#     UV_PYTHON_INSTALL_DIR=/opt/ccmeter/python \
+#     uv tool install "ccmeter[server] @ git+https://github.com/ArzMat/ccmeter"
+#   printf 'CCMETER_API_TOKEN=%s\n' "$(openssl rand -hex 32)" > /etc/ccmeter.env
+#   chown root:ccmeter /etc/ccmeter.env && chmod 640 /etc/ccmeter.env
+#   cp ccmeter-server.service /etc/systemd/system/ && systemctl daemon-reload
+#   systemctl enable --now ccmeter-server
+#
+# Set --host below to the private address the agents reach (LAN, VPN or Tailscale IP).
+# The dashboard and the read API have no authentication: never bind a public address.
+
+[Unit]
+Description=ccmeter server
+After=network-online.target
+Wants=network-online.target
+# keep retrying while a VPN interface comes up after boot
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=ccmeter
+Group=ccmeter
+EnvironmentFile=/etc/ccmeter.env
+StateDirectory=ccmeter
+ExecStart=/opt/ccmeter/bin/ccmeter server run --host 127.0.0.1 --port 8787 --db /var/lib/ccmeter/ccmeter.db
+Restart=always
+RestartSec=10
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/ccmeter
+MemoryMax=2G
+
+[Install]
+WantedBy=multi-user.target
