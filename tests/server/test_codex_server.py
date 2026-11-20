@@ -8,7 +8,7 @@ from typing import Any, cast
 
 import pytest
 from fastapi.testclient import TestClient
-from tests.codex_fixtures import NEW_CLI, SESSION, Cumulative, Rollout, usage
+from tests.codex_fixtures import CHILD, NEW_CLI, SESSION, Cumulative, Rollout, compress, usage
 
 from ccmeter.client.agent import AgentConfig, OffsetState, ship_codex
 from ccmeter.server.app import create_app
@@ -363,3 +363,63 @@ def test_agent_to_server_end_to_end(tmp_path: Path) -> None:
     assert model["input"] == (10_000 + 20_000 + 30_000) - 3 * 5_000
     assert model["cache_read"] == 15_000
     assert model["output"] == 300
+
+
+def _agent_cfg(codex_dir: Path) -> AgentConfig:
+    return AgentConfig(
+        server_url="http://testserver",
+        api_token="secret-token",
+        host_label="desktop",
+        claude_projects_dir=codex_dir.parent / "claude",
+        codex_dirs=(codex_dir,),
+    )
+
+
+def test_rollout_compressed_after_a_partial_read_is_counted_once(tmp_path: Path) -> None:
+    cumulative = Cumulative()
+    format_a = Rollout().meta().turn("gpt-5.6-sol")
+    for index in range(4):
+        format_a.token_count(*cumulative.step(usage(1_000 * (index + 1), 500, 10 + index, 0)))
+    format_b = Rollout(CHILD).meta(cli=NEW_CLI).turn("gpt-6-astra")
+    for index in range(4):
+        format_b.record(f"resp_zst_{index}", usage(2_000 * (index + 1), 1_000, 20 + index, 0))
+    rollouts = {"rollout-a.jsonl": format_a, "rollout-b.jsonl": format_b}
+    live = tmp_path / "live" / "codex"
+    live.mkdir(parents=True)
+    for name, rollout in rollouts.items():
+        payload = rollout.text_payload()
+        # the agent reads the first half while Codex is still writing the rollout
+        (live / name).write_bytes(payload[: payload.index(b"\n", len(payload) // 2) + 1])
+    reference_dir = tmp_path / "reference"
+    for name, rollout in rollouts.items():
+        rollout.write(reference_dir / "codex" / name)
+    client = _client(tmp_path / "live")
+    reference = _client(reference_dir)
+    state = OffsetState(offsets={})
+
+    first = ship_codex(_agent_cfg(live), state, _TestClientAdapter(client))
+    # Codex finishes both sessions and later compresses the idle rollouts
+    for name, rollout in rollouts.items():
+        compress(rollout.write(live / name))
+    second = ship_codex(_agent_cfg(live), state, _TestClientAdapter(client))
+    ship_codex(
+        _agent_cfg(reference_dir / "codex"), OffsetState(offsets={}), _TestClientAdapter(reference)
+    )
+
+    assert first[1] == 0
+    assert 0 < first[0] < 8
+    # every record of the compressed copies is sent again and the server keeps one of each
+    assert second == (8, 0)
+    summary = client.get("/api/summary").json()
+    assert summary["by_model"] == reference.get("/api/summary").json()["by_model"]
+    assert summary["by_provider"] == reference.get("/api/summary").json()["by_provider"]
+    conn = sqlite3.connect(tmp_path / "live" / "ccmeter.db")
+    try:
+        count = conn.execute("SELECT COUNT(*) FROM messages WHERE provider = 'codex'").fetchone()
+    finally:
+        conn.close()
+    assert count[0] == 8
+    assert sorted(Path(key).name for key in state.codex) == [
+        "rollout-a.jsonl.zst",
+        "rollout-b.jsonl.zst",
+    ]

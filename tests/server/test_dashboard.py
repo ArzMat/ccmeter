@@ -392,6 +392,62 @@ def test_stale_dashboard_data_is_served_at_once_and_rebuilt_in_background() -> N
     assert renders.count == 2
 
 
+def test_a_stale_copy_is_flagged_until_the_new_one_is_ready() -> None:
+    """The flag lets the dashboard ask again at once instead of showing old numbers for a
+    whole refresh interval."""
+    renders = _Renders()
+    now = [0.0]
+    cache = StaleWhileRevalidate(renders, ttl_seconds=60, clock=lambda: now[0])
+
+    assert cache.get_entry() == (cache.get(), False)
+    renders.gate.clear()
+    now[0] = 61
+    asset, refreshing = cache.get_entry()
+    assert (asset.body, refreshing) == (b"v0", True)
+    renders.gate.set()
+
+    assert _eventually(lambda: cache.get_entry()[0].body == b"v1")
+    assert cache.get_entry()[1] is False
+
+
+def test_overview_tells_the_client_when_it_served_an_older_copy(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    import ccmeter.server.app as app_module
+
+    _seed_db(tmp_path).close()
+    monkeypatch.setattr(app_module, "OVERVIEW_CACHE_TTL_SECONDS", 0.0)
+    client = TestClient(create_app(db_path=tmp_path / "ccmeter.db", api_token="token"))
+
+    first = client.get("/api/dashboard/overview")
+    second = client.get("/api/dashboard/overview")
+    revalidated = client.get(
+        "/api/dashboard/overview", headers={"If-None-Match": second.headers["etag"]}
+    )
+
+    assert first.status_code == 200
+    assert first.headers["x-ccmeter-refreshing"] == "0"
+    assert second.headers["x-ccmeter-refreshing"] == "1"
+    assert revalidated.status_code in (200, 304)
+    assert revalidated.headers["x-ccmeter-refreshing"] == "1"
+
+
+def test_a_fresh_overview_says_so_also_on_a_304(tmp_path: Path) -> None:
+    """A 304 only updates the headers it carries in the browser's cached copy: the flag is
+    always sent, so an earlier "1" cannot linger after the copy is fresh."""
+    _seed_db(tmp_path).close()
+    client = TestClient(create_app(db_path=tmp_path / "ccmeter.db", api_token="token"))
+
+    fresh = client.get("/api/dashboard/overview")
+    revalidated = client.get(
+        "/api/dashboard/overview", headers={"If-None-Match": fresh.headers["etag"]}
+    )
+
+    assert fresh.headers["x-ccmeter-refreshing"] == "0"
+    assert revalidated.status_code == 304
+    assert revalidated.headers["x-ccmeter-refreshing"] == "0"
+
+
 def test_failed_background_refresh_keeps_previous_copy_and_retries() -> None:
     renders = _Renders()
     now = [0.0]

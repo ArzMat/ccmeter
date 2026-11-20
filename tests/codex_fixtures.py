@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from compression import zstd
 from pathlib import Path
 from typing import Any
 
@@ -101,6 +102,20 @@ class Rollout:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(self.text_payload())
         return path
+
+    def write_zst(self, path: Path) -> Path:
+        """Write the rollout zstd-compressed (`rollout-*.jsonl.zst`)."""
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(zstd.compress(self.text_payload()))
+        return path
+
+
+def compress(path: Path) -> Path:
+    """Replace a `.jsonl` rollout with its `.jsonl.zst`, the way Codex compresses idle rollouts."""
+    target = path.with_name(path.name + ".zst")
+    target.write_bytes(zstd.compress(path.read_bytes()))
+    path.unlink()
+    return target
 
 
 def usage(

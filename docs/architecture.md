@@ -20,7 +20,10 @@ Each pass (every 5 seconds by default):
 2. Reduce each Claude line (`minimize_line`) and send batches of up to 500 to `POST /ingest`.
    A batch's offsets are saved only after the server accepted it: delivery is at least once
    and the server deduplicates.
-3. Read the Codex rollouts the same way and send their numeric records in batches.
+3. Read the Codex rollouts the same way and send their numeric records in batches. Rollouts
+   that Codex compressed (`.jsonl.zst`) are streamed through `compression.zstd`: the offset is
+   a position in the decompressed data, and a file read to the end is not decompressed again
+   until its size or modification time changes.
 4. With nothing to send for five minutes, send an empty request (heartbeat).
 
 State lives in `~/.ccmeter/state.json` (byte offsets per file, Codex reader state per rollout),

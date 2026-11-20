@@ -22,6 +22,7 @@ from ccmeter.client.codex_source import (
     CodexFileState,
     CodexRecord,
     find_rollout_files,
+    pending_state,
     read_codex_file,
 )
 from ccmeter.client.config import AgentConfig, load_agent_config
@@ -141,22 +142,20 @@ def ship_codex(cfg: AgentConfig, state: OffsetState, client: HttpClient) -> tupl
     files = find_rollout_files(cfg.codex_dirs, _WARNED_ZST)
     present = {str(path) for path in files}
     for key in [key for key in state.codex if key not in present]:
-        # archived (moved) or deleted: the new path starts from zero and the server drops
-        # the duplicates by message_id
+        # archived (moved), compressed (.jsonl -> .jsonl.zst) or deleted: the new path starts
+        # from zero and the server drops the duplicates by message_id
         del state.codex[key]
     batch = _CodexBatch()
     sent = 0
     for path in files:
         key = str(path)
-        file_state = CodexFileState.from_dict(state.codex.get(key))
         try:
-            size = path.stat().st_size
+            pending = pending_state(path, CodexFileState.from_dict(state.codex.get(key)))
         except OSError:
             continue
-        if size < file_state.offset:
-            file_state = CodexFileState()
-        if size == file_state.offset:
+        if pending is None:
             continue
+        file_state = pending
         while True:
             try:
                 result = read_codex_file(

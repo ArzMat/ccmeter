@@ -32,7 +32,9 @@ dashboard.
 ## Codex
 
 **Read:** `rollout-*.jsonl` under `~/.codex/sessions` and `~/.codex/archived_sessions` (or
-`codex_dirs` in `agent.json`; `[]` turns Codex off), streamed from the last offset.
+`codex_dirs` in `agent.json`; `[]` turns Codex off), streamed from the last offset. The
+rollouts Codex compresses (`rollout-*.jsonl.zst`) are decompressed on the fly, in memory, and
+read the same way.
 
 **Sent:** one numeric record per model request, built on your machine
 (`src/ccmeter/client/codex_source.py`): ids (response id or a content hash, session, thread,

@@ -54,12 +54,21 @@ class StaleWhileRevalidate:
         self._building = False
 
     def get(self) -> CachedAsset:
+        return self.get_entry()[0]
+
+    def get_entry(self) -> tuple[CachedAsset, bool]:
+        """The current copy, and whether it is past the TTL with a newer one being built.
+
+        A client told so can ask again in a moment instead of showing old numbers until its
+        next regular refresh.
+        """
         asset = self._asset
         if asset is None:
-            return self._first_build()
+            return self._first_build(), False
         if self._clock() - self._built_at >= self._ttl:
             self.refresh_in_background()
-        return asset
+            return asset, True
+        return asset, False
 
     def refresh_in_background(self) -> None:
         with self._cond:

@@ -126,7 +126,7 @@ agent still sends a heartbeat every five minutes, so a silent host is a stopped 
 
 | | Claude Code | Codex |
 |---|---|---|
-| Read on your machine | `~/.claude/projects/**/*.jsonl` | `~/.codex/sessions/**/rollout-*.jsonl` and `~/.codex/archived_sessions` |
+| Read on your machine | `~/.claude/projects/**/*.jsonl` | `~/.codex/sessions/**/rollout-*.jsonl` and `~/.codex/archived_sessions`, compressed `rollout-*.jsonl.zst` included |
 | Sent to the server | the machine's host label; for each line, the transcript's path relative to `~/.claude/projects` and the line's byte offset (to tell lines apart and drop duplicates), and the line reduced to its type, ids, timestamp, session, sidechain flag, model and token counters; message contents keep only their shape (a string becomes `""`, a list keeps each block's type) | the machine's host label; one numeric record per model request: ids, timestamp, model, project folder name, token counters |
 | Never sent | prompts, answers, tool inputs and outputs, attachments, the working directory (`cwd`) and every other field of the line | conversation text, tool calls, working directories |
 

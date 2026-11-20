@@ -72,6 +72,8 @@ session and model.
 `byModelTok` is `[input, output, cache read, cache write]`, deduplicated; `rawTok` counts every
 transcript line, as Claude Code does. Sum the days of any period to get its numbers. Served
 from a one-minute cache with an ETag: send `If-None-Match` to get a `304` when nothing changed.
+An older copy is answered at once while a newer one is built: `X-Ccmeter-Refreshing` is then
+`1` (ask again shortly to get the new numbers), otherwise `0`; 304 answers carry it too.
 
 `GET /api/dashboard/session-list?from=&to=&provider=`: sessions of the period, clipped to it
 (`total`, `byModel`, `models`, `promptCount`, `messages`, `daily`, `project`, `host`,

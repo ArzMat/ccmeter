@@ -11,6 +11,8 @@ const html = htm.bind(h);
 const MODEL_COLORS = ["#9b79ee", "#c68206", "#db5fa1", "#a6930b", "#12a7a7", "#e86154", "#0599ef", "#3fac4a"];
 const OTHER_COLOR = "#8892a0";
 const REFRESH_MS = 60_000;
+// the server says it served an older overview while building a new one: ask again soon
+const QUICK_RELOAD_MS = [1_500, 3_000, 5_000, 8_000];
 const CARDS_PER_GROUP = 12;
 const ITEMS_SHOWN = 10;
 const MAX_DAY_BARS = 62;
@@ -257,11 +259,15 @@ class HttpError extends Error {
   }
 }
 
-async function getJson(url) {
+async function fetchJson(url) {
   // no-cache: the browser revalidates with the ETag and gets a 304 when nothing changed
   const response = await fetch(url, { cache: "no-cache", headers: { Accept: "application/json" } });
   if (!response.ok) throw new HttpError(response.status);
-  return response.json();
+  return { data: await response.json(), refreshing: response.headers.get("X-Ccmeter-Refreshing") === "1" };
+}
+
+async function getJson(url) {
+  return (await fetchJson(url)).data;
 }
 
 function apiUrl(path, params = {}) {
@@ -333,6 +339,8 @@ class App extends Component {
       hover: null,
     };
     this.loadRequest = 0;
+    this.quickTries = 0;
+    this.quickTimer = null;
     this.focusDay = null;
   }
 
@@ -351,6 +359,7 @@ class App extends Component {
 
   componentWillUnmount() {
     clearInterval(this.timer);
+    clearTimeout(this.quickTimer);
     window.removeEventListener("hashchange", this.onHash);
   }
 
@@ -359,24 +368,47 @@ class App extends Component {
     document.documentElement.lang = this.state.lang;
   }
 
-  async load() {
+  // quick: a follow-up of an overview served while the server rebuilt it. Only the overview is
+  // asked again; sessions are fetched again only if the period itself moved, never forced
+  // (the session list is computed per request and can be expensive on a long history)
+  async load(quick = false) {
     const request = ++this.loadRequest;
     const asked = this.state.provider;
     try {
-      const base = await getJson(apiUrl("overview"));
+      const first = await fetchJson(apiUrl("overview"));
+      const base = first.data;
       let view = base;
+      let refreshing = first.refreshing;
       let provider = asked;
       if (provider && base.providers.includes(provider)) {
-        view = await getJson(apiUrl("overview", { provider }));
+        const filtered = await fetchJson(apiUrl("overview", { provider }));
+        view = filtered.data;
+        refreshing = refreshing || filtered.refreshing;
       } else {
         provider = "";
       }
       // a newer load, or a provider chosen meanwhile, owns the screen now
       if (request !== this.loadRequest || this.state.provider !== asked) return;
-      this.setState({ base, view, viewProvider: provider, provider, error: null }, () => this.syncSessions(true));
+      this.setState({ base, view, viewProvider: provider, provider, error: null }, () => this.syncSessions(!quick));
+      this.followRefresh(refreshing);
     } catch (error) {
       if (request === this.loadRequest) this.setState({ error: error.message || String(error) });
     }
+  }
+
+  // An older overview was served while the server builds a newer one: load again after a short
+  // pause, a few times at most, then leave it to the regular refresh.
+  followRefresh(refreshing) {
+    clearTimeout(this.quickTimer);
+    this.quickTimer = null;
+    if (!refreshing) {
+      this.quickTries = 0;
+      return;
+    }
+    const delay = QUICK_RELOAD_MS[this.quickTries];
+    if (delay === undefined) return;
+    this.quickTries += 1;
+    this.quickTimer = setTimeout(() => this.load(true), delay);
   }
 
   sessionsKey() {

@@ -58,6 +58,8 @@ DEFAULT_DB_PATH = Path.home() / ".ccmeter" / "ccmeter.db"
 PLACEHOLDER_API_TOKEN = "change-me"
 MONTH_DAYS = 30
 OVERVIEW_CACHE_TTL_SECONDS = 60.0
+# set on an overview response that is an older copy while a newer one is being built
+REFRESHING_HEADER = "X-Ccmeter-Refreshing"
 GZIP_MIN_BYTES = 1024
 STATIC_DIR = Path(__file__).with_name("static")
 PROVIDER_PATTERN = re.compile(r"^[a-z0-9_-]{1,32}$")
@@ -380,8 +382,16 @@ def create_app(
         # only providers with data get a cache slot: made-up names cannot fill the cache
         if provider is not None and provider not in known_providers():
             raise HTTPException(status_code=404, detail="No usage for this provider")
-        asset = overview_cache(provider).get()
-        headers = {"ETag": asset.etag, "Cache-Control": "no-cache"}
+        asset, refreshing = overview_cache(provider).get_entry()
+        # "1": an older copy, served at once while the new one is built, so ask again
+        # shortly. Always sent, "0" included: a 304 updates the headers the browser keeps for
+        # its cached copy only with the headers it carries, so a missing one would leave a
+        # stale "1" in place
+        headers = {
+            "ETag": asset.etag,
+            "Cache-Control": "no-cache",
+            REFRESHING_HEADER: "1" if refreshing else "0",
+        }
         if request.headers.get("if-none-match") == asset.etag:
             return Response(status_code=304, headers=headers)
         return _maybe_gzip(

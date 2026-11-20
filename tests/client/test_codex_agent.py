@@ -5,6 +5,8 @@ from __future__ import annotations
 import json
 import logging
 import time
+from collections.abc import Callable
+from compression import zstd
 from pathlib import Path
 from typing import cast
 
@@ -330,22 +332,143 @@ def test_long_lines_are_streamed_in_chunks(tmp_path: Path, monkeypatch: pytest.M
     assert _read_all(path).state.offset == path.stat().st_size
 
 
-def test_find_rollout_files_skips_zst_with_single_warning(
+def test_find_rollout_files_lists_plain_and_compressed_rollouts(
     tmp_path: Path,
     caplog: pytest.LogCaptureFixture,
 ) -> None:
     root = tmp_path / "sessions" / "2026" / "07" / "20"
     Rollout().meta().write(root / "rollout-1.jsonl")
-    (root / "rollout-2.jsonl.zst").write_bytes(b"\x28\xb5\x2f\xfd")
+    Rollout().meta().write_zst(root / "rollout-2.jsonl.zst")
+    (root / "rollout-3.jsonl.tmp").write_bytes(b"")
+
+    with caplog.at_level(logging.WARNING):
+        files = find_rollout_files((tmp_path / "sessions", tmp_path / "missing"), set())
+
+    assert [path.name for path in files] == ["rollout-1.jsonl", "rollout-2.jsonl.zst"]
+    assert caplog.messages == []
+
+
+def test_find_rollout_files_without_zstd_skips_compressed_with_one_warning(
+    tmp_path: Path,
+    caplog: pytest.LogCaptureFixture,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    # a Python built without compression.zstd keeps the 1.0.0 behaviour
+    monkeypatch.setattr("ccmeter.client.codex_source._zstd", None)
+    root = tmp_path / "sessions" / "2026" / "07" / "20"
+    Rollout().meta().write(root / "rollout-1.jsonl")
+    Rollout().meta().write_zst(root / "rollout-2.jsonl.zst")
+    Rollout().meta().write_zst(root / "rollout-3.jsonl.zst")
     warned: set[str] = set()
 
     with caplog.at_level(logging.WARNING):
-        first = find_rollout_files((tmp_path / "sessions", tmp_path / "missing"), warned)
+        first = find_rollout_files((tmp_path / "sessions",), warned)
         second = find_rollout_files((tmp_path / "sessions",), warned)
 
     assert [path.name for path in first] == ["rollout-1.jsonl"]
     assert second == first
-    assert sum("zstd" in message for message in caplog.messages) == 1
+    assert len(caplog.messages) == 1
+    assert "2 compressed" in caplog.messages[0]
+
+
+@pytest.mark.parametrize("build", [_format_a_rollout, _format_b_rollout])
+def test_compressed_rollout_reads_like_plain_jsonl(
+    tmp_path: Path,
+    build: Callable[[], Rollout],
+) -> None:
+    rollout = build()
+    plain = rollout.write(tmp_path / "plain" / "rollout-x.jsonl")
+    packed = rollout.write_zst(tmp_path / "packed" / "rollout-x.jsonl.zst")
+
+    expected = _read_all(plain)
+    result = _read_all(packed)
+
+    assert result.records == expected.records
+    assert result.state.offset == len(rollout.text_payload())
+    assert result.state.compressed_done is True
+    assert expected.state.compressed_done is False
+
+
+def test_compressed_rollout_resumes_from_decompressed_offset(tmp_path: Path) -> None:
+    path = _format_a_rollout().write_zst(tmp_path / "rollout-a.jsonl.zst")
+    single = _read_all(path).records
+
+    first = read_codex_file(path, CodexFileState(), max_records=2, now=LATER)
+    restored = CodexFileState.from_dict(json.loads(json.dumps(first.state.to_dict())))
+    rest = _read_all(path, restored)
+
+    assert first.exhausted is False
+    assert first.state.compressed_done is False
+    assert first.records + rest.records == single
+    assert rest.state.compressed_done is True
+
+
+def test_compressed_rollout_is_final_and_never_waits(tmp_path: Path) -> None:
+    # a recent .jsonl would wait STALE_SECONDS here; a compressed rollout no longer grows
+    new_a = Rollout().meta(cli=NEW_CLI).turn("gpt-6-sol")
+    new_a.token_count(*Cumulative().step(usage(1_000, 0, 10, 0)))
+    no_model = Rollout(CHILD).meta()
+    no_model.token_count(*Cumulative().step(usage(2_000, 0, 20, 0)))
+    new_a_path = new_a.write_zst(tmp_path / "rollout-new-a.jsonl.zst")
+    no_model_path = no_model.write_zst(tmp_path / "rollout-nomodel.jsonl.zst")
+
+    new_a_result = _read_all(new_a_path, now=NOW)
+    no_model_result = _read_all(no_model_path, now=NOW)
+
+    assert [record.output_tokens for record in new_a_result.records] == [10]
+    assert [record.model for record in no_model_result.records] == [UNKNOWN_MODEL]
+    assert new_a_result.state.compressed_done is True
+    assert no_model_result.state.compressed_done is True
+
+
+def test_compressed_copy_without_session_meta_keeps_the_same_ids(tmp_path: Path) -> None:
+    rollout = Rollout().turn("gpt-5.6-sol")
+    rollout.token_count(*Cumulative().step(usage(1_000, 0, 10, 0)))
+    plain = rollout.write(tmp_path / "rollout-nometa.jsonl")
+    packed = rollout.write_zst(tmp_path / "rollout-nometa.jsonl.zst")
+
+    plain_records = _read_all(plain).records
+    packed_records = _read_all(packed).records
+
+    assert packed_records == plain_records
+    assert plain_records[0].session_id == "rollout-nometa"
+    assert plain_records[0].thread_id == "rollout-nometa"
+
+
+def test_damaged_compressed_rollouts_keep_their_readable_part(
+    tmp_path: Path,
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    rollout = _format_a_rollout()
+    payload = rollout.text_payload()
+    split = payload.index(b"\n", len(payload) // 2) + 1
+    full = _read_all(rollout.write(tmp_path / "plain" / "rollout-cut.jsonl")).records
+    head_path = tmp_path / "head" / "rollout-cut.jsonl"
+    head_path.parent.mkdir()
+    head_path.write_bytes(payload[:split])
+    head = _read_all(head_path).records
+    truncated = tmp_path / "rollout-cut.jsonl.zst"
+    # two frames, the second cut short: the first one stays readable
+    truncated.write_bytes(zstd.compress(payload[:split]) + zstd.compress(payload[split:])[:-8])
+    garbage = tmp_path / "rollout-garbage.jsonl.zst"
+    garbage.write_bytes(b"\x28\xb5\x2f\xfd" + b"not zstd" * 8)
+    empty = tmp_path / "rollout-empty.jsonl.zst"
+    empty.write_bytes(b"")
+
+    with caplog.at_level(logging.WARNING):
+        truncated_result = _read_all(truncated)
+        garbage_result = _read_all(garbage)
+        empty_result = _read_all(empty)
+
+    assert head
+    assert truncated_result.records[: len(head)] == head
+    assert truncated_result.records == full[: len(truncated_result.records)]
+    assert len(truncated_result.records) < len(full)
+    assert garbage_result.records == []
+    assert empty_result.records == []
+    for result in (truncated_result, garbage_result, empty_result):
+        assert result.state.compressed_done is True
+    assert sum("damaged" in message for message in caplog.messages) == 3
 
 
 def _records_of(payload: dict[str, object]) -> list[dict[str, object]]:
@@ -461,6 +584,52 @@ def test_moved_rollout_is_reread_and_old_state_pruned(tmp_path: Path) -> None:
     first_ids = [record["message_id"] for record in _records_of(server.payloads[0])]
     second_ids = [record["message_id"] for record in _records_of(server.payloads[1])]
     assert first_ids == second_ids
+
+
+def test_ship_codex_reads_compressed_rollouts_once_until_rewritten(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    rollout = _format_a_rollout()
+    packed = rollout.write_zst(tmp_path / "sessions" / "rollout-a.jsonl.zst")
+    damaged = tmp_path / "sessions" / "rollout-empty.jsonl.zst"
+    damaged.write_bytes(b"")
+    state = OffsetState(offsets={})
+    server = _Server()
+    reads: list[Path] = []
+
+    def counting_read(
+        path: Path,
+        file_state: CodexFileState,
+        *,
+        max_records: int,
+        now: float | None = None,
+    ) -> CodexReadResult:
+        reads.append(path)
+        return read_codex_file(path, file_state, max_records=max_records, now=now)
+
+    monkeypatch.setattr("ccmeter.client.agent.read_codex_file", counting_read)
+
+    with caplog.at_level(logging.WARNING):
+        first = ship_codex(_codex_cfg(tmp_path), state, server)
+        reads_after_first = len(reads)
+        second = ship_codex(_codex_cfg(tmp_path), state, server)
+    reads_after_second = len(reads)
+    rollout.token_count(usage(1, 0, 7, 0), usage(1_000_000, 0, 7_777, 0))
+    rollout.write_zst(packed)
+    third = ship_codex(_codex_cfg(tmp_path), state, server)
+
+    assert first == (3, 0)
+    assert reads_after_first == 2
+    assert second == (0, 0)
+    assert reads_after_second == reads_after_first
+    assert sum("damaged" in message for message in caplog.messages) == 1
+    # rewritten: read again from the start, the server drops the three it already has
+    assert third == (4, 0)
+    assert [record["output_tokens"] for record in _records_of(server.payloads[-1])][-1] == 7
+    assert state.codex[str(packed)]["compressed_done"] is True
+    assert state.codex[str(damaged)]["compressed_done"] is True
 
 
 def test_agent_config_codex_dirs_default_and_override(tmp_path: Path) -> None:

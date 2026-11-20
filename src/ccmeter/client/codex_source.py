@@ -49,6 +49,19 @@ every deduplicated A event is preceded by a B line with identical usage, and B o
 the 11 compaction requests, which A does not record.
 
 `codex-auto-review` (guardian sub-agents) is excluded: it is never sent.
+
+Compressed rollouts: Codex compresses idle rollouts to `rollout-*.jsonl.zst` and removes the
+`.jsonl`. They are read through `compression.zstd` with the same line reader and parser; the
+state offset is a position in the decompressed stream, so a file split across batches
+resumes where it stopped (the stream is decompressed again up to that point). A `.zst` does
+not grow: the state keeps its size and mtime from when reading started (`compressed_stamp`)
+and whether it was read to the end (`compressed_done`). A finished file is not decompressed
+again until its stamp changes; a changed file is read again from the start. It is never
+recent either, so nothing waits for `STALE_SECONDS`. A rollout already read as `.jsonl` and
+then compressed is a new path, read from zero: it yields the same message ids (response id
+or content hash), which the server already has and drops. A damaged or truncated `.zst`
+counts its readable lines and is retried only when its stamp changes. On a Python built
+without `compression.zstd` compressed rollouts are skipped with a warning.
 """
 
 from __future__ import annotations
@@ -59,10 +72,21 @@ import logging
 import re
 import time
 from dataclasses import asdict, dataclass, field, replace
+from io import BufferedIOBase
 from pathlib import Path
-from typing import Any, BinaryIO, cast
+from typing import Any, cast
+
+try:
+    from compression import zstd as _zstd
+except ImportError:  # CPython can be built without zstd support
+    _zstd = None
 
 logger = logging.getLogger(__name__)
+
+# a truncated .zst raises EOFError, a corrupt one ZstdError
+_DECOMPRESSION_ERRORS: tuple[type[Exception], ...] = (
+    (EOFError, _zstd.ZstdError) if _zstd is not None else (EOFError,)
+)
 
 PROVIDER = "codex"
 UNKNOWN_MODEL = "codex-unknown"
@@ -74,6 +98,8 @@ MAX_RELEVANT_LINE_BYTES = 32 << 20
 STALE_SECONDS = 3600
 MODE_A = "A"
 MODE_B = "B"
+PLAIN_SUFFIX = ".jsonl"
+COMPRESSED_SUFFIX = ".jsonl.zst"
 MARKERS = (b'"session_meta"', b'"turn_context"', b'"token_usage_record"', b'"token_count"')
 USAGE_FIELDS = (
     "input_tokens",
@@ -129,6 +155,9 @@ class CodexFileState:
     model: str | None = None
     turn_id: str | None = None
     last_total: list[int] | None = field(default=None)
+    # `.jsonl.zst` only: [size, mtime_ns] when reading started, and read to the end
+    compressed_stamp: list[int] | None = field(default=None)
+    compressed_done: bool = False
 
     def to_dict(self) -> dict[str, object]:
         """Serialize for state.json."""
@@ -141,6 +170,7 @@ class CodexFileState:
             return cls()
         data = cast(JsonObject, raw)
         last_total = data.get("last_total")
+        stamp = data.get("compressed_stamp")
         return cls(
             offset=_int(data.get("offset")),
             thread_id=_str(data.get("thread_id")),
@@ -158,6 +188,12 @@ class CodexFileState:
                 if isinstance(last_total, list)
                 else None
             ),
+            compressed_stamp=(
+                [_int(value) for value in cast(list[object], stamp)]
+                if isinstance(stamp, list)
+                else None
+            ),
+            compressed_done=bool(data.get("compressed_done", False)),
         )
 
 
@@ -184,7 +220,8 @@ def read_codex_file(
     """Read complete new lines of a rollout from `state.offset`, in streaming.
 
     Args:
-        path: Rollout JSONL file.
+        path: Rollout file, `.jsonl` or `.jsonl.zst` (the offset is then a position in the
+            decompressed stream).
         state: Current state of the file; it is not modified.
         max_records: Reading stops after this number of records.
         now: Current time (for tests); used to tell whether the file is idle.
@@ -192,45 +229,102 @@ def read_codex_file(
     Returns:
         Normalized records, the new state (offset right after the last consumed line) and
         `exhausted` true if no complete lines are left to read. An incomplete trailing
-        line is never consumed.
+        line is never consumed. A compressed rollout read to its end, or up to a damaged
+        point, gets `compressed_done`.
     """
     current = replace(state, last_total=list(state.last_total) if state.last_total else None)
     records: list[CodexRecord] = []
     reader = _FileReader(path, now=time.time() if now is None else now)
-    with path.open("rb") as handle:
-        handle.seek(current.offset)
-        while len(records) < max_records:
-            line = _read_line(handle, path)
-            if line is None:
-                return CodexReadResult(records=records, state=current, exhausted=True)
-            content, next_offset = line
-            if content is not None:
-                try:
-                    record = reader.process(content, current, next_offset)
-                except _Defer:
+    with _open_rollout(path) as handle:
+        try:
+            handle.seek(current.offset)
+            while len(records) < max_records:
+                line = _read_line(handle, path)
+                if line is None:
+                    current.compressed_done = reader.compressed
                     return CodexReadResult(records=records, state=current, exhausted=True)
-                if record is not None:
-                    records.append(record)
-            current.offset = next_offset
+                content, next_offset = line
+                if content is not None:
+                    try:
+                        record = reader.process(content, current, next_offset)
+                    except _Defer:
+                        return CodexReadResult(records=records, state=current, exhausted=True)
+                    if record is not None:
+                        records.append(record)
+                current.offset = next_offset
+        except _DECOMPRESSION_ERRORS as exc:
+            logger.warning(
+                "damaged compressed Codex rollout, counted up to byte %d: %s (%s)",
+                current.offset,
+                path,
+                exc,
+            )
+            current.compressed_done = True
+            return CodexReadResult(records=records, state=current, exhausted=True)
     return CodexReadResult(records=records, state=current, exhausted=False)
 
 
+def pending_state(path: Path, state: CodexFileState) -> CodexFileState | None:
+    """State to read `path` from, or None when it has nothing new.
+
+    A `.jsonl` is read past `state.offset` while it grows and from zero if it shrank. A
+    `.jsonl.zst` is read until done; a different size or mtime starts it again from zero.
+
+    Raises:
+        OSError: The file cannot be inspected (for example, it was just removed).
+    """
+    info = path.stat()
+    if is_compressed(path):
+        stamp = [info.st_size, info.st_mtime_ns]
+        if state.compressed_stamp != stamp:
+            return CodexFileState(compressed_stamp=stamp)
+        return None if state.compressed_done else state
+    if info.st_size < state.offset:
+        return CodexFileState()
+    if info.st_size == state.offset:
+        return None
+    return state
+
+
+def is_compressed(path: Path) -> bool:
+    """True for a zstd-compressed rollout (`.jsonl.zst`)."""
+    return path.name.endswith(COMPRESSED_SUFFIX)
+
+
 def find_rollout_files(roots: tuple[Path, ...], warned: set[str]) -> list[Path]:
-    """Return the `.jsonl` rollouts under `roots`; `.zst` ones are skipped with a warning."""
+    """Return the `.jsonl` and `.jsonl.zst` rollouts under `roots`.
+
+    Without `compression.zstd` the compressed ones are left out, with one warning for those
+    not already in `warned`.
+    """
     files: list[Path] = []
+    skipped: list[str] = []
     for root in roots:
         if not root.exists():
             continue
         for path in root.rglob("*.jsonl*"):
-            name = path.name
-            if name.endswith(".jsonl"):
+            if path.name.endswith(PLAIN_SUFFIX):
                 files.append(path)
-            elif name.endswith(".jsonl.zst"):
-                key = str(path)
-                if key not in warned:
-                    warned.add(key)
-                    logger.warning("compressed Codex rollout skipped (no zstd): %s", path)
+            elif is_compressed(path):
+                if _zstd is not None:
+                    files.append(path)
+                elif str(path) not in warned:
+                    skipped.append(str(path))
+    if skipped:
+        warned.update(skipped)
+        logger.warning(
+            "%d compressed Codex rollouts skipped: this Python has no compression.zstd",
+            len(skipped),
+        )
     return sorted(files)
+
+
+def _open_rollout(path: Path) -> BufferedIOBase:
+    if not is_compressed(path):
+        return path.open("rb")
+    if _zstd is None:
+        raise OSError(f"this Python has no compression.zstd: {path}")
+    return _zstd.ZstdFile(path)
 
 
 class _FileReader:
@@ -239,6 +333,7 @@ class _FileReader:
     def __init__(self, path: Path, *, now: float) -> None:
         self.path = path
         self.now = now
+        self.compressed = is_compressed(path)
         self._first_model: str | None = None
         self._first_model_known = False
         self._b_ahead: bool | None = None
@@ -399,6 +494,9 @@ class _FileReader:
         raise _Defer
 
     def _is_stale(self) -> bool:
+        if self.compressed:
+            # Codex compresses only idle rollouts and a .zst never grows: nothing to wait for
+            return True
         try:
             return self.now - self.path.stat().st_mtime >= STALE_SECONDS
         except OSError:
@@ -418,7 +516,7 @@ def _apply_meta(state: CodexFileState, payload: JsonObject, path: Path) -> None:
     state.excluded = _is_guardian(payload.get("source"))
 
 
-def _read_line(handle: BinaryIO, path: Path) -> tuple[bytes | None, int] | None:
+def _read_line(handle: BufferedIOBase, path: Path) -> tuple[bytes | None, int] | None:
     """Read the next complete line.
 
     Returns None when no complete line is left (EOF or partial line at the end).
@@ -457,7 +555,15 @@ def _is_candidate(content: bytes) -> bool:
 
 
 def _lookahead_model(path: Path, offset: int) -> str | None:
-    with path.open("rb") as handle:
+    """First model after `offset`; the damaged tail of a .zst reads as the end of the file."""
+    try:
+        return _first_model_after(path, offset)
+    except _DECOMPRESSION_ERRORS:
+        return None
+
+
+def _first_model_after(path: Path, offset: int) -> str | None:
+    with _open_rollout(path) as handle:
         handle.seek(offset)
         while True:
             line = _read_line(handle, path)
@@ -477,7 +583,15 @@ def _lookahead_model(path: Path, offset: int) -> str | None:
 
 
 def _lookahead_has_b(path: Path, offset: int) -> bool:
-    with path.open("rb") as handle:
+    """Any B line after `offset`; the damaged tail of a .zst reads as the end of the file."""
+    try:
+        return _has_b_after(path, offset)
+    except _DECOMPRESSION_ERRORS:
+        return False
+
+
+def _has_b_after(path: Path, offset: int) -> bool:
+    with _open_rollout(path) as handle:
         handle.seek(offset)
         while True:
             line = _read_line(handle, path)
@@ -521,7 +635,10 @@ def _session_id(state: CodexFileState, path: Path) -> str:
 
 def _thread_from_name(path: Path) -> str:
     match = UUID_RE.search(path.name)
-    return match.group(0) if match else path.stem
+    if match:
+        return match.group(0)
+    # the same name with or without compression, so a compressed copy keeps its ids
+    return path.name.removesuffix(".zst").removesuffix(PLAIN_SUFFIX)
 
 
 def _project_from_cwd(cwd: str | None) -> str | None:

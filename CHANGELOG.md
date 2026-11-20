@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.0.1
+
+### Fixed
+- The agent reads the Codex rollouts that Codex compresses (`rollout-*.jsonl.zst`) instead of
+  skipping them, so sessions compressed before the agent saw them are counted. A rollout the
+  agent already read and Codex compressed later is not counted twice: the server already has
+  its requests and drops them by id. A compressed rollout read to the end is not decompressed
+  again until it changes. Needs a Python with `compression.zstd` (the standard builds have
+  it); without it the agent skips them with one warning, as before.
+- After a pause the dashboard no longer shows the numbers of its last opening for up to a
+  minute: an overview served from an older copy while a newer one is built says so
+  (`X-Ccmeter-Refreshing: 1`, otherwise `0`) and the page asks again a moment later.
+
 ## 1.0.0
 
 First public release.

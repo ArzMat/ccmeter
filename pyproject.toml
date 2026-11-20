@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ccmeter"
-version = "1.0.0"
+version = "1.0.1"
 description = "Self-hosted token and cost tracker for Claude Code and Codex, across all your machines"
 readme = "README.md"
 license = "MIT"
